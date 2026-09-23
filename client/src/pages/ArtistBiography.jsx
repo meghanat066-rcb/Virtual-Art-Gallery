@@ -8,6 +8,7 @@ import {
     FaVideo
 } from 'react-icons/fa'
 import './ArtistBiography.css'
+import { API_BASE_URL } from '../services/api'
 
 function ArtistBiography() {
     const navigate = useNavigate()
@@ -61,7 +62,7 @@ if (form.biography.trim() || form.artisticJourney.trim()) {
 console.log("BIOGRAPHY BEING SENT:", form.biography)
 console.log("ARTISTIC JOURNEY BEING SENT:", form.artisticJourney)
     const biographyResponse = await fetch(
-        'http://localhost:8000/api/artists/profile/biography',
+        `${API_BASE_URL}/artists/profile/biography`,
         {
             method: 'PATCH',
             headers: {
@@ -100,7 +101,7 @@ console.log(
 
 if (artistJourneyVideo.trim()) {
     const videoResponse = await fetch(
-        'http://localhost:8000/api/artists/profile/video',
+        `${API_BASE_URL}/artists/profile/video`,
         {
             method: 'PATCH',
             headers: {

@@ -10,6 +10,7 @@ import {
     FaTrash
 } from 'react-icons/fa'
 import './ArtistNotifications.css'
+import { API_BASE_URL } from '../services/api'
 
 function ArtistNotifications() {
     const navigate = useNavigate()
@@ -30,7 +31,7 @@ function ArtistNotifications() {
             }
 
             const response = await fetch(
-                'http://localhost:8000/api/notifications/my-notifications',
+                `${API_BASE_URL}/notifications/my-notifications`,
                 {
                     method: 'GET',
                     headers: {
@@ -66,7 +67,7 @@ const handleNotificationClick = async (notificationId) => {
         }
 
         const response = await fetch(
-            `http://localhost:8000/api/notifications/${notificationId}/read`,
+            `${API_BASE_URL}/notifications/${notificationId}/read`,
             {
                 method: 'PUT',
                 headers: {
@@ -105,7 +106,7 @@ const handleMarkAllAsRead = async () => {
         }
 
         const response = await fetch(
-            'http://localhost:8000/api/notifications/read-all',
+            `${API_BASE_URL}/notifications/read-all`,
             {
                 method: 'PUT',
                 headers: {
@@ -143,7 +144,7 @@ const handleDeleteNotification = async (notificationId) => {
         }
 
         const response = await fetch(
-            `http://localhost:8000/api/notifications/${notificationId}`,
+            `${API_BASE_URL}/notifications/${notificationId}`,
             {
                 method: 'DELETE',
                 headers: {

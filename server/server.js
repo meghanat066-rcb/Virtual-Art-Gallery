@@ -26,6 +26,20 @@ connectDB();
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Ensure MongoDB is connected for each request (critical for serverless cold starts)
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    console.error("Database connection middleware error:", err.message);
+    return res.status(500).json({
+      success: false,
+      message: "Database connection failed. Please check MongoDB connection and credentials."
+    });
+  }
+});
 app.use("/uploads", express.static("uploads"));
 app.use("/api/artworks", artworkRoutes);
 app.use("/api/favorites", favoriteRoutes);

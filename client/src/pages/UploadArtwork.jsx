@@ -5,6 +5,7 @@ import {
     FaCloudUploadAlt,
 } from "react-icons/fa";
 import "./UploadArtwork.css";
+import { API_BASE_URL } from "../services/api";
 
 const ARTWORK_CATEGORIES = [
     "Paintings",
@@ -645,7 +646,7 @@ const handleReplicaPriceChange = (size, value) => {
 
             const response =
                 await fetch(
-                    "http://localhost:8000/api/artworks/upload",
+                    `${API_BASE_URL}/artworks/upload`,
                     {
                         method: "POST",
 

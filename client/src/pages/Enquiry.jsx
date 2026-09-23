@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { FaArrowLeft, FaEnvelope } from 'react-icons/fa'
-import api from '../services/api'
+import api, { SERVER_BASE_URL } from '../services/api'
 import PageLayout from '../components/PageLayout'
 import './Enquiry.css'
 
@@ -135,7 +135,8 @@ function Enquiry() {
             return image
         }
 
-        return `http://localhost:8000${image}`
+        const clean = image.startsWith('/') ? image : `/${image}`
+        return `${SERVER_BASE_URL}${clean}`
     }
 
     return (

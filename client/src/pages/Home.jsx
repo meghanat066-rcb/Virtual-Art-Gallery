@@ -9,7 +9,7 @@ import {
     FaCalendarAlt
 } from 'react-icons/fa'
 import './Home.css'
-import api from "../services/api";
+import api, { getImageUrl } from "../services/api";
 
 function Home() {
     const navigate = useNavigate()
@@ -227,9 +227,7 @@ const currentSlide = heroSlides[activeSlide]
                     <img
                         src={
                             featuredArtist.profileImage
-                                ? featuredArtist.profileImage.startsWith('http')
-                                    ? featuredArtist.profileImage
-                                    : `http://localhost:8000${featuredArtist.profileImage}`
+                                ? getImageUrl(featuredArtist.profileImage)
                                 : featuredArtist.image
                         }
                         alt={`Artist ${featuredArtist.name}`}

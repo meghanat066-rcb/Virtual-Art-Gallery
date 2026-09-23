@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaArrowRight, FaPalette } from 'react-icons/fa'
 
-import api from '../services/api'
+import api, { getImageUrl } from '../services/api'
 import './Artists.css'
 
 function Artists() {
@@ -130,9 +130,7 @@ console.log(
                                    <img
     src={
         artist.profileImage
-            ? artist.profileImage.startsWith('http')
-                ? artist.profileImage
-                : `http://localhost:8000${artist.profileImage}`
+            ? getImageUrl(artist.profileImage)
             : artist.image
     }
     alt={artist.name}

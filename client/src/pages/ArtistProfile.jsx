@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { FaArrowLeft, FaPalette } from "react-icons/fa";
 import "./ArtistProfile.css";
+import { API_BASE_URL, SERVER_BASE_URL } from "../services/api";
 
 const getYouTubeEmbedUrl = (url) => {
     if (!url) {
@@ -47,7 +48,7 @@ const ArtistProfile = () => {
     const fetchArtist = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/artists/${id}`,
+          `${API_BASE_URL}/artists/${id}`,
         );
 
         const data = await response.json();
@@ -100,7 +101,7 @@ console.log("ARTIST STATEMENT FROM ARTIST:", data.artist?.artistStatement);
     }
 
     if (image.startsWith("/uploads")) {
-      return`http://localhost:8000${image}`;
+      return `${SERVER_BASE_URL}${image}`;
     }
 
     return image;
@@ -112,7 +113,7 @@ console.log("ARTIST STATEMENT FROM ARTIST:", data.artist?.artistStatement);
         return video;
     }
 
-    return `http://localhost:8000${video}`;
+    return `${SERVER_BASE_URL}${video}`;
 };
 
   return (
