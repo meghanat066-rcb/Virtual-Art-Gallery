@@ -1,0 +1,361 @@
+.my-enquiries-page {
+    min-height: 100vh;
+    margin-top: -220px;
+    padding: 40px 7%;
+    background: #f7f5f1;
+    color: #302d29;
+}
+/* Header */
+
+.my-enquiries-header {
+    max-width: 1200px;
+    margin: 0 auto 45px;
+}
+
+.my-enquiries-back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    margin-bottom: 35px;
+    border: 1px solid #d8d3ca;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #302d29;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.my-enquiries-back-button:hover {
+    background: #302d29;
+    color: #ffffff;
+    border-color: #302d29;
+}
+
+.my-enquiries-title span {
+    display: block;
+    margin-bottom: 10px;
+    color: #8b7355;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.my-enquiries-title h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.my-enquiries-title p {
+    margin: 12px 0 0;
+    color: #77716a;
+    font-size: 14px;
+}
+
+
+/* Loading / Error */
+
+.my-enquiries-loading {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #77716a;
+    font-size: 14px;
+}
+
+.my-enquiries-error {
+    max-width: 1200px;
+    margin: 0 auto 25px;
+    padding: 14px 18px;
+    border: 1px solid #e2caca;
+    border-radius: 8px;
+    background: #fff7f7;
+    color: #a14d4d;
+    font-size: 13px;
+}
+
+
+/* Empty State */
+
+.my-enquiries-empty {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 55px 30px;
+    text-align: center;
+    border: 1px solid #e3ded5;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.my-enquiries-empty > svg {
+    margin-bottom: 18px;
+    color: #8b7355;
+    font-size: 30px;
+}
+
+.my-enquiries-empty h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.my-enquiries-empty p {
+    margin: 0 0 25px;
+    color: #77716a;
+    font-size: 14px;
+}
+
+.my-enquiries-empty button {
+    padding: 11px 22px;
+    border: none;
+    border-radius: 7px;
+    background: #302d29;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.my-enquiries-empty button:hover {
+    background: #8b7355;
+}
+
+
+/* Enquiry List */
+
+.my-enquiries-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+/* Enquiry Card */
+
+.my-enquiry-card {
+    position: relative;
+    padding: 28px;
+    border: 1px solid #e1ddd5;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(48, 45, 41, 0.04);
+}
+
+
+/* Artwork */
+
+.my-enquiry-artwork {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #ece8e1;
+}
+
+.my-enquiry-artwork img,
+.my-enquiry-no-image {
+    width: 95px;
+    height: 95px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.my-enquiry-no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1eee8;
+    color: #a19a91;
+    font-size: 25px;
+}
+
+.my-enquiry-artwork span {
+    display: block;
+    margin-bottom: 7px;
+    color: #8b7355;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.my-enquiry-artwork h2 {
+    margin: 0 0 7px;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.my-enquiry-artwork p {
+    margin: 0;
+    color: #8a847c;
+    font-size: 12px;
+}
+
+
+/* Content */
+
+.my-enquiry-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 22px;
+}
+
+.my-enquiry-message,
+.my-enquiry-reply {
+    padding: 19px;
+    border-radius: 9px;
+}
+
+.my-enquiry-message {
+    border: 1px solid #e6e1d9;
+    background: #faf9f6;
+}
+
+.my-enquiry-reply.has-reply {
+    border: 1px solid #ddd4c7;
+    background: #f1eee8;
+}
+
+.my-enquiry-reply.waiting-reply {
+    border: 1px dashed #d8d1c7;
+    background: #fbfaf8;
+}
+
+
+/* Section Titles */
+
+.my-enquiry-section-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 12px;
+}
+
+.my-enquiry-section-title svg {
+    color: #8b7355;
+    font-size: 12px;
+}
+
+.my-enquiry-section-title span {
+    color: #6d675f;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+
+/* Messages */
+
+.my-enquiry-message p,
+.my-enquiry-reply p {
+    margin: 0;
+    color: #403c37;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.my-enquiry-reply.waiting-reply p {
+    color: #8a847c;
+    font-style: italic;
+}
+
+.my-enquiry-reply small {
+    display: block;
+    margin-top: 10px;
+    color: #8a847c;
+    font-size: 11px;
+}
+
+
+/* View Artwork */
+.my-enquiry-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+}
+.my-enquiry-view-artwork {
+    padding: 10px 19px;
+    border: 1px solid #d5cfc5;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #302d29;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.my-enquiry-view-artwork:hover {
+    border-color: #302d29;
+    background: #302d29;
+    color: #ffffff;
+}
+.my-enquiry-delete-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 19px;
+    border: 1px solid #d8caca;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #9a5555;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.my-enquiry-delete-button:hover {
+    border-color: #9a5555;
+    background: #9a5555;
+    color: #ffffff;
+}
+
+.my-enquiry-delete-button svg {
+    font-size: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .my-enquiries-page {
+        padding: 30px 5%;
+    }
+
+    .my-enquiries-title h1 {
+        font-size: 32px;
+    }
+
+    .my-enquiry-card {
+        padding: 20px;
+    }
+
+    .my-enquiry-content {
+        grid-template-columns: 1fr;
+    }
+
+    .my-enquiry-artwork img,
+    .my-enquiry-no-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .my-enquiry-artwork h2 {
+        font-size: 18px;
+    }
+}

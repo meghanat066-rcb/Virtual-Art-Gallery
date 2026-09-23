@@ -1,0 +1,328 @@
+/* =========================================================
+   ARTIST BIOGRAPHY PAGE
+   ========================================================= */
+
+.artist-biography-page {
+    width: 92%;
+    max-width: 1150px;
+    margin:  -220px auto 80px;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.biography-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.biography-back-button {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    color: #555;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.biography-back-button:hover {
+    color: #222;
+    transform: translateX(-3px);
+}
+
+.biography-page-label {
+    color: #777;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.biography-intro {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.biography-intro-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #f1ede6;
+    color: #6c4ee8;
+    font-size: 20px;
+}
+
+.biography-intro > span {
+    color: #777;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+
+.biography-intro h1 {
+    margin: 12px 0 10px;
+    color: #222;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 500;
+}
+
+.biography-intro p {
+    max-width: 600px;
+    margin: auto;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.biography-form {
+    padding: 42px;
+    background: #fff;
+    border: 1px solid #e8e4dc;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+.biography-form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #ece8e1;
+}
+
+.biography-form-header span {
+    color: #888;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+}
+
+.biography-form-header h2 {
+    margin: 8px 0 0;
+    color: #222;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.biography-artist-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.biography-artist-name small {
+    color: #999;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+}
+
+.biography-artist-name strong {
+    color: #333;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   FORM FIELDS
+   ========================================================= */
+
+.biography-field {
+    margin-bottom: 25px;
+}
+
+.biography-field label {
+    display: block;
+    margin-bottom: 9px;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.biography-field textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 16px;
+    border: 1px solid #dcd8d0;
+    border-radius: 9px;
+    background: #faf9f6;
+    color: #333;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.7;
+    resize: vertical;
+    outline: none;
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.biography-field textarea::placeholder {
+    color: #aaa;
+}
+
+.biography-field textarea:focus {
+    border-color: #6c4ee8;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(108, 78, 232, 0.08);
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.biography-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 12px;
+    margin-top: 10px;
+    border-top: 1px solid #ece8e1;
+}
+
+.biography-actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-width: 125px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.biography-cancel-button {
+    border: 1px solid #d8d4cc;
+    background: #fff;
+    color: #666;
+}
+
+.biography-cancel-button:hover {
+    background: #f5f3ef;
+}
+
+.biography-save-button {
+    border: 1px solid #6c4ee8;
+    background: #6c4ee8;
+    color: #fff;
+}
+
+.biography-save-button:hover {
+    background: #5638d5;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .artist-biography-page {
+        width: 94%;
+        margin-top: -25px;
+    }
+
+    .biography-topbar {
+        margin-bottom: 25px;
+    }
+
+    .biography-page-label {
+        display: none;
+    }
+
+    .biography-intro {
+        margin-bottom: 30px;
+    }
+
+    .biography-intro h1 {
+        font-size: 38px;
+    }
+
+    .biography-form {
+        padding: 25px 20px;
+        border-radius: 14px;
+    }
+
+    .biography-form-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .biography-artist-name {
+        align-items: flex-start;
+    }
+
+    .biography-actions {
+        flex-direction: column-reverse;
+    }
+
+    .biography-actions button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .artist-biography-page {
+        width: 94%;
+    }
+
+    .biography-intro h1 {
+        font-size: 32px;
+    }
+
+    .biography-intro p {
+        font-size: 13px;
+    }
+
+    .biography-form {
+        padding: 20px 15px;
+    }
+
+    .biography-form-header h2 {
+        font-size: 23px;
+    }
+
+    .biography-field textarea {
+        padding: 13px;
+        font-size: 13px;
+    }
+}

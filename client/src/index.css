@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --color-background: #f7f5f0;
+    --color-surface: #ffffff;
+    --color-text-primary: #161616;
+    --color-text-secondary: #6f6f6f;
+    --color-accent: #a47c48;
+    --color-border: #ddd8cf;
+    --color-dark: #111111;
+    --color-success: #357a55;
+    --color-warning: #b7791f;
+    --color-error: #b23a3a;
+
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Inter', Arial, sans-serif;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    --space-9: 96px;
+    --space-10: 128px;
+
+    --container-width: 1440px;
+    --transition-standard: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+    font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-text-primary);
+    font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: clamp(3rem, 7vw, 7rem);
+}
+
+h2 {
+    font-size: clamp(2.3rem, 5vw, 4.8rem);
+}
+
+h3 {
+    font-size: clamp(1.7rem, 3vw, 2.8rem);
+}
+
+p {
+    color: var(--color-text-secondary);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+textarea,
+select {
+    color: var(--color-text-primary);
+}
+
+::selection {
+    background: var(--color-accent);
+    color: #ffffff;
+}
+
+.page-container {
+    width: min(92%, var(--container-width));
+    margin: 0 auto;
+}
+
+.section-spacing {
+    padding-top: var(--space-9);
+    padding-bottom: var(--space-9);
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: var(--space-4);
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    max-width: 900px;
+    margin-bottom: var(--space-6);
+}
+
+.section-description {
+    max-width: 680px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.primary-button,
+.secondary-button,
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    border: 1px solid transparent;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition:
+        background var(--transition-standard),
+        color var(--transition-standard),
+        border-color var(--transition-standard),
+        transform var(--transition-standard);
+}
+
+.primary-button {
+    padding: 15px 24px;
+    background: var(--color-dark);
+    color: #ffffff;
+    border-color: var(--color-dark);
+}
+
+.primary-button:hover {
+    background: transparent;
+    color: var(--color-dark);
+}
+
+.secondary-button {
+    padding: 15px 24px;
+    background: transparent;
+    color: var(--color-dark);
+    border-color: var(--color-dark);
+}
+
+.secondary-button:hover {
+    background: var(--color-dark);
+    color: #ffffff;
+}
+
+.text-link {
+    position: relative;
+    padding: 6px 0;
+    color: var(--color-text-primary);
+}
+
+.text-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform var(--transition-standard);
+}
+
+.text-link:hover::after {
+    transform: scaleX(0);
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        width: min(90%, var(--container-width));
+    }
+
+    .section-spacing {
+        padding-top: var(--space-8);
+        padding-bottom: var(--space-8);
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+}

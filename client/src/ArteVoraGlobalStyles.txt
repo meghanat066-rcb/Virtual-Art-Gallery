@@ -1,0 +1,31 @@
+:root {
+    --color-background: #f7f5f0;
+    --color-surface: #ffffff;
+    --color-text-primary: #161616;
+    --color-text-secondary: #6f6f6f;
+    --color-accent: #a47c48;
+    --color-border: #ddd8cf;
+    --color-dark: #111111;
+    --color-success: #357a55;
+    --color-warning: #b7791f;
+    --color-error: #b23a3a;
+
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Inter', Arial, sans-serif;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    --space-9: 96px;
+    --space-10: 128px;
+
+    --container-width: 1440px;
+    --transition-standard: 0.3s ease;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');

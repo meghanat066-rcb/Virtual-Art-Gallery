@@ -1,0 +1,933 @@
+/* =========================================================
+   ARTIST MY ARTWORKS PAGE
+   ========================================================= */
+
+.artist-my-artworks-page {
+    min-height: 100vh;
+    padding: 35px 55px 70px;
+    background: #f7f5f1;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.my-artworks-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.my-artworks-topbar > span {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #8b6f47;
+}
+
+.my-artworks-back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 15px;
+    border: 1px solid #ddd4c8;
+    background: #fff;
+    color: #554b40;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.my-artworks-back-button:hover {
+    background: #eee9e2;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.my-artworks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.my-artworks-header > div > span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #8b6f47;
+}
+
+.my-artworks-header h1 {
+    margin: 0 0 10px;
+    font-family: Georgia, serif;
+    font-size: 44px;
+    font-weight: 500;
+    color: #29251f;
+}
+
+.my-artworks-header p {
+    max-width: 650px;
+    margin: 0;
+    color: #777;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.add-artwork-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 19px;
+    border: none;
+    background: #3c342b;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s ease;
+}
+
+.add-artwork-button:hover {
+    background: #5a4c3d;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.my-artworks-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.my-artworks-summary-card {
+    padding: 22px;
+    background: #fff;
+    border: 1px solid #e6dfd6;
+}
+
+.my-artworks-summary-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: #9a7b52;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.my-artworks-summary-card strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #302b24;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.my-artworks-summary-card small {
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.my-artworks-content {
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #e6dfd6;
+    box-sizing: border-box;
+}
+
+.my-artworks-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 22px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #eee8df;
+}
+
+.my-artworks-section-heading > div:first-child > span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #9a7b52;
+}
+
+.my-artworks-section-heading h2 {
+    margin: 7px 0 0;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: #302b24;
+}
+
+.my-artworks-count {
+    padding: 9px 16px;
+    border: 1px solid #ded6ca;
+    color: #6f6254;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ARTWORK COLLECTION
+   ========================================================= */
+
+.my-artworks-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* =========================================================
+   ARTWORK CARD
+   ========================================================= */
+
+.my-artwork-card {
+    width: 100%;
+    display: grid;
+
+    /*
+       1. Image
+       2. Artwork information
+       3. Replica prices
+       4. Availability
+       5. Actions
+    */
+    grid-template-columns:
+        82px
+        minmax(190px, 1.15fr)
+        minmax(330px, 1.8fr)
+        120px
+        145px;
+
+    align-items: center;
+    column-gap: 24px;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+    border: 1px solid #e7e0d7;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.my-artwork-card:hover {
+    border-color: #d3c6b6;
+    box-shadow: 0 6px 20px rgba(50, 42, 34, 0.06);
+}
+
+
+/* =========================================================
+   ARTWORK IMAGE
+   ========================================================= */
+
+.my-artwork-image-wrapper {
+    position: relative;
+    width: 82px;
+    height: 96px;
+    overflow: hidden;
+    background: #f4f1ec;
+    border: 1px solid #e1d9cf;
+    box-sizing: border-box;
+}
+
+.my-artwork-image-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.my-artwork-no-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa29a;
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   ARTWORK INFORMATION
+   ========================================================= */
+
+.my-artwork-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.my-artwork-info .my-artwork-category {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #9b7040;
+}
+
+.my-artwork-info h3 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #302b26;
+}
+
+.my-artwork-info .my-artwork-artist {
+    margin: 0;
+    font-size: 12px;
+    color: #858078;
+}
+
+
+/* =========================================================
+   ARTWORK STATUS
+   ========================================================= */
+
+.my-artwork-info .my-artwork-status {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    min-width: 65px;
+
+    margin: 4px 0 0;
+    padding: 4px 9px;
+
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    background: #fff;
+}
+
+.my-artwork-status.approved {
+    color: #3f6d50;
+    border: 1px solid #b9d2c0;
+    background: #f5f8f3;
+}
+
+.my-artwork-status.pending {
+    color: #8a6a35;
+    border: 1px solid #dbc9a7;
+    background: #fcf9f2;
+}
+
+.my-artwork-status.rejected {
+    color: #8a4949;
+    border: 1px solid #d8b6b6;
+    background: #fbf5f4;
+}
+
+
+/* =========================================================
+   REPLICA PRICE SECTION
+   ========================================================= */
+
+/*
+   The JSX contains:
+
+   .my-artwork-price-list
+       ├── .my-artwork-price-column
+       │      ├── Small
+       │      └── Medium
+       │
+       └── .my-artwork-price-column
+              ├── Large
+              └── XL
+
+   The two columns are placed side-by-side here.
+*/
+
+.my-artwork-price-list {
+    min-width: 0;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 24px;
+    align-items: start;
+}
+
+.my-artwork-price-column {
+    min-width: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   INDIVIDUAL REPLICA PRICE
+   ========================================================= */
+
+.my-artwork-price-item {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 7px 0;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #e8e2d9;
+}
+
+.my-artwork-price-column
+.my-artwork-price-item:last-child {
+    border-bottom: none;
+}
+
+.my-artwork-price-item span {
+    min-width: 0;
+
+    font-size: 11px;
+    color: #777068;
+
+    white-space: nowrap;
+}
+
+.my-artwork-price-item strong {
+    flex-shrink: 0;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: #332d28;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   AVAILABILITY
+   ========================================================= */
+
+.my-artwork-availability {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 5px;
+
+    padding-left: 18px;
+
+    border-left: 1px solid #e8e1d8;
+    box-sizing: border-box;
+}
+
+.my-artwork-availability .my-artwork-column-label {
+    display: block;
+    margin: 0;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+
+    color: #9b7040;
+}
+
+.my-artwork-availability strong {
+    font-size: 12px;
+    font-weight: 600;
+    color: #514a42;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.my-artwork-actions {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.my-artwork-actions button {
+    width: 100%;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 8px 12px;
+
+    border: 1px solid #ddd5ca;
+    background: #ffffff;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.my-artwork-edit-button {
+    color: #51493f;
+}
+
+.my-artwork-edit-button:hover {
+    background: #f6f2ec;
+    border-color: #cbbdad;
+}
+
+.my-artwork-delete-button {
+    color: #9a5148;
+}
+
+.my-artwork-delete-button:hover {
+    background: #fbf3f1;
+    border-color: #d3aaa4;
+}
+
+.my-artwork-actions button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.my-artworks-empty {
+    min-height: 360px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+.my-artworks-empty-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ddd2c3;
+    border-radius: 50%;
+
+    color: #92754e;
+    font-size: 25px;
+}
+
+.my-artworks-empty h2 {
+    margin: 0 0 10px;
+
+    color: #342f28;
+
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.my-artworks-empty p {
+    max-width: 500px;
+
+    margin: 0 0 22px;
+
+    color: #888;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.my-artworks-empty button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 17px;
+
+    border: none;
+    background: #3c342b;
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.my-artworks-empty button:hover {
+    background: #5a4c3d;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.my-artworks-loading {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.my-artworks-loader {
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 20px;
+
+    border: 3px solid #ddd5ca;
+    border-top-color: #8b6f47;
+
+    border-radius: 50%;
+
+    animation: myArtworksSpin 0.8s linear infinite;
+}
+
+.my-artworks-loading h2 {
+    margin: 0 0 8px;
+
+    color: #342f28;
+
+    font-family: Georgia, serif;
+    font-weight: 500;
+}
+
+.my-artworks-loading p {
+    margin: 0;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+@keyframes myArtworksSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .artist-my-artworks-page {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .my-artwork-card {
+        grid-template-columns:
+            75px
+            180px
+            minmax(280px, 1fr)
+            105px
+            120px;
+
+        column-gap: 16px;
+        padding: 15px;
+    }
+
+    .my-artwork-image-wrapper {
+        width: 75px;
+        height: 88px;
+    }
+
+    .my-artwork-price-list {
+        column-gap: 16px;
+    }
+
+    .my-artwork-price-item {
+        gap: 7px;
+    }
+
+    .my-artwork-price-item span {
+        font-size: 10px;
+    }
+
+    .my-artwork-price-item strong {
+        font-size: 11px;
+    }
+
+    .my-artwork-availability {
+        padding-left: 12px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .my-artworks-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .my-artworks-header h1 {
+        font-size: 40px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .my-artworks-grid {
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .my-artwork-card {
+        min-width: 850px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 850px
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .my-artwork-card {
+        grid-template-columns:
+            80px
+            minmax(180px, 1fr)
+            minmax(250px, 1.3fr)
+            110px
+            120px;
+
+        column-gap: 18px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .artist-my-artworks-page {
+        padding: 25px 20px 50px;
+    }
+
+    .my-artworks-topbar {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .my-artworks-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .my-artworks-header h1 {
+        font-size: 36px;
+    }
+
+    .my-artworks-summary {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .my-artworks-content {
+        padding: 20px;
+    }
+
+    .my-artworks-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /*
+       On small screens the collection becomes a
+       normal single-column card.
+    */
+    .my-artworks-grid {
+        overflow-x: visible;
+    }
+
+    .my-artwork-card {
+        min-width: 0;
+
+        grid-template-columns:
+            80px
+            1fr;
+
+        gap: 18px;
+    }
+
+    .my-artwork-image-wrapper {
+        width: 80px;
+        height: 100px;
+    }
+
+    .my-artwork-info {
+        grid-column: 2;
+    }
+
+    .my-artwork-price-list {
+        grid-column: 2;
+
+        column-gap: 20px;
+    }
+
+    .my-artwork-availability {
+        grid-column: 2;
+
+        padding-left: 0;
+        padding-top: 12px;
+
+        border-left: none;
+        border-top: 1px solid #e8e1d8;
+    }
+
+    .my-artwork-actions {
+        grid-column: 2;
+
+        flex-direction: row;
+    }
+
+    .my-artwork-actions button {
+        flex: 1;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 450px
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .my-artworks-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .my-artworks-header h1 {
+        font-size: 32px;
+    }
+
+    .my-artworks-content {
+        padding: 16px;
+    }
+
+    .my-artwork-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .my-artwork-image-wrapper {
+        width: 100%;
+        height: 220px;
+    }
+
+    .my-artwork-info {
+        grid-column: 1;
+    }
+
+    .my-artwork-price-list {
+        grid-column: 1;
+
+        grid-template-columns: 1fr;
+        row-gap: 0;
+    }
+
+    .my-artwork-price-column {
+        width: 100%;
+    }
+
+    .my-artwork-availability {
+        grid-column: 1;
+    }
+
+    .my-artwork-actions {
+        grid-column: 1;
+
+        flex-direction: column;
+    }
+
+    .my-artwork-actions button {
+        width: 100%;
+    }
+}

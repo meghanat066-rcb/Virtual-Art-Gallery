@@ -1,0 +1,431 @@
+/* =========================================================
+   ARTEVORA — VIRTUAL ROOM ADMIN
+   ========================================================= */
+
+.admin-virtual-room-page {
+    min-height: 100vh;
+    background: #f7f5f1;
+    padding: 50px 40px 80px;
+    color: #222;
+}
+
+.admin-virtual-room-container {
+    width: min(1250px, 100%);
+    margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.admin-virtual-room-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 45px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dedbd5;
+}
+
+.admin-virtual-room-eyebrow {
+    display: block;
+    margin-bottom: 12px;
+    color: #8a7358;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.admin-virtual-room-header h1 {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 400;
+    letter-spacing: -1px;
+    color: #1e1e1c;
+}
+
+.admin-virtual-room-header p {
+    max-width: 650px;
+    margin: 14px 0 0;
+    color: #716f6a;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.admin-virtual-room-back {
+    flex-shrink: 0;
+    border: 1px solid #cfcac2;
+    background: transparent;
+    color: #393735;
+    padding: 12px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.admin-virtual-room-back:hover {
+    background: #262522;
+    border-color: #262522;
+    color: #fff;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.admin-virtual-room-form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.admin-virtual-room-section {
+    background: #fff;
+    border: 1px solid #e3e0da;
+    padding: 35px;
+}
+
+.admin-virtual-room-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ebe8e2;
+}
+
+.admin-virtual-room-section-heading > div {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.admin-virtual-room-section-heading span {
+    color: #9a876f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.admin-virtual-room-section-heading h2 {
+    margin: 0;
+    color: #252421;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.admin-virtual-room-section-heading p {
+    max-width: 420px;
+    margin: 0;
+    color: #77736d;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: right;
+}
+
+/* =========================================================
+   FIELDS
+   ========================================================= */
+
+.admin-virtual-room-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.admin-virtual-room-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.admin-virtual-room-field.full {
+    grid-column: 1 / -1;
+}
+
+.admin-virtual-room-field label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #383633;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.admin-virtual-room-field label span {
+    color: #a08f7a;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.admin-virtual-room-field input,
+.admin-virtual-room-field textarea,
+.admin-virtual-room-field select {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d9d5ce;
+    border-radius: 0;
+    background: #fcfbf9;
+    color: #282724;
+    padding: 13px 14px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-virtual-room-field input {
+    min-height: 46px;
+}
+
+.admin-virtual-room-field textarea {
+    min-height: 110px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.admin-virtual-room-field select {
+    min-height: 46px;
+    cursor: pointer;
+}
+
+.admin-virtual-room-field input:focus,
+.admin-virtual-room-field textarea:focus,
+.admin-virtual-room-field select:focus {
+    border-color: #927a5d;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(146, 122, 93, 0.08);
+}
+
+.admin-virtual-room-field input::placeholder,
+.admin-virtual-room-field textarea::placeholder {
+    color: #aaa59d;
+}
+
+.admin-virtual-room-field small {
+    color: #918c84;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   FILE INPUT
+   ========================================================= */
+
+.admin-virtual-room-field input[type='file'] {
+    padding: 9px;
+    cursor: pointer;
+}
+
+.admin-virtual-room-field input[type='file']::file-selector-button {
+    margin-right: 12px;
+    border: 1px solid #cbc6bd;
+    background: #f3f0eb;
+    color: #45423e;
+    padding: 8px 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* =========================================================
+   REPEATABLE CARDS
+   ========================================================= */
+
+.admin-virtual-room-repeatable {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin-virtual-room-card {
+    border: 1px solid #dfdcd6;
+    background: #fbfaf8;
+    padding: 25px;
+}
+
+.admin-virtual-room-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e6e2dc;
+}
+
+.admin-virtual-room-card-header > div > span {
+    display: block;
+    margin-bottom: 6px;
+    color: #9b8973;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.admin-virtual-room-card-header h3 {
+    margin: 0;
+    color: #292825;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.admin-virtual-room-remove {
+    border: none;
+    background: transparent;
+    color: #9b5148;
+    padding: 4px 0;
+    font-size: 11px;
+    cursor: pointer;
+    letter-spacing: 0.4px;
+}
+
+.admin-virtual-room-remove:hover {
+    color: #70362f;
+    text-decoration: underline;
+}
+
+/* =========================================================
+   ADD BUTTON
+   ========================================================= */
+
+.admin-virtual-room-add {
+    margin-top: 20px;
+    border: 1px dashed #c9c4bb;
+    background: transparent;
+    color: #665f56;
+    padding: 13px 20px;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.admin-virtual-room-add:hover {
+    border-color: #927a5d;
+    background: #f5f1eb;
+    color: #3c3935;
+}
+
+/* =========================================================
+   BOTTOM ACTIONS
+   ========================================================= */
+
+.admin-virtual-room-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    padding-top: 10px;
+}
+
+.admin-virtual-room-cancel,
+.admin-virtual-room-submit {
+    min-width: 160px;
+    padding: 14px 22px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.admin-virtual-room-cancel {
+    border: 1px solid #cbc6be;
+    background: transparent;
+    color: #4d4a46;
+}
+
+.admin-virtual-room-cancel:hover {
+    background: #ebe7e1;
+}
+
+.admin-virtual-room-submit {
+    border: 1px solid #292825;
+    background: #292825;
+    color: #fff;
+}
+
+.admin-virtual-room-submit:hover {
+    background: #4a4742;
+    border-color: #4a4742;
+}
+
+.admin-virtual-room-submit:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .admin-virtual-room-page {
+        padding: 35px 25px 60px;
+    }
+
+    .admin-virtual-room-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .admin-virtual-room-section-heading {
+        flex-direction: column;
+    }
+
+    .admin-virtual-room-section-heading p {
+        max-width: 600px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 700px) {
+    .admin-virtual-room-page {
+        padding: 25px 16px 50px;
+    }
+
+    .admin-virtual-room-section {
+        padding: 22px 18px;
+    }
+
+    .admin-virtual-room-fields {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .admin-virtual-room-field.full {
+        grid-column: auto;
+    }
+
+    .admin-virtual-room-section-heading > div {
+        gap: 10px;
+    }
+
+    .admin-virtual-room-section-heading h2 {
+        font-size: 23px;
+    }
+
+    .admin-virtual-room-card {
+        padding: 18px;
+    }
+
+    .admin-virtual-room-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .admin-virtual-room-cancel,
+    .admin-virtual-room-submit {
+        width: 100%;
+    }
+}

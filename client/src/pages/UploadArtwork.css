@@ -1,0 +1,1133 @@
+/* =========================================================
+   ARTEVORA — UPLOAD ARTWORK PAGE
+========================================================= */
+
+.artevora-upload-page {
+    min-height: 100vh;
+    background: #ffffff;
+    color: #24211e;
+    padding: 70px 40px 100px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER / BACK BUTTON
+========================================================= */
+
+.artevora-upload-header {
+    max-width: 1180px;
+    margin: 0 auto 35px;
+}
+
+.artevora-upload-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    border: none;
+    background: transparent;
+
+    color: #55504a;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    padding: 8px 0;
+
+    transition: color 0.2s ease;
+}
+
+.artevora-upload-back:hover {
+    color: #111;
+}
+
+.artevora-upload-back svg {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.artevora-upload-intro {
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.artevora-upload-label {
+    margin: 0 0 18px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+    color: #8b837a;
+}
+
+.artevora-upload-intro h1 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 5vw, 76px);
+    font-weight: 400;
+
+    line-height: 1.05;
+    letter-spacing: -2px;
+
+    color: #211f1d;
+}
+
+.artevora-upload-intro-text {
+    max-width: 650px;
+
+    margin: 28px auto 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+
+    color: #7b746d;
+}
+
+
+/* =========================================================
+   MAIN FORM
+========================================================= */
+
+.artevora-upload-form {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e3dfda;
+
+    padding: 45px 50px 55px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   INFORMATION SECTION
+========================================================= */
+
+.artevora-upload-information,
+.artevora-upload-image-section {
+    width: 100%;
+}
+
+.artevora-upload-section-title {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #ddd8d2;
+
+    margin-bottom: 35px;
+}
+
+.artevora-upload-section-title span {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    color: #aaa29a;
+}
+
+.artevora-upload-section-title h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 26px;
+    font-weight: 400;
+
+    color: #292622;
+}
+
+
+/* =========================================================
+   FORM FIELDS
+========================================================= */
+
+.artevora-upload-field {
+    margin-bottom: 27px;
+}
+
+.artevora-upload-field label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    color: #625c56;
+}
+
+.artevora-upload-field input,
+.artevora-upload-field select,
+.artevora-upload-field textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d9d4ce;
+
+    border-radius: 0;
+
+    background: #ffffff;
+
+    padding: 16px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    color: #302d29;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.artevora-upload-field input,
+.artevora-upload-field select {
+    height: 54px;
+}
+
+.artevora-upload-field textarea {
+    min-height: 140px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+.artevora-upload-field input::placeholder,
+.artevora-upload-field textarea::placeholder {
+    color: #aaa39c;
+}
+
+.artevora-upload-field input:focus,
+.artevora-upload-field select:focus,
+.artevora-upload-field textarea:focus {
+    border-color: #8b8178;
+
+    box-shadow: 0 0 0 2px rgba(139, 129, 120, 0.08);
+}
+
+
+/* READ ONLY ARTIST FIELD */
+
+.artevora-upload-field input[readonly] {
+    background: #f7f5f2;
+
+    color: #746d66;
+
+    cursor: default;
+}
+
+
+/* =========================================================
+   ARTWORK TYPE SELECTOR
+========================================================= */
+
+.artevora-artwork-type-selector {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-top: 5px;
+}
+
+.artevora-artwork-type-selector button {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    text-align: left;
+
+    min-height: 105px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #d8d2cc;
+
+    border-radius: 0;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.artevora-artwork-type-selector button:hover {
+    border-color: #a79d94;
+
+    background: #faf9f7;
+}
+
+.artevora-artwork-type-selector button.active {
+    border-color: #292622;
+
+    background: #f6f3ef;
+
+    box-shadow: inset 0 0 0 1px #292622;
+}
+
+.artevora-artwork-type-selector button strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #282522;
+}
+
+.artevora-artwork-type-selector button span {
+    display: block;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #777069;
+}
+
+
+/* =========================================================
+   REPLICA ORIGINAL ARTWORK SELECT
+========================================================= */
+
+.artevora-upload-field select {
+    appearance: auto;
+}
+
+.artevora-upload-field select option {
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================================
+   REPLICA PRICE SECTION
+========================================================= */
+
+.artevora-replica-prices-field {
+    padding: 25px;
+
+    border: 1px solid #e0dbd5;
+
+    background: #faf9f7;
+}
+
+.artevora-replica-prices-field > label {
+    margin-bottom: 6px;
+}
+
+.artevora-upload-field-help {
+    margin: 0 0 20px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #817970;
+}
+
+
+/* PRICE ROW */
+
+.artevora-replica-price-row {
+    display: grid;
+
+    grid-template-columns: 1fr 180px;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #e4dfda;
+}
+
+.artevora-replica-price-row:first-of-type {
+    border-top: none;
+}
+
+.artevora-replica-price-row > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.artevora-replica-price-row strong {
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #302c28;
+}
+
+.artevora-replica-price-row span {
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    color: #817970;
+}
+
+.artevora-replica-price-row input {
+    height: 48px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   IMAGE UPLOAD SECTION
+========================================================= */
+
+.artevora-upload-image-section {
+    margin-top: 55px;
+}
+
+.artevora-upload-area {
+    position: relative;
+
+    min-height: 260px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    border: 1px dashed #cfc8c1;
+
+    background: #faf9f7;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.artevora-upload-area:hover {
+    border-color: #8f867e;
+
+    background: #f7f5f2;
+}
+
+.artevora-upload-area svg {
+    margin-bottom: 18px;
+
+    font-size: 36px;
+
+    color: #8b8178;
+}
+
+.artevora-upload-area strong {
+    margin-bottom: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    color: #302c28;
+}
+
+.artevora-upload-area span {
+    margin-bottom: 12px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #7d756e;
+}
+
+.artevora-upload-area small {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: #aaa29a;
+}
+
+.artevora-upload-area input {
+    display: none;
+}
+
+
+/* =========================================================
+   IMAGE PREVIEW
+========================================================= */
+
+.artevora-upload-preview {
+    position: relative;
+
+    width: 100%;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #ddd8d2;
+
+    background: #faf9f7;
+
+    text-align: center;
+}
+
+.artevora-upload-preview img {
+    display: block;
+
+    max-width: 100%;
+
+    max-height: 600px;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+.artevora-remove-image {
+    margin-top: 20px;
+
+    padding: 11px 20px;
+
+    border: 1px solid #bdb5ad;
+
+    background: #ffffff;
+
+    color: #4b4641;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.artevora-remove-image:hover {
+    background: #f3f0ec;
+
+    border-color: #8d847c;
+}
+
+
+/* =========================================================
+   ERROR / SUCCESS
+========================================================= */
+
+.artevora-upload-error,
+.artevora-upload-success {
+    margin-top: 30px;
+
+    padding: 15px 18px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    border: 1px solid;
+}
+
+.artevora-upload-error {
+    background: #faf2f0;
+
+    border-color: #dec5bf;
+
+    color: #8a4035;
+}
+
+.artevora-upload-success {
+    background: #f2f6f1;
+
+    border-color: #c5d4c1;
+
+    color: #496044;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.artevora-upload-submit {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 45px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #ddd8d2;
+}
+
+.artevora-upload-submit button {
+    min-width: 190px;
+
+    height: 54px;
+
+    padding: 0 28px;
+
+    border: 1px solid #272421;
+
+    background: #272421;
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.artevora-upload-submit button:hover:not(:disabled) {
+    background: #45403b;
+
+    border-color: #45403b;
+}
+
+.artevora-upload-submit button:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+.artevora-upload-submit button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .artevora-upload-page {
+        padding: 50px 25px 80px;
+    }
+
+    .artevora-upload-form {
+        padding: 40px 35px 45px;
+    }
+
+    .artevora-upload-intro h1 {
+        font-size: 54px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .artevora-upload-page {
+        padding: 35px 15px 60px;
+    }
+
+    .artevora-upload-header {
+        margin-bottom: 25px;
+    }
+
+    .artevora-upload-intro {
+        margin-bottom: 40px;
+    }
+
+    .artevora-upload-intro h1 {
+        font-size: 42px;
+
+        letter-spacing: -1px;
+    }
+
+    .artevora-upload-intro-text {
+        font-size: 13px;
+
+        padding: 0 10px;
+    }
+
+    .artevora-upload-form {
+        padding: 30px 20px 35px;
+
+        border-left: none;
+        border-right: none;
+    }
+
+    .artevora-upload-section-title {
+        gap: 12px;
+
+        padding-bottom: 22px;
+
+        margin-bottom: 28px;
+    }
+
+    .artevora-upload-section-title h2 {
+        font-size: 22px;
+    }
+
+    .artevora-artwork-type-selector {
+        grid-template-columns: 1fr;
+    }
+
+    .artevora-replica-price-row {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .artevora-replica-price-row input {
+        width: 100%;
+    }
+
+    .artevora-replica-prices-field {
+        padding: 18px;
+    }
+
+    .artevora-upload-area {
+        min-height: 220px;
+
+        padding: 25px 15px;
+    }
+
+    .artevora-upload-submit {
+        justify-content: stretch;
+    }
+
+    .artevora-upload-submit button {
+        width: 100%;
+    }
+
+}
+/* =========================================================
+   ARTEVORA — REPLICA AVAILABILITY
+========================================================= */
+
+.artevora-upload-field .artevora-replica-toggle {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.artevora-upload-field .artevora-replica-toggle button {
+    min-width: 52px;
+    padding: 9px 18px;
+    border: 1px solid #d4c9bb;
+    border-radius: 3px;
+    background: #fff;
+    color: #5b5045;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.artevora-upload-field .artevora-replica-toggle button:hover {
+    border-color: #8c704c;
+}
+
+.artevora-upload-field .artevora-replica-toggle button.active {
+    background: #3d3025;
+    border-color: #3d3025;
+    color: #fff;
+}
+
+
+/* =========================================================
+   REPLICA OPTIONS CONTAINER
+========================================================= */
+
+.artevora-replica-options {
+    margin-top: 38px;
+    padding: 30px;
+    background: #f8f5ef;
+    border: 1px solid #e1d9ce;
+    border-radius: 4px;
+}
+
+
+/* Heading */
+
+.artevora-replica-heading {
+    margin-bottom: 24px;
+}
+
+.artevora-replica-heading h3 {
+    margin: 0 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #2e2823;
+}
+
+.artevora-replica-heading p {
+    margin: 0;
+    color: #756b61;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   INDIVIDUAL REPLICA OPTION
+========================================================= */
+
+.artevora-replica-option {
+    display: grid;
+    grid-template-columns: 90px 1fr 180px;
+    align-items: center;
+    gap: 22px;
+
+    margin-bottom: 12px;
+    padding: 18px 20px;
+
+    background: #fff;
+    border: 1px solid #ded6cb;
+    border-radius: 4px;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.artevora-replica-option:last-child {
+    margin-bottom: 0;
+}
+
+.artevora-replica-option:hover {
+    border-color: #b39a78;
+    box-shadow: 0 5px 18px rgba(55, 43, 31, 0.06);
+}
+
+.artevora-replica-option.selected {
+    border-color: #8c704c;
+    background: #fcfaf6;
+    box-shadow: 0 5px 18px rgba(55, 43, 31, 0.05);
+}
+
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.artevora-replica-option-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0;
+    color: #71665b;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.artevora-replica-option-check input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+
+    accent-color: #5a432d;
+    cursor: pointer;
+}
+
+.artevora-replica-option-check span {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SIZE INFORMATION
+========================================================= */
+
+.artevora-replica-option-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.artevora-replica-option-info strong {
+    color: #302922;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.artevora-replica-option-info span {
+    color: #81766b;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.artevora-replica-option-price {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.artevora-replica-option-price label {
+    margin: 0;
+
+    color: #75695d;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.artevora-replica-option-price input {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+
+    padding: 0 12px;
+
+    border: 1px solid #d5ccc0;
+    border-radius: 3px;
+
+    background: #fff;
+    color: #342c26;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.artevora-replica-option-price input:focus {
+    border-color: #8c704c;
+    box-shadow: 0 0 0 3px rgba(140, 112, 76, 0.08);
+}
+
+.artevora-replica-option-price input:disabled {
+    background: #f1eee9;
+    color: #aaa198;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   REPLICA IMAGE UPLOAD
+========================================================= */
+
+/* Only the upload area belonging to #replica-image */
+
+.artevora-upload-field label[for="replica-image"] {
+    box-sizing: border-box;
+}
+
+.artevora-upload-field label[for="replica-image"].artevora-upload-area {
+    min-height: 190px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    border: 1px dashed #cfc4b6;
+    border-radius: 4px;
+
+    background: #fbf9f5;
+
+    text-align: center;
+    cursor: pointer;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.artevora-upload-field label[for="replica-image"].artevora-upload-area:hover {
+    border-color: #967851;
+    background: #f8f4ed;
+    box-shadow: 0 8px 24px rgba(55, 43, 31, 0.06);
+}
+
+
+/* Upload icon */
+
+.artevora-upload-field label[for="replica-image"].artevora-upload-area svg {
+    margin-bottom: 14px;
+    font-size: 30px;
+    color: #8b8177;
+}
+
+
+/* Upload title */
+
+.artevora-upload-field label[for="replica-image"].artevora-upload-area strong {
+    margin-bottom: 7px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    font-weight: 400;
+
+    color: #332b25;
+}
+
+
+/* Description */
+
+.artevora-upload-field label[for="replica-image"].artevora-upload-area span {
+    max-width: 500px;
+
+    color: #7b7167;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* File information */
+
+.artevora-upload-field label[for="replica-image"].artevora-upload-area small {
+    margin-top: 9px;
+
+    color: #a0978d;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+
+/* =========================================================
+   REPLICA IMAGE PREVIEW
+========================================================= */
+
+.artevora-upload-field:has(#replica-image) .artevora-upload-preview {
+    padding: 16px;
+
+    border: 1px solid #ddd4c8;
+    border-radius: 4px;
+
+    background: #fff;
+}
+
+.artevora-upload-field:has(#replica-image) .artevora-upload-preview img {
+    display: block;
+
+    width: 100%;
+    max-height: 300px;
+
+    object-fit: contain;
+    background: #f8f6f2;
+}
+
+
+/* =========================================================
+   REMOVE REPLICA IMAGE BUTTON
+========================================================= */
+
+.artevora-upload-field:has(#replica-image) .artevora-remove-image {
+    margin-top: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .artevora-replica-options {
+        padding: 22px;
+    }
+
+    .artevora-replica-option {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .artevora-replica-option-price {
+        width: 100%;
+    }
+
+    .artevora-replica-option-price input {
+        width: 100%;
+    }
+}

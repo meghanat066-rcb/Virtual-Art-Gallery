@@ -1,0 +1,566 @@
+.artevora-virtual-gallery-3d {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background: #d8d2c8;
+}
+
+.artevora-virtual-gallery-3d canvas {
+    display: block;
+
+    width: 100% !important;
+    height: 100% !important;
+}
+.artevora-virtual-menu-button {
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #15182f;
+
+    font-size: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.18);
+
+    z-index: 50;
+}
+/* =========================================
+   INSTRUCTIONS OVERLAY
+========================================= */
+
+.artevora-instructions-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(20, 20, 20, 0.28);
+
+    backdrop-filter: blur(2px);
+
+    z-index: 100;
+}
+
+
+/* =========================================
+   INSTRUCTIONS PANEL
+========================================= */
+
+.artevora-instructions-panel {
+    width: min(620px, calc(100vw - 40px));
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 30px 36px 32px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+
+    color: #15182f;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.artevora-instructions-header {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+}
+
+.artevora-instructions-header h2 {
+    margin: 0;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2px;
+}
+
+.artevora-instructions-close {
+    position: absolute;
+
+    right: 0;
+    top: -5px;
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #15182f;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   GALLERY VISUAL
+========================================= */
+
+.artevora-instructions-visual {
+    display: flex;
+
+    justify-content: center;
+
+    margin: 5px 0 28px;
+}
+
+.artevora-gallery-diagram {
+    position: relative;
+
+    width: 390px;
+    height: 190px;
+
+    max-width: 100%;
+}
+
+
+/* BACK WALL */
+
+.artevora-gallery-back-wall {
+    position: absolute;
+
+    left: 21%;
+    right: 21%;
+
+    top: 30px;
+    bottom: 30px;
+
+    border: 2px solid #15182f;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.5),
+            rgba(240, 238, 234, 0.3)
+        );
+}
+
+
+/* LEFT WALL */
+
+.artevora-gallery-left-wall {
+    position: absolute;
+
+    left: 2%;
+
+    top: 0;
+
+    width: 20%;
+    height: 100%;
+
+    border-top: 2px solid #15182f;
+    border-right: 2px solid #15182f;
+
+    transform: skewY(27deg);
+
+    transform-origin: right center;
+}
+
+
+/* RIGHT WALL */
+
+.artevora-gallery-right-wall {
+    position: absolute;
+
+    right: 2%;
+
+    top: 0;
+
+    width: 20%;
+    height: 100%;
+
+    border-top: 2px solid #15182f;
+    border-left: 2px solid #15182f;
+
+    transform: skewY(-27deg);
+
+    transform-origin: left center;
+}
+
+
+/* PERSPECTIVE */
+
+.artevora-gallery-perspective-line {
+    position: absolute;
+
+    left: 50%;
+    bottom: 15px;
+
+    width: 2px;
+    height: 45px;
+
+    background: #15182f;
+
+    transform: translateX(-50%);
+}
+
+
+/* CENTER SYMBOL */
+
+.artevora-gallery-cursor {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #15182f;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.artevora-instructions-controls {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 100px;
+
+    padding: 24px 0;
+
+    border-top: 1px solid #dedbd6;
+    border-bottom: 1px solid #dedbd6;
+}
+
+.artevora-control-section {
+    min-width: 160px;
+
+    text-align: center;
+}
+
+.artevora-control-section h3 {
+    margin: 0 0 14px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+.artevora-control-section p {
+    margin: 12px 0 0;
+
+    font-size: 12px;
+
+    color: #686868;
+}
+
+
+/* =========================================
+   KEYBOARD
+========================================= */
+
+.artevora-wasd-keys,
+.artevora-arrow-keys {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.artevora-key-row {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.artevora-control-key {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1.5px solid #15182f;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #15182f;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   START BUTTON
+========================================= */
+
+.artevora-instructions-start {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 24px;
+
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #15182f;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.4px;
+
+    cursor: pointer;
+}
+
+.artevora-instructions-start:hover {
+    opacity: 0.88;
+}
+
+
+/* =========================================
+   MOBILE / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 700px) {
+
+    .artevora-instructions-panel {
+        padding: 24px 20px 25px;
+    }
+
+    .artevora-instructions-controls {
+        gap: 30px;
+    }
+
+    .artevora-control-section {
+        min-width: 130px;
+    }
+
+}
+/* =========================================
+   VIRTUAL GALLERY MENU
+========================================= */
+
+.artevora-virtual-menu {
+    position: fixed;
+
+    right: 24px;
+    bottom: 82px;
+
+    width: 230px;
+
+    padding: 8px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.18);
+
+    z-index: 80;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+/* MENU ITEM */
+
+.artevora-virtual-menu-item {
+    width: 100%;
+
+    min-height: 46px;
+
+    padding: 0 14px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #15182f;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.2s ease;
+}
+
+
+.artevora-virtual-menu-item:hover {
+    background: #f1efeb;
+}
+
+
+/* RIGHT ARROW */
+
+.artevora-menu-arrow {
+    font-size: 20px;
+
+    color: #777;
+
+    line-height: 1;
+}
+
+
+/* STATUS */
+
+.artevora-menu-status {
+    font-size: 10px;
+
+    letter-spacing: 0.8px;
+
+    color: #777;
+}
+.artevora-virtual-gallery-3d:fullscreen {
+    width: 100vw;
+    height: 100vh;
+
+    background: #d8d2c8;
+}
+.artevora-artwork-view {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #111;
+}
+
+.artevora-artwork-view-image {
+    width: 90vw;
+    height: 80vh;
+
+    object-fit: contain;
+}
+
+.artevora-artwork-view h2 {
+    margin: 12px 0 0;
+
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.artevora-artwork-view-close {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+
+    width: 50px;
+    height: 50px;
+
+    z-index: 9999;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}

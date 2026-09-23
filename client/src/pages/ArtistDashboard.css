@@ -1,0 +1,1286 @@
+/* =========================================================
+   ARTIST DASHBOARD
+   ========================================================= */
+
+.artist-studio-dashboard {
+    width: 100%;
+    min-height: calc(100vh - 90px);
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    background: #f7f5f0;
+    color: #25231f;
+    margin: 0;
+    padding: 0;
+     margin-top: -220px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.artist-sidebar {
+    width: 260px;
+    min-height: calc(100vh - 90px);
+    background: #f7f5f0;
+    border-right: 1px solid #ddd8cf;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+    top: 90px;
+
+    align-self: start;
+}
+
+
+/* BRAND */
+
+.artist-brand {
+    padding: 28px 30px 24px;
+    border-bottom: 1px solid #ddd8cf;
+}
+
+.artist-brand h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #22201d;
+}
+
+.artist-brand span {
+    display: block;
+    margin-top: 5px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #a58a63;
+}
+
+
+/* PROFILE */
+
+.artist-profile-mini {
+    padding: 25px 30px;
+    border-bottom: 1px solid #ddd8cf;
+}
+
+.artist-profile-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e9e1d5;
+    color: #5d564c;
+
+    margin-bottom: 12px;
+}
+
+.artist-profile-mini h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.artist-profile-mini span {
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999188;
+}
+
+
+/* NAVIGATION */
+
+.artist-sidebar-nav {
+    padding: 18px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.artist-sidebar-nav button {
+    width: 100%;
+    min-height: 43px;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 10px 14px;
+
+    border: none;
+    background: transparent;
+
+    color: #716c64;
+
+    font-size: 12px;
+    letter-spacing: .3px;
+
+    text-align: left;
+    cursor: pointer;
+
+    border-left: 2px solid transparent;
+
+    transition: .2s ease;
+}
+
+.artist-sidebar-nav button svg {
+    width: 13px;
+    min-width: 13px;
+}
+
+.artist-sidebar-nav button:hover {
+    background: #efebe5;
+    color: #292722;
+}
+
+.artist-sidebar-nav button.active {
+    background: #ebe7df;
+    color: #292722;
+    border-left-color: #a77a42;
+    font-weight: 600;
+}
+
+
+/* NOTIFICATION */
+
+.notification-count {
+    margin-left: auto;
+
+    width: 19px;
+    height: 19px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ad7c43;
+    color: white;
+
+    font-size: 10px;
+}
+
+
+/* QUOTE */
+
+.artist-sidebar-quote {
+    margin-top: auto;
+    padding: 30px;
+    border-top: 1px solid #ddd8cf;
+}
+
+.artist-sidebar-quote > span {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    color: #b28a58;
+}
+
+.artist-sidebar-quote p {
+    margin: 4px 0 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    line-height: 1.7;
+
+    color: #777169;
+}
+
+.artist-sidebar-quote small {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10px;
+    color: #999188;
+}
+
+
+/* =========================================================
+   MAIN DASHBOARD
+   ========================================================= */
+
+.artist-dashboard-main {
+    min-width: 0;
+    width: 100%;
+
+    padding: 52px 55px 70px;
+
+    box-sizing: border-box;
+    transform: translateY(-80px);
+}
+
+
+/* =========================================================
+   WELCOME AREA
+   IMPORTANT:
+   THIS IS NOT A CARD.
+   ========================================================= */
+
+.artist-dashboard-hero {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 8px 0 42px;
+
+    border-bottom: 1px solid #ddd8cf;
+
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+
+/* HERO CONTENT */
+
+.artist-hero-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.artist-eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #a77a42;
+}
+
+.artist-hero-content h1 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 4vw, 62px);
+
+    font-weight: 400;
+    line-height: 1.08;
+
+    color: #24221f;
+}
+
+.artist-hero-line {
+    width: 52px;
+    height: 1px;
+
+    margin: 22px 0;
+
+    background: #b78b57;
+}
+
+.artist-hero-content p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #777169;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+/* =========================================================
+   HERO IMAGE AREA
+   ========================================================= */
+
+.artist-hero-image {
+    width: 300px;
+    min-width: 300px;
+
+    height: 185px;
+
+    overflow: hidden;
+}
+
+.artist-hero-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ded8ce,
+            #c7bfb2
+        );
+
+    color: #6e665b;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   JOURNEY
+   ========================================================= */
+
+.artist-journey-card {
+    width: 100%;
+
+    padding: 28px 0 34px;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #a77a42;
+}
+
+
+/* JOURNEY LINE */
+
+.artist-journey {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 0;
+}
+
+.artist-journey::before {
+    content: "";
+
+    position: absolute;
+
+    top: 16px;
+    left: 18px;
+    right: 18px;
+
+    height: 1px;
+
+    background: #d7d1c8;
+
+    z-index: 0;
+}
+
+.journey-step {
+    position: relative;
+
+    text-align: left;
+
+    min-width: 0;
+
+    z-index: 1;
+}
+
+.journey-icon {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eeeae3;
+    border: 1px solid #d8d1c7;
+
+    color: #aaa39a;
+
+    margin-bottom: 10px;
+}
+
+.journey-step.completed .journey-icon {
+    background: #292722;
+    border-color: #292722;
+    color: white;
+}
+
+.journey-step.active .journey-icon {
+    background: #ad7c43;
+    border-color: #ad7c43;
+    color: white;
+}
+
+.journey-step h4 {
+    margin: 0 0 5px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #35312c;
+}
+
+.journey-step span {
+    font-size: 10px;
+    color: #9b948b;
+}
+
+
+/* =========================================================
+   THREE COLUMN DASHBOARD
+   ========================================================= */
+
+.artist-dashboard-columns {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 18px;
+
+    align-items: stretch;
+}
+
+
+/* COMMON PANELS */
+
+.dashboard-panel {
+    min-width: 0;
+
+    background: #fff;
+
+    border: 1px solid #ddd8cf;
+
+    border-radius: 0;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+}
+
+
+/* PANEL HEADING */
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid #e5e0d8;
+
+    margin-bottom: 16px;
+}
+
+.panel-heading .section-label {
+    margin: 0;
+}
+
+.panel-heading button {
+    border: none;
+    background: transparent;
+
+    padding: 0;
+
+    color: #8b6740;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SUBMISSIONS
+   ========================================================= */
+
+.submission-item {
+    display: grid;
+
+    grid-template-columns: 62px minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eeeae4;
+}
+
+.submission-item:last-child {
+    border-bottom: none;
+}
+
+.submission-item img {
+    width: 62px;
+    height: 62px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.submission-details {
+    min-width: 0;
+}
+
+.submission-details h3 {
+    margin: 0 0 5px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.submission-details p {
+    margin: 0 0 5px;
+
+    font-size: 11px;
+    color: #777169;
+}
+
+.submission-details small {
+    font-size: 9px;
+    color: #aaa39a;
+}
+
+.submission-status {
+    padding: 6px 9px;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+.status-approved {
+    background: #e4f1e7;
+    color: #438052;
+}
+
+.status-pending {
+    background: #f5ead8;
+    color: #a47537;
+}
+
+.status-rejected {
+    background: #f5e2e0;
+    color: #ad5149;
+}
+
+
+/* =========================================================
+   ACTIVITY
+   ========================================================= */
+
+.activity-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #eeeae4;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 30px;
+    height: 30px;
+
+    min-width: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+}
+
+.activity-icon.approved {
+    background: #e4f1e7;
+    color: #438052;
+}
+
+.activity-icon.liked {
+    background: #f6e5e4;
+    color: #b0524b;
+}
+
+.activity-icon.enquiry {
+    background: #eee9e1;
+    color: #856b4b;
+}
+
+.activity-item p {
+    margin: 0 0 5px;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: #4d4943;
+}
+
+.activity-item small {
+    font-size: 9px;
+    color: #aaa39a;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile-panel-content {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-top: 10px;
+}
+
+.profile-placeholder {
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e9e1d5;
+    color: #655d52;
+}
+
+.profile-panel-content p {
+    margin: 0 0 12px;
+
+    font-size: 11px;
+    line-height: 1.6;
+
+    color: #777169;
+}
+
+.profile-complete {
+    font-size: 10px;
+    color: #4e8a5a;
+}
+
+.profile-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+.profile-buttons button {
+    flex: 1;
+
+    min-height: 34px;
+
+    border: 1px solid #d8d1c7;
+
+    background: transparent;
+
+    color: #514c45;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+}
+
+.profile-buttons button:hover {
+    background: #f2eee8;
+}
+
+
+/* =========================================================
+   AUDIENCE
+   ========================================================= */
+
+.artist-audience-card {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    background: #fff;
+
+    border: 1px solid #ddd8cf;
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+.section-heading-row {
+    margin-bottom: 20px;
+}
+
+.section-heading-row .section-label {
+    margin-bottom: 0;
+}
+
+.audience-stat-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid #e5e0d8;
+    border-bottom: 1px solid #e5e0d8;
+}
+
+.audience-stat {
+    min-height: 105px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border-right: 1px solid #e5e0d8;
+}
+
+.audience-stat:last-child {
+    border-right: none;
+}
+
+.audience-stat > span {
+    margin-bottom: 8px;
+
+    color: #a77a42;
+
+    font-size: 15px;
+}
+
+.audience-stat strong {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+    font-weight: 400;
+
+    color: #2c2925;
+}
+
+.audience-stat small {
+    margin-top: 4px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: #9b948b;
+}
+
+.audience-description {
+    margin: 18px 0 0;
+
+    font-size: 11px;
+    color: #8a837a;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-dashboard-message {
+    padding: 30px 10px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #999188;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .artist-dashboard-main {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .artist-dashboard-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profile-panel {
+        grid-column: span 2;
+    }
+
+    .artist-hero-image {
+        width: 240px;
+        min-width: 240px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .artist-studio-dashboard {
+        grid-template-columns: 210px minmax(0, 1fr);
+    }
+
+    .artist-sidebar {
+        width: 210px;
+    }
+
+    .artist-dashboard-main {
+        padding: 35px 25px 60px;
+    }
+
+    .artist-dashboard-hero {
+        flex-direction: column;
+    }
+
+    .artist-hero-image {
+        width: 100%;
+        height: 150px;
+    }
+
+    .artist-journey {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 25px;
+    }
+
+    .artist-journey::before {
+        display: none;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .artist-studio-dashboard {
+        display: block;
+    }
+
+    .artist-sidebar {
+        width: 100%;
+        min-height: auto;
+
+        position: relative;
+        top: 0;
+
+        border-right: none;
+        border-bottom: 1px solid #ddd8cf;
+    }
+
+    .artist-brand {
+        padding: 20px;
+    }
+
+    .artist-profile-mini {
+        padding: 18px 20px;
+    }
+
+    .artist-sidebar-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artist-sidebar-quote {
+        display: none;
+    }
+
+    .artist-dashboard-main {
+        padding: 30px 18px 50px;
+    }
+
+    .artist-dashboard-hero {
+        padding-top: 0;
+    }
+
+    .artist-hero-content h1 {
+        font-size: 40px;
+    }
+
+    .artist-dashboard-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-panel {
+        grid-column: auto;
+    }
+
+    .artist-journey {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .audience-stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .audience-stat {
+        border-bottom: 1px solid #e5e0d8;
+    }
+
+    .audience-stat:nth-child(2) {
+        border-right: none;
+    }
+
+    .audience-stat:nth-child(3),
+    .audience-stat:nth-child(4) {
+        border-bottom: none;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .artist-sidebar-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-journey {
+        grid-template-columns: 1fr;
+    }
+
+    .audience-stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .audience-stat {
+        border-right: none !important;
+        border-bottom: 1px solid #e5e0d8 !important;
+    }
+
+    .audience-stat:last-child {
+        border-bottom: none !important;
+    }
+
+    .submission-item {
+        grid-template-columns: 55px minmax(0, 1fr);
+    }
+
+    .submission-item img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .submission-status {
+        grid-column: 2;
+        justify-self: start;
+    }
+}
+/* =========================================================
+   RESPONSIVE ARTIST SIDEBAR
+   ========================================================= */
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1100px) {
+
+    .artist-sidebar {
+        width: 230px;
+        min-width: 230px;
+        padding: 28px 18px;
+    }
+
+    .artist-brand h2 {
+        font-size: 22px;
+        letter-spacing: 0.12em;
+    }
+
+    .artist-brand span {
+        font-size: 9px;
+    }
+
+    .artist-profile-mini h3 {
+        font-size: 16px;
+    }
+
+    .artist-sidebar-nav button {
+        padding: 12px 13px;
+        font-size: 13px;
+        gap: 11px;
+    }
+
+    .artist-sidebar-nav button svg {
+        font-size: 15px;
+        min-width: 15px;
+    }
+
+    .artist-sidebar-quote {
+        padding: 18px 12px;
+    }
+
+    .artist-sidebar-quote p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+}
+
+
+/* ---------- Small Tablet ---------- */
+
+@media (max-width: 850px) {
+
+    .artist-sidebar {
+        width: 200px;
+        min-width: 200px;
+        padding: 24px 14px;
+    }
+
+    .artist-brand h2 {
+        font-size: 19px;
+    }
+
+    .artist-profile-avatar {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .artist-profile-mini h3 {
+        font-size: 15px;
+    }
+
+    .artist-sidebar-nav {
+        gap: 5px;
+    }
+
+    .artist-sidebar-nav button {
+        padding: 11px 10px;
+        font-size: 12px;
+        gap: 9px;
+    }
+
+    .artist-sidebar-nav button svg {
+        font-size: 14px;
+    }
+
+    .notification-count {
+        min-width: 17px;
+        height: 17px;
+        font-size: 9px;
+    }
+
+    .artist-sidebar-quote {
+        display: none;
+    }
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 700px) {
+
+    .artist-studio-dashboard {
+        display: block;
+    }
+
+    .artist-sidebar {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        padding: 18px 20px;
+        box-sizing: border-box;
+    }
+
+    .artist-brand {
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    .artist-brand h2 {
+        font-size: 21px;
+        margin-bottom: 4px;
+    }
+
+    .artist-profile-mini {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .artist-profile-avatar {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .artist-profile-mini h3 {
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .artist-profile-mini span {
+        font-size: 11px;
+    }
+
+    /* Horizontal navigation on mobile */
+
+    .artist-sidebar-nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        overflow-x: auto;
+        padding: 4px 2px 10px;
+        scrollbar-width: none;
+    }
+
+    .artist-sidebar-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .artist-sidebar-nav button {
+        flex: 0 0 auto;
+        width: auto;
+        min-width: max-content;
+        padding: 10px 13px;
+        border-radius: 8px;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .artist-sidebar-nav button svg {
+        font-size: 14px;
+    }
+
+    .artist-sidebar-quote {
+        display: none;
+    }
+
+    /* Reset the desktop upward movement on mobile */
+
+    .artist-dashboard-main {
+        transform: none;
+        margin-top: 0;
+    }
+
+}
+
+
+/* ---------- Very Small Phones ---------- */
+
+@media (max-width: 480px) {
+
+    .artist-sidebar {
+        padding: 15px 14px;
+    }
+
+    .artist-brand h2 {
+        font-size: 18px;
+        letter-spacing: 0.1em;
+    }
+
+    .artist-brand span {
+        font-size: 8px;
+    }
+
+    .artist-profile-mini {
+        margin-bottom: 12px;
+    }
+
+    .artist-profile-avatar {
+        width: 38px;
+        height: 38px;
+    }
+
+    .artist-profile-mini h3 {
+        font-size: 14px;
+    }
+
+    .artist-sidebar-nav {
+        gap: 6px;
+    }
+
+    .artist-sidebar-nav button {
+        padding: 9px 11px;
+        font-size: 11px;
+    }
+
+    .artist-sidebar-nav button svg {
+        font-size: 13px;
+    }
+
+    .notification-count {
+        min-width: 16px;
+        height: 16px;
+        font-size: 8px;
+    }
+
+}

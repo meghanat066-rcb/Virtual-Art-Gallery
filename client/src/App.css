@@ -1,0 +1,3739 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+}
+
+
+/* Home Hero */
+.home-hero {
+  width: 100vw;
+  height: 60vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-overlay {
+  text-align: center;
+  color: white;
+  max-width: 850px;
+  padding: 30px;
+}
+
+.home-overlay h3 {
+  font-size: 34px;
+  color: #ffb703;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.home-overlay h1 {
+  font-size: 64px;
+  margin: 8px 0;
+  letter-spacing: 2px;
+}
+
+.home-overlay h4 {
+  font-size: 26px;
+  margin: 12px 0;
+}
+
+.home-overlay p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+.hero-buttons button {
+  margin: 8px;
+  padding: 13px 28px;
+  background: #4a63e7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero-buttons button:hover {
+  background: #3548b5;
+}
+
+/* Featured Artwork */
+.featured-section {
+  padding: 35px 20px 50px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.featured-section h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.featured-grid {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.featured-art-card {
+  background: white;
+  width: 310px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.featured-art-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.featured-info {
+  padding: 14px;
+  text-align: left;
+}
+
+.featured-info h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: #222;
+}
+
+.featured-bottom {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  font-size: 15px;
+}
+
+/* Common Pages */
+.page {
+  min-height: 70vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Forms */
+.auth-page{
+    width:92%;
+    max-width:500px;
+    margin:-80px auto 40px;
+}
+
+.auth-brand{
+    text-align:center;
+    margin-bottom:20px;
+    color:#fff;
+}
+
+.auth-brand h1{
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.auth-card{
+    background:rgba(255,255,255,.96);
+    padding:32px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+}
+
+.auth-card h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.auth-card label{
+    display:block;
+    margin:12px 0 6px;
+    font-weight:600;
+}
+
+.auth-input{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:0 12px;
+    margin-bottom:15px;
+}
+
+.auth-input input,
+.auth-input select{
+    width:100%;
+    padding:14px 0;
+    border:none;
+    outline:none;
+    background:none;
+}
+
+.password-toggle{
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+.auth-submit{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#6547e8,#4a63e7);
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.auth-error{
+    color:#d32f2f;
+    margin-bottom:12px;
+    text-align:center;
+}
+
+.auth-switch{
+    text-align:center;
+    margin-top:18px;
+}
+
+.auth-switch a{
+    color:#6547e8;
+    text-decoration:none;
+    font-weight:600;
+}
+/* Gallery */
+
+/* Artist Profile */
+.artist-card {
+  background: white;
+  width: 350px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.artist-card h3 {
+  text-align: center;
+  color: #333;
+}
+
+.artist-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.artist-card ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.artist-card li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.featured-art-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-art-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.page-banner {
+  width: 100vw;
+  min-height: 100vh;
+  margin-left: calc(50% - 50vw);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  color: #222;
+  padding-top: 160px;
+}
+
+.page-banner h1 {
+  font-size: 58px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.page-banner p {
+  font-size: 22px;
+  color: #333;
+}
+.page-layout {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 220px;
+  padding-bottom: 80px;
+}
+.gallery-subtitle {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  margin: 0 0 22px;
+}
+.page-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.page-heading h1 {
+    font-size: 52px;
+    color: #222;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.page-heading p {
+    font-size: 20px;
+    color: #444;
+}
+
+.login-page {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.favorites-grid {
+    max-width: 1300px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 30px;
+    padding: 0 30px;
+}
+
+.favorite-card {
+    background: rgba(255,255,255,.95);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    transition: .3s;
+}
+
+.favorite-card:hover {
+    transform: translateY(-8px);
+}
+
+.favorite-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.favorite-info {
+    padding: 20px;
+}
+
+.favorite-info h3 {
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.favorite-info p {
+    color: #666;
+}
+.details-card {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(15px);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+    padding: 30px;
+}
+
+.details-card img {
+    width: 450px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.details-content {
+    flex: 1;
+}
+
+.details-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.details-content h3 {
+    margin-top: 20px;
+}
+
+.details-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.details-content hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.error-message {
+  color: #b00020;
+  background: #ffe5e5;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  background: #ffe7e7;
+  color: #b00020;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-align: center;
+}
+.image-preview {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.image-preview p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.image-preview img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.gallery-count {
+    text-align: center;
+    font-size: 17px;
+    color: #333;
+    margin: 14px 0 16px;
+    font-weight: 600;
+}
+
+.my-artworks-page {
+    width: 92%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 55px 0 90px;
+}
+
+
+
+.my-artwork-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.my-artwork-title-row h2 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.artwork-status {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    color: #ffffff;
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.status-pending {
+    background: #e6a700;
+}
+
+.status-approved {
+    background: #209653;
+}
+
+.status-rejected {
+    background: #dc3545;
+}
+
+.my-artwork-info p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.my-artwork-info small {
+    display: block;
+
+    margin-top: 17px;
+    padding-top: 14px;
+
+    border-top: 1px solid #ece9e3;
+
+    color: #96918a;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.04em;
+}
+
+.my-artworks-message {
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .my-artworks-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.profile-card {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 35px;
+    background: white;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.profile-avatar {
+    display: grid;
+    place-items: center;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    background: #5046e5;
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.profile-card h2 {
+    margin-bottom: 5px;
+}
+
+.profile-email {
+    color: #666;
+}
+
+.profile-role {
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 20px;
+    background: #eceaff;
+    color: #5046e5;
+    text-transform: capitalize;
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.profile-stats div {
+    padding: 18px 8px;
+    background: #f6f6fb;
+    border-radius: 12px;
+}
+
+.profile-stats h3,
+.profile-stats p {
+    margin: 4px;
+}
+
+.profile-about {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.profile-about ul {
+    padding: 0;
+    list-style: none;
+}
+
+.profile-about li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-artwork-status {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.profile-artworks-button {
+    margin-top: 20px;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #5046e5;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .profile-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.favorite-btn {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.favorite-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+/* ================================
+   BACK TO PROFILE
+================================ */
+
+.artevora-back-profile {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 25px;
+    padding: 10px 18px;
+
+    border: 1px solid #d8d0c5;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #4a4038;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.2s ease;
+}
+
+.artevora-back-profile:hover {
+    background: #4a4038;
+    color: #fff;
+    border-color: #4a4038;
+    transform: translateX(-2px);
+}
+
+.artevora-back-profile:active {
+    transform: translateX(0);
+}
+
+.artevora-back-profile:focus-visible {
+    outline: 2px solid #4a4038;
+    outline-offset: 3px;
+}
+.favorites-page {
+    width: min(1360px, 92%);
+    max-width: 1360px;
+    margin: -175px auto 70px;
+    padding: 0;
+}
+
+.favorites-page .page-heading h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    margin: 0;
+
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #222;
+}
+.favorites-page .page-heading p {
+    margin-top: 10px;
+    color: #777;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+}
+
+.favorites-page .page-heading h1 svg {
+    color: #b98232;
+    font-size: 1.5rem;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.favorite-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e5e1da;
+    border-radius: 4px;
+    box-shadow: none;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.favorite-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+.favorite-image {
+    cursor: pointer;
+}
+
+.favorite-image {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: #f2f0ec;
+}
+
+.favorite-image img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.favorite-card:hover .favorite-image img {
+    transform: scale(1.04);
+}
+
+.favorite-info {
+    position: relative;
+    padding: 12px 14px 14px;
+    text-align: left;
+}
+
+.saved-star {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-size: 16px;
+    color: #b98232;
+}
+
+.favorite-info h3 {
+    margin: 0 30px 7px 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.favorite-info p {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 4px 0;
+    color: #777;
+    font-size: 0.68rem;
+}
+
+.favorite-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.favorite-actions button {
+    padding: 7px 11px;
+    border: 1px solid #d8d3cb;
+    border-radius: 3px;
+    background: #fff;
+    color: #333;
+    font-size: 0.65rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.favorite-actions button:hover {
+    background: #222;
+    border-color: #222;
+    color: #fff;
+}
+
+.favorite-actions .remove-favorite-btn {
+    border-color: #e0d6ca;
+    background: transparent;
+    color: #8a6a48;
+}
+
+.favorite-actions .remove-favorite-btn:hover {
+    background: #f5eee6;
+    border-color: #c28a35;
+    color: #8a5d22;
+}
+.favorites-message {
+    max-width: 520px;
+    margin: 45px auto 0;
+    padding: 30px 20px;
+    border-top: 1px solid #e3dfd8;
+    border-bottom: 1px solid #e3dfd8;
+    text-align: center;
+    color: #777;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 1100px) {
+    .favorites-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .favorites-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .favorite-image img {
+        height: 230px;
+    }
+}
+
+@media (max-width: 520px) {
+    .favorites-page {
+        width: 92%;
+    }
+
+    .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .favorite-image img {
+        height: 260px;
+    }
+
+    .favorite-actions {
+        flex-wrap: wrap;
+    }
+}
+.my-artwork-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    margin-bottom: 14px;
+}
+
+.artwork-icon-actions {
+    display: flex;
+
+    flex-shrink: 0;
+
+    gap: 7px;
+}
+
+.my-artwork-header h2 {
+    margin: 0;
+
+    color: #24221e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.35rem;
+    font-weight: 400;
+
+    line-height: 1.25;
+}
+.my-artwork-info > .artwork-status {
+    margin-bottom: 12px;
+}
+.my-artwork-info p {
+    margin: 8px 0;
+}
+
+.my-artwork-info p strong {
+    color: #35322d;
+}
+
+.my-artwork-info p:last-of-type {
+    color: #35322d;
+    font-weight: 500;
+}
+@media (max-width: 650px) {
+    .my-collection-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .artist-upload-button {
+        width: 100%;
+    }
+
+    .my-collection-heading h2 {
+        font-size: 1.9rem;
+    }
+}
+.buy-now-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #209653;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.buy-now-button:hover {
+    background: #187a43;
+}
+
+.buy-now-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+.payment-page{
+    width:92%;
+    max-width:850px;
+    margin:-140px auto 0;
+    padding:30px 0 60px;
+}
+
+.payment-heading{
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+    text-shadow:0 3px 12px rgba(0,0,0,.5);
+}
+
+.payment-heading h1{
+    margin:10px 0 6px;
+    font-size:40px;
+}
+
+.secure-payment-icon,
+.payment-title-icon{
+    display:grid;
+    place-items:center;
+    color:white;
+    background:linear-gradient(135deg,#6548f3,#c23cf0);
+}
+
+.secure-payment-icon{
+    width:55px;
+    height:55px;
+    margin:auto;
+    border-radius:16px;
+}
+
+.payment-glass{
+    max-width:590px;
+    margin:auto;
+    padding:18px;
+    border-radius:22px;
+    background:rgba(255,255,255,.16);
+    backdrop-filter:blur(12px);
+    box-shadow:0 20px 45px rgba(0,0,0,.28);
+}
+
+.payment-card{
+    background:white;
+    border-radius:16px;
+}
+
+.payment-form{
+    padding:30px;
+    text-align:left;
+}
+
+.payment-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.payment-title-icon{
+    min-width:46px;
+    height:46px;
+    border-radius:50%;
+}
+
+.payment-title h2,
+.payment-title p{
+    margin:0;
+}
+
+.payment-title p{
+    color:#777;
+    font-size:14px;
+}
+
+.payment-form label{
+    display:block;
+    margin:13px 0 6px;
+    font-weight:600;
+}
+
+.payment-input{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:0 13px;
+    border:1px solid #ddd;
+    border-radius:9px;
+}
+
+.payment-input input{
+    width:100%;
+    padding:13px 0;
+    border:none;
+    outline:none;
+    background:none;
+}
+
+.payment-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.demo-payment-note{
+    display:flex;
+    gap:8px;
+    align-items:center;
+    margin:16px 0;
+    padding:10px;
+    border-radius:8px;
+    background:#f0edff;
+    color:#666;
+    font-size:13px;
+}
+
+.pay-now-button{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    padding:14px;
+    border:none;
+    border-radius:9px;
+    background:linear-gradient(135deg,#4e46ef,#bd32ed);
+    color:white;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.pay-now-button:hover{
+    transform:translateY(-2px);
+}
+
+.payment-security{
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    margin-top:22px;
+    color:white;
+}
+
+.payment-security div{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.error-message{
+    color:#c62828;
+    text-align:center;
+}
+
+@media(max-width:650px){
+    .payment-heading h1{
+        font-size:31px;
+    }
+
+    .payment-form{
+        padding:22px;
+    }
+
+    .payment-row{
+        grid-template-columns:1fr;
+    }
+
+    .payment-security{
+        flex-direction:column;
+        align-items:center;
+        gap:8px;
+    }
+}
+@media (max-width: 750px) {
+    .payment-row {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===========================
+   MY PURCHASES PAGE
+=========================== */
+
+.my-purchases-page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 70px;
+    margin-top: -100px;
+}
+
+.purchases-message {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.purchases-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.purchase-card {
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.purchase-card img {
+    width: 180px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.purchase-info {
+    flex: 1;
+}
+
+.purchase-info h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.purchase-info p {
+    margin: 5px 0;
+    color: #444;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.purchase-info strong {
+    color: #111;
+}
+
+.transaction-id {
+    margin-top: 10px;
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+.transaction-id svg {
+    margin-right: 8px;
+}
+
+.purchase-info small {
+    margin-top: 12px;
+    color: #666;
+}
+
+.view-artwork-btn {
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 50%;
+    background: #1f7a3d;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.view-artwork-btn:hover {
+    background: #166534;
+    transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+    .purchase-card {
+        flex-direction: column;
+    }
+
+    .purchase-card img {
+        width: 100%;
+        height: 240px;
+    }
+
+    .purchase-info {
+        padding: 20px;
+    }
+}
+.purchase-card {
+    transform: none;
+    transition: none;
+    animation: none;
+}
+
+.purchase-card:hover {
+    transform: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.purchase-card img {
+    display: block;
+}
+
+.artist-artwork-filters {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    margin-bottom: 28px;
+}
+
+.artist-artwork-filters button {
+    position: relative;
+
+    padding: 8px 0;
+
+    border: none;
+    background: transparent;
+
+    color: #8c8882;
+
+    font-family: var(--font-body);
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: color 0.25s ease;
+}
+
+.artist-artwork-filters button::after {
+    content: '';
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 1px;
+
+    background: #292722;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.25s ease;
+}
+
+.artist-artwork-filters button:hover,
+.artist-artwork-filters button.active {
+    color: #292722;
+}
+
+.artist-artwork-filters button.active::after {
+    transform: scaleX(1);
+}
+@media (max-width: 600px) {
+    .artist-artwork-filters {
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+
+    .artist-artwork-filters button {
+        flex-shrink: 0;
+    }
+}
+@media (max-width: 700px) {
+    .artist-dashboard-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+
+    .artist-dashboard-stats div {
+        min-height: 105px;
+        padding: 18px 12px;
+    }
+
+    .artist-dashboard-stats h3 {
+        font-size: 1.8rem;
+    }
+
+   
+}
+
+@media (max-width: 430px) {
+    .artist-dashboard-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.my-collection-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 28px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #e4e0d9;
+}
+
+.my-collection-heading span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #8b867f;
+
+    font-size: 0.65rem;
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+.my-collection-heading h2 {
+    margin: 0;
+
+    color: #1d1c19;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 2.2rem;
+    font-weight: 400;
+
+    line-height: 1.1;
+}
+
+.artist-upload-button {
+    flex-shrink: 0;
+
+    padding: 12px 20px;
+
+    border: 1px solid #2b2925;
+    border-radius: 2px;
+
+    background: #2b2925;
+
+    color: #ffffff;
+
+    font-family: var(--font-body);
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.artist-upload-button:hover {
+    background: #ffffff;
+    color: #2b2925;
+
+    transform: translateY(-2px);
+}
+.my-artworks-grid {
+    margin-top: 0;
+}
+.my-artworks-page .page-heading {
+    margin-top: -150px;
+    padding-top: 0;
+}
+.my-artworks-page .page-heading p {
+    color: #222;
+    font-weight: 500;
+}
+.notifications-page {
+    width: 92%;
+    max-width: 900px;
+    margin: -100px auto 0;
+    padding: 0px 0 70px;
+}
+
+.notifications-page .page-heading h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mark-all-read-btn {
+    display: block;
+    margin: 0 0 20px auto;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #5046e5;
+    color: white;
+    cursor: pointer;
+}
+
+.notifications-list {
+    display: grid;
+    gap: 14px;
+}
+
+.notification-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px;
+    background: white;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.notification-unread {
+    border-left: 5px solid #5046e5;
+}
+
+.notification-read {
+    opacity: 0.75;
+}
+
+.notification-status-icon {
+    font-size: 26px;
+}
+
+.approved-notification-icon {
+    color: #209653;
+}
+
+.rejected-notification-icon {
+    color: #dc3545;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-content p {
+    margin: 0 0 6px;
+    color: #222;
+}
+
+.notification-content small {
+    color: #777;
+}
+
+.unread-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #5046e5;
+}
+
+.notifications-message {
+    padding: 18px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.profile-page{
+    max-width:900px;
+    margin:-100px auto 50px;
+}
+
+.profile-heading{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.profile-heading h1{
+    font-size:48px;
+    margin-bottom:8px;
+}
+
+.profile-heading p{
+    color:#555;
+    font-size:18px;
+}
+
+.profile-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.profile-avatar{
+    width:100px;
+    height:100px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#6c4cff,#4a2dd9);
+    color:#fff;
+    font-size:42px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 8px 20px rgba(92,76,255,.35);
+}
+
+.profile-role{
+    display:inline-block;
+    margin-top:8px;
+    padding:5px 15px;
+    background:#ede8ff;
+    color:#5b3df5;
+    border-radius:20px;
+    font-weight:600;
+}
+
+.profile-info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin:30px 0;
+}
+
+.profile-info-box{
+    background:#fafafa;
+    border:1px solid #eee;
+    border-radius:12px;
+    padding:20px;
+}
+
+.profile-info-box svg{
+    font-size:28px;
+    color:#5b3df5;
+    margin-bottom:10px;
+}
+
+.artist-access-message{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#fff1f1;
+    border:1px solid #ffcaca;
+    border-radius:12px;
+    padding:18px;
+    color:#d32f2f;
+}
+
+.access-message-card{
+  width:90%;
+  max-width:500px;
+  margin:-60px auto 40px;
+  text-align:center;
+}
+.artwork-icon-actions{
+    display:flex;
+    gap:8px;
+}
+.delete-icon-btn:hover {
+    color: #8b3333;
+    background: #faf2f2;
+    border-color: #d8bcbc;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   ARTIST DASHBOARD
+   ========================================================= */
+
+.my-artworks-page {
+    width: 92%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 55px 0 90px;
+}
+
+/* =========================================================
+   DASHBOARD HEADER
+   ========================================================= */
+
+.page-heading {
+    margin-bottom: 38px;
+    text-align: left;
+}
+
+.page-heading h1 {
+    margin: 0 0 10px;
+    color: #202020;
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+}
+
+.page-heading p {
+    max-width: 650px;
+    margin: 0;
+    color: #77726c;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DASHBOARD STATISTICS
+   ========================================================= */
+
+.artist-dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    margin: 0 0 65px;
+    overflow: hidden;
+    border: 1px solid #dedad3;
+    background: #dedad3;
+}
+
+.artist-dashboard-stats div {
+    min-height: 125px;
+    padding: 25px;
+    background: #ffffff;
+    text-align: left;
+}
+
+.artist-dashboard-stats h3 {
+    margin: 0 0 8px;
+    color: #202020;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.artist-dashboard-stats p {
+    margin: 0;
+    color: #88827b;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   COLLECTION HEADER
+   ========================================================= */
+
+.my-collection-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #dedad3;
+}
+
+.my-collection-heading span {
+    display: block;
+    margin-bottom: 8px;
+    color: #918b84;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+}
+
+.my-collection-heading h2 {
+    margin: 0;
+    color: #202020;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   UPLOAD BUTTON
+   ========================================================= */
+
+.artist-upload-button {
+    min-height: 44px;
+    padding: 0 22px;
+    border: 1px solid #202020;
+    background: #202020;
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.artist-upload-button:hover {
+    background: #ffffff;
+    color: #202020;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ARTWORK GRID
+   ========================================================= */
+
+.my-artworks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+}
+
+
+/* =========================================================
+   ARTWORK CARD
+   ========================================================= */
+
+.my-artwork-card {
+    overflow: hidden;
+    border: 1px solid #e5e1da;
+    background: #ffffff;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.my-artwork-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =========================================================
+   ARTWORK IMAGE
+   ========================================================= */
+
+.my-artwork-card img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   ARTWORK INFORMATION
+   ========================================================= */
+
+.my-artwork-info {
+    padding: 21px;
+}
+
+.my-artwork-header {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.my-artwork-header h2 {
+    min-width: 0;
+    margin: 0;
+    color: #222;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   ARTIST / CATEGORY / PRICE
+   ========================================================= */
+
+.my-artwork-info p {
+    margin: 8px 0;
+    color: #77726c;
+    font-family: var(--font-body);
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+.my-artwork-info p strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.my-artwork-info small {
+    display: block;
+    margin-top: 17px;
+    padding-top: 14px;
+    border-top: 1px solid #eeeae4;
+    color: #99938c;
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.artwork-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 72px;
+    padding: 5px 9px;
+    border: 1px solid transparent;
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.status-pending {
+    border-color: #e0b85c;
+    background: #fff8e6;
+    color: #9a6c00;
+}
+
+.status-approved {
+    border-color: #8bc5a3;
+    background: #eef9f2;
+    color: #247342;
+}
+
+.status-rejected {
+    border-color: #dfa0a0;
+    background: #fff0f0;
+    color: #a52d2d;
+}
+
+
+/* =========================================================
+   EDIT / DELETE ACTIONS
+   ========================================================= */
+
+.artwork-icon-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.edit-icon-btn,
+.delete-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid #e0ddd7;
+    background: #ffffff;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.edit-icon-btn {
+    color: #5f52a4;
+}
+
+.edit-icon-btn:hover {
+    border-color: #5f52a4;
+    background: #f7f5ff;
+}
+
+.delete-icon-btn {
+    color: #b33b3b;
+}
+
+.delete-icon-btn:hover {
+    border-color: #b33b3b;
+    background: #fff5f5;
+}
+
+
+/* =========================================================
+   LOADING / EMPTY STATE
+   ========================================================= */
+
+.my-artworks-message {
+    margin: 25px 0;
+    padding: 35px 20px;
+    border-top: 1px solid #dedad3;
+    border-bottom: 1px solid #dedad3;
+    background: #ffffff;
+    color: #77726c;
+    text-align: center;
+}
+
+.error-message {
+    padding: 16px 20px;
+    border: 1px solid #e0aaaa;
+    background: #fff5f5;
+    color: #a52d2d;
+}
+
+
+/* =========================================================
+   EDIT MODAL
+   ========================================================= */
+
+.edit-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: grid;
+    place-items: center;
+
+    padding: 25px;
+
+    background: rgba(20, 20, 20, 0.72);
+    backdrop-filter: blur(5px);
+}
+
+.edit-artwork-modal {
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    padding: 32px;
+
+    border: 1px solid #e1ddd6;
+    background: #ffffff;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+.edit-artwork-modal h2 {
+    margin: 0 0 25px;
+    color: #222;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.edit-artwork-modal label {
+    display: block;
+    margin: 15px 0 7px;
+    color: #444;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.edit-artwork-modal input,
+.edit-artwork-modal select,
+.edit-artwork-modal textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 13px;
+
+    border: 1px solid #d8d4cd;
+    border-radius: 0;
+
+    background: #ffffff;
+    color: #222;
+
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.edit-artwork-modal input:focus,
+.edit-artwork-modal select:focus,
+.edit-artwork-modal textarea:focus {
+    border-color: #555;
+}
+
+.edit-artwork-modal textarea {
+    resize: vertical;
+}
+
+
+/* =========================================================
+   MODAL BUTTONS
+   ========================================================= */
+
+.edit-modal-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.edit-modal-buttons button {
+    flex: 1;
+    min-height: 45px;
+    border: 1px solid #202020;
+    background: #202020;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.edit-modal-buttons button:last-child {
+    border-color: #d4d0c9;
+    background: #ffffff;
+    color: #555;
+}
+
+.edit-modal-buttons button:hover {
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .my-artworks-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .artist-dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .my-artworks-page {
+        width: 90%;
+        padding-top: 40px;
+    }
+
+    .page-heading h1 {
+        font-size: 3rem;
+    }
+
+    .my-collection-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .artist-upload-button {
+        width: 100%;
+    }
+
+    .my-artworks-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .artist-dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-dashboard-stats div {
+        min-height: auto;
+    }
+
+    .my-artwork-card img {
+        height: 230px;
+    }
+
+    .my-artwork-header {
+        grid-template-columns: 1fr auto;
+    }
+
+    .artwork-status {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+
+    .edit-artwork-modal {
+        padding: 22px;
+    }
+
+    .edit-modal-buttons {
+        flex-direction: column;
+    }
+}
+/* =========================================================
+   ARTEVORA
+   ARTIST DASHBOARD
+   Complete Dashboard Styling
+========================================================= */
+
+
+/* =========================================================
+   MAIN DASHBOARD PAGE
+========================================================= */
+
+.artist-studio-dashboard {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+
+    padding: 42px 5% 80px;
+
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 230px minmax(0, 1fr);
+    gap: 42px;
+
+    background: #f7f5f1;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.artist-sidebar {
+    position: sticky;
+    top: 105px;
+
+    height: calc(100vh - 150px);
+    min-height: 650px;
+
+    padding: 8px 0;
+
+    background: transparent;
+
+    color: #24221f;
+
+    border-right: 1px solid #ded9d1;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: none;
+
+    border-radius: 0;
+}
+
+
+/* =========================================================
+   SIDEBAR BRAND
+========================================================= */
+
+.artist-brand {
+    padding: 0 25px 28px 5px;
+
+    border-bottom: 1px solid #ded9d1;
+}
+
+.artist-brand h2 {
+    margin: 0;
+
+    color: #1d1c19;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 23px;
+
+    font-weight: 400;
+
+    letter-spacing: .08em;
+}
+
+.artist-brand span {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #948e85;
+
+    font-size: 9px;
+
+    letter-spacing: .22em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ARTIST MINI PROFILE
+========================================================= */
+
+.artist-profile-mini {
+    padding: 25px 5px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #ded9d1;
+}
+
+.artist-profile-avatar {
+    width: 46px;
+    height: 46px;
+
+    margin: 0 0 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e7dfd4;
+
+    color: #514a42;
+
+    font-size: 16px;
+}
+
+.artist-profile-mini h3 {
+    margin: 0;
+
+    color: #24221f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+}
+
+.artist-profile-mini span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #958e85;
+
+    font-size: 9px;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+========================================================= */
+
+.artist-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    padding-top: 20px;
+}
+
+.artist-sidebar-nav button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 8px;
+
+    border: none;
+
+    border-left: 2px solid transparent;
+
+    background: transparent;
+
+    color: #777169;
+
+    font-family: var(--font-body);
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: .04em;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        color .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+}
+
+.artist-sidebar-nav button svg {
+    width: 14px;
+
+    flex-shrink: 0;
+
+    font-size: 13px;
+}
+
+.artist-sidebar-nav button:hover {
+    background: #eeeae4;
+
+    color: #211f1c;
+}
+
+.artist-sidebar-nav button.active {
+    border-left-color: #a17b58;
+
+    background: #eeeae4;
+
+    color: #211f1c;
+}
+
+
+/* =========================================================
+   NOTIFICATION COUNT
+========================================================= */
+
+.notification-count {
+    min-width: 19px;
+    height: 19px;
+
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #a17b58;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SIDEBAR QUOTE
+========================================================= */
+
+.artist-sidebar-quote {
+    margin-top: auto;
+
+    padding: 25px 10px 5px 5px;
+
+    color: #958e85;
+}
+
+.artist-sidebar-quote > span {
+    display: block;
+
+    margin-bottom: -8px;
+
+    color: #b18a63;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 38px;
+}
+
+.artist-sidebar-quote p {
+    margin: 0 0 8px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 11px;
+
+    line-height: 1.65;
+}
+
+.artist-sidebar-quote small {
+    color: #aaa39a;
+
+    font-size: 8px;
+
+    letter-spacing: .1em;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.artist-dashboard-main {
+    width: 100%;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   HERO / WELCOME SECTION
+========================================================= */
+
+.artist-dashboard-hero {
+    width: 100%;
+
+    min-height: 310px;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e4dfd7;
+
+    border-radius: 0;
+
+    box-shadow: 0 10px 30px rgba(35, 31, 27, .05);
+}
+
+.artist-hero-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 50px 55px;
+}
+
+.artist-eyebrow {
+    margin-bottom: 14px;
+
+    color: #a17b58;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: .22em;
+
+    text-transform: uppercase;
+}
+
+.artist-hero-content h1 {
+    margin: 0;
+
+    color: #1d1c19;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(38px, 4vw, 60px);
+
+    font-weight: 400;
+
+    line-height: 1.04;
+}
+
+.artist-hero-line {
+    width: 58px;
+    height: 1px;
+
+    margin: 22px 0;
+
+    background: #a17b58;
+}
+
+.artist-hero-content p {
+    max-width: 550px;
+
+    margin: 0;
+
+    color: #77716a;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.artist-hero-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 11px;
+
+    margin-top: 28px;
+}
+
+.primary-dashboard-button,
+.secondary-dashboard-button {
+    min-height: 42px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    border-radius: 3px;
+
+    font-family: var(--font-body);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+}
+
+.primary-dashboard-button {
+    border: 1px solid #1d1c19;
+
+    background: #1d1c19;
+
+    color: #ffffff;
+}
+
+.primary-dashboard-button:hover {
+    background: #393632;
+
+    border-color: #393632;
+}
+
+.secondary-dashboard-button {
+    border: 1px solid #d7d0c7;
+
+    background: #ffffff;
+
+    color: #3c3935;
+}
+
+.secondary-dashboard-button:hover {
+    background: #f3f0eb;
+
+    border-color: #bdb4aa;
+}
+
+
+/* =========================================================
+   HERO PLACEHOLDER
+========================================================= */
+
+.artist-hero-image {
+    display: none;
+}
+
+
+/* =========================================================
+   DASHBOARD STATISTICS
+========================================================= */
+
+.artist-dashboard-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1px;
+
+    margin: 30px 0;
+
+    background: #dcd6cd;
+
+    border: 1px solid #dcd6cd;
+}
+
+.artist-dashboard-stats div {
+    min-height: 125px;
+
+    padding: 24px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+.artist-dashboard-stats h3 {
+    margin: 0 0 7px;
+
+    color: #a17b58;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+}
+
+.artist-dashboard-stats p {
+    margin: 0;
+
+    color: #777169;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ARTIST JOURNEY
+========================================================= */
+
+.artist-journey-section {
+    margin-top: 35px;
+
+    padding: 35px 40px;
+
+    background: #ffffff;
+
+    border-top: 1px solid #ddd7ce;
+
+    border-bottom: 1px solid #ddd7ce;
+}
+
+.artist-section-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #a17b58;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: .2em;
+
+    text-transform: uppercase;
+}
+
+.artist-journey-section h2 {
+    margin: 0;
+
+    color: #1d1c19;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+}
+
+
+/* JOURNEY LINE */
+
+.artist-journey {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 0;
+
+    margin-top: 40px;
+}
+
+.artist-journey::before {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 7%;
+
+    right: 7%;
+
+    height: 1px;
+
+    background: #d7d0c7;
+}
+
+
+/* JOURNEY ITEM */
+
+.artist-journey-step {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.artist-journey-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #cfc7bd;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #8c8174;
+
+    font-size: 12px;
+}
+
+.artist-journey-step.completed
+.artist-journey-icon {
+    border-color: #a17b58;
+
+    background: #a17b58;
+
+    color: #ffffff;
+}
+
+.artist-journey-step.current
+.artist-journey-icon {
+    border-color: #a17b58;
+
+    color: #a17b58;
+
+    box-shadow: 0 0 0 5px #f1e9df;
+}
+
+.artist-journey-step h4 {
+    margin: 13px 0 4px;
+
+    color: #302d29;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: .04em;
+}
+
+.artist-journey-step p {
+    margin: 0;
+
+    color: #958e85;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   COLLECTION HEADER
+========================================================= */
+
+.my-collection-heading {
+    margin: 42px 0 22px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #dcd6cd;
+
+    padding-bottom: 18px;
+}
+
+.my-collection-heading span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #a17b58;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: .2em;
+
+    text-transform: uppercase;
+}
+
+.my-collection-heading h2 {
+    margin: 0;
+
+    color: #1d1c19;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   UPLOAD BUTTON
+========================================================= */
+
+.artist-upload-button {
+    min-height: 40px;
+
+    padding: 0 17px;
+
+    border: 1px solid #1d1c19;
+
+    background: #1d1c19;
+
+    color: #ffffff;
+
+    font-family: var(--font-body);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+}
+
+.artist-upload-button:hover {
+    background: #a17b58;
+
+    border-color: #a17b58;
+}
+
+
+/* =========================================================
+   ARTWORK GRID
+========================================================= */
+
+.my-artworks-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   ARTWORK CARD
+========================================================= */
+
+.my-artwork-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e2ddd5;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.my-artwork-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #c9c0b5;
+
+    box-shadow: 0 15px 35px rgba(30, 27, 23, .09);
+}
+
+
+/* =========================================================
+   ARTWORK IMAGE
+========================================================= */
+
+.my-artwork-card img {
+    width: 100%;
+
+    height: 235px;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .45s ease;
+}
+
+.my-artwork-card:hover img {
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   ARTWORK INFORMATION
+========================================================= */
+
+.my-artwork-info {
+    padding: 18px;
+
+    text-align: left;
+}
+
+.my-artwork-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.my-artwork-header h2 {
+    margin: 0;
+
+    color: #24211e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   ICON ACTIONS
+========================================================= */
+
+.artwork-icon-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    flex-shrink: 0;
+}
+
+.edit-icon-btn,
+.delete-icon-btn {
+    width: 31px;
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #ddd7cf;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+}
+
+.edit-icon-btn {
+    color: #776047;
+
+    font-size: 13px;
+}
+
+.edit-icon-btn:hover {
+    border-color: #a17b58;
+
+    background: #a17b58;
+
+    color: #ffffff;
+}
+
+.delete-icon-btn {
+    color: #a34d47;
+
+    font-size: 12px;
+}
+
+.delete-icon-btn:hover {
+    border-color: #a34d47;
+
+    background: #a34d47;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ARTWORK STATUS
+========================================================= */
+
+.artwork-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-top: 14px;
+
+    padding: 5px 9px;
+
+    border-radius: 2px;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+}
+
+.status-pending {
+    background: #f5ead7;
+
+    color: #9a6d29;
+}
+
+.status-approved {
+    background: #e2f0e6;
+
+    color: #287044;
+}
+
+.status-rejected {
+    background: #f5e1df;
+
+    color: #9a3e39;
+}
+
+
+/* =========================================================
+   ARTWORK TEXT
+========================================================= */
+
+.my-artwork-info p {
+    margin: 9px 0 0;
+
+    color: #716b64;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+.my-artwork-info p strong {
+    color: #3c3935;
+
+    font-weight: 600;
+}
+
+.my-artwork-info small {
+    display: block;
+
+    margin-top: 15px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #eeeae4;
+
+    color: #99928a;
+
+    font-size: 9px;
+
+    letter-spacing: .03em;
+}
+
+
+/* =========================================================
+   EMPTY / LOADING STATE
+========================================================= */
+
+.my-artworks-message {
+    padding: 45px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1dcd4;
+
+    border-radius: 0;
+
+    color: #77716a;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-message {
+    padding: 15px 20px;
+
+    border: 1px solid #e5c9c6;
+
+    background: #fbefed;
+
+    color: #9a4540;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   RECENT ACTIVITY
+========================================================= */
+
+.artist-activity-section {
+    margin-top: 45px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #dcd6cd;
+}
+
+.artist-activity-section h2 {
+    margin: 0 0 22px;
+
+    color: #1d1c19;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 28px;
+
+    font-weight: 400;
+}
+
+.artist-activity-list {
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #e1dcd4;
+}
+
+.artist-activity-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 17px 20px;
+
+    border-bottom: 1px solid #eeeae4;
+}
+
+.artist-activity-item:last-child {
+    border-bottom: none;
+}
+
+.artist-activity-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f1ebe3;
+
+    color: #9a7654;
+
+    font-size: 12px;
+}
+
+.artist-activity-item p {
+    margin: 0;
+
+    color: #4d4944;
+
+    font-size: 12px;
+}
+
+.artist-activity-item small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #9a938a;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   EDIT MODAL
+========================================================= */
+
+.edit-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(25, 23, 20, .65);
+
+    backdrop-filter: blur(4px);
+}
+
+.edit-artwork-modal {
+    width: 100%;
+
+    max-width: 520px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 32px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #ddd7cf;
+
+    border-radius: 2px;
+
+    box-shadow: 0 25px 70px rgba(0,0,0,.25);
+}
+
+.edit-artwork-modal h2 {
+    margin: 0 0 25px;
+
+    color: #1d1c19;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    text-align: center;
+}
+
+.edit-artwork-modal label {
+    display: block;
+
+    margin: 14px 0 6px;
+
+    color: #4b4742;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: .06em;
+
+    text-transform: uppercase;
+}
+
+.edit-artwork-modal input,
+.edit-artwork-modal select,
+.edit-artwork-modal textarea {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d9d3cb;
+
+    border-radius: 2px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #302d29;
+
+    font-family: var(--font-body);
+
+    font-size: 12px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.edit-artwork-modal input:focus,
+.edit-artwork-modal select:focus,
+.edit-artwork-modal textarea:focus {
+    border-color: #a17b58;
+
+    box-shadow: 0 0 0 3px rgba(161,123,88,.1);
+}
+
+.edit-artwork-modal textarea {
+    resize: vertical;
+
+    min-height: 100px;
+}
+
+.edit-modal-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.edit-modal-buttons button {
+    min-height: 42px;
+
+    border: 1px solid #1d1c19;
+
+    border-radius: 2px;
+
+    background: #1d1c19;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+}
+
+.edit-modal-buttons button:hover {
+    background: #a17b58;
+
+    border-color: #a17b58;
+}
+
+.edit-modal-buttons button:last-child {
+    border-color: #d1cbc3;
+
+    background: #ffffff;
+
+    color: #5e5953;
+}
+
+.edit-modal-buttons button:last-child:hover {
+    background: #f1eee9;
+
+    border-color: #c4bdb4;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .artist-studio-dashboard {
+        grid-template-columns: 190px minmax(0, 1fr);
+
+        gap: 28px;
+
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .my-artworks-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .artist-dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artist-journey {
+        grid-template-columns: repeat(4, 1fr);
+
+        row-gap: 28px;
+    }
+
+    .artist-journey::before {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .artist-studio-dashboard {
+        width: 100%;
+
+        display: block;
+
+        padding: 25px 20px 60px;
+    }
+
+    .artist-sidebar {
+        position: static;
+
+        width: 100%;
+
+        min-height: auto;
+
+        margin-bottom: 30px;
+
+        padding-bottom: 20px;
+
+        border-right: none;
+
+        border-bottom: 1px solid #ded9d1;
+    }
+
+    .artist-sidebar-nav {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 4px;
+    }
+
+    .artist-sidebar-quote {
+        display: none;
+    }
+
+    .artist-dashboard-hero {
+        min-height: 280px;
+    }
+
+    .artist-hero-content {
+        padding: 35px 25px;
+    }
+
+    .artist-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .artist-dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+
+        margin: 22px 0;
+    }
+
+    .artist-dashboard-stats div {
+        min-height: 105px;
+    }
+
+    .my-collection-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        margin-top: 32px;
+    }
+
+    .artist-upload-button {
+        width: 100%;
+    }
+
+    .my-artworks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-journey-section {
+        padding: 25px 20px;
+    }
+
+    .artist-journey {
+        grid-template-columns: repeat(2, 1fr);
+
+        row-gap: 25px;
+    }
+
+    .artist-hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .primary-dashboard-button,
+    .secondary-dashboard-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .artist-studio-dashboard {
+        padding: 20px 14px 50px;
+    }
+
+    .artist-dashboard-stats {
+        gap: 1px;
+    }
+
+    .artist-dashboard-stats h3 {
+        font-size: 27px;
+    }
+
+    .artist-dashboard-stats p {
+        font-size: 8px;
+    }
+
+    .artist-hero-content {
+        padding: 30px 20px;
+    }
+
+    .artist-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .my-artwork-card img {
+        height: 220px;
+    }
+
+    .edit-artwork-modal {
+        padding: 24px 18px;
+    }
+
+    .edit-modal-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .artist-sidebar-nav button,
+    .primary-dashboard-button,
+    .secondary-dashboard-button,
+    .artist-upload-button,
+    .my-artwork-card,
+    .my-artwork-card img,
+    .edit-icon-btn,
+    .delete-icon-btn {
+        transition: none;
+    }
+}

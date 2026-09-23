@@ -1,0 +1,773 @@
+/* ========================================
+   EDIT ARTWORK PAGE
+======================================== */
+
+.edit-artwork-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            135deg,
+            #f7f4ef 0%,
+            #f2eee7 45%,
+            #ebe5dc 100%
+        );
+    color: #24211e;
+    padding-bottom: 80px;
+}
+
+
+/* ========================================
+   TOP BAR
+======================================== */
+
+.edit-artwork-topbar {
+    height: 72px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(50, 43, 36, 0.12);
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(12px);
+}
+
+.edit-artwork-topbar > span {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #6b6259;
+}
+
+.edit-artwork-back-button {
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #39332e;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: 0.25s ease;
+}
+
+.edit-artwork-back-button:hover {
+    color: #8b5e3c;
+    transform: translateX(-3px);
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.edit-artwork-header {
+    width: 86%;
+    max-width: 1250px;
+    margin: 55px auto 35px;
+}
+
+.edit-artwork-header > span {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #8b5e3c;
+    margin-bottom: 12px;
+}
+
+.edit-artwork-header h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 5vw, 62px);
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #29231e;
+}
+
+.edit-artwork-header p {
+    max-width: 650px;
+    margin: 15px 0 0;
+    color: #766d64;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.edit-artwork-form {
+    width: 86%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   SECTIONS
+======================================== */
+
+.edit-artwork-section {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(54, 45, 37, 0.12);
+    border-radius: 18px;
+    padding: 36px;
+    margin-bottom: 28px;
+    box-shadow:
+        0 15px 45px rgba(48, 38, 30, 0.07);
+}
+
+
+/* ========================================
+   SECTION HEADING
+======================================== */
+
+.edit-section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(54, 45, 37, 0.1);
+}
+
+.edit-section-heading > span {
+    min-width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #332b25;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.edit-section-heading h2 {
+    margin: 0 0 6px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: #2d2722;
+}
+
+.edit-section-heading p {
+    margin: 0;
+    color: #81786f;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   IMAGE PREVIEW
+======================================== */
+
+.edit-artwork-image-preview {
+    width: 100%;
+    max-width: 650px;
+    height: 380px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #e7e1d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-artwork-image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.edit-artwork-image-preview > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #8c837a;
+    font-size: 14px;
+}
+
+.edit-artwork-image-preview svg {
+    font-size: 45px;
+}
+
+
+/* ========================================
+   BASIC INFORMATION GRID
+======================================== */
+
+.edit-artwork-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.edit-artwork-field.full {
+    grid-column: 1 / -1;
+}
+
+
+/* ========================================
+   FIELDS
+======================================== */
+
+.edit-artwork-field {
+    margin-bottom: 20px;
+}
+
+.edit-artwork-field:last-child {
+    margin-bottom: 0;
+}
+
+.edit-artwork-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #514941;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.edit-artwork-field input,
+.edit-artwork-field textarea,
+.edit-artwork-field select {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d8d0c7;
+    border-radius: 9px;
+    background: #fcfbf9;
+    color: #302a25;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.edit-artwork-field input,
+.edit-artwork-field select {
+    height: 48px;
+    padding: 0 14px;
+}
+
+.edit-artwork-field textarea {
+    min-height: 145px;
+    padding: 13px 14px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.edit-artwork-field input:focus,
+.edit-artwork-field textarea:focus,
+.edit-artwork-field select:focus {
+    border-color: #9a6b47;
+    background: #fff;
+    box-shadow:
+        0 0 0 3px rgba(139, 94, 60, 0.09);
+}
+
+.edit-artwork-field input:disabled,
+.edit-artwork-field textarea:disabled,
+.edit-artwork-field select:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+
+/* ========================================
+   DESCRIPTION SECTION
+======================================== */
+
+.edit-artwork-section:nth-of-type(3) {
+    padding-bottom: 15px;
+}
+
+
+/* ========================================
+   ACTION BUTTONS
+======================================== */
+
+.edit-artwork-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.edit-artwork-cancel-button,
+.edit-artwork-save-button {
+    min-height: 48px;
+    padding: 0 24px;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.edit-artwork-cancel-button {
+    border: 1px solid #cfc6bc;
+    background: #fff;
+    color: #514941;
+}
+
+.edit-artwork-cancel-button:hover {
+    background: #f5f1ec;
+    transform: translateY(-1px);
+}
+
+.edit-artwork-save-button {
+    border: 1px solid #332b25;
+    background: #332b25;
+    color: #fff;
+}
+
+.edit-artwork-save-button:hover {
+    background: #8b5e3c;
+    border-color: #8b5e3c;
+    transform: translateY(-1px);
+    box-shadow:
+        0 8px 18px rgba(70, 48, 34, 0.16);
+}
+
+.edit-artwork-cancel-button:disabled,
+.edit-artwork-save-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* ========================================
+   LOADING
+======================================== */
+
+.edit-artwork-loading {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.edit-artwork-loader {
+    width: 38px;
+    height: 38px;
+    border: 3px solid #ddd5cc;
+    border-top-color: #8b5e3c;
+    border-radius: 50%;
+    animation: editArtworkSpin 0.8s linear infinite;
+    margin-bottom: 20px;
+}
+
+.edit-artwork-loading h2 {
+    margin: 0 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+    color: #332c26;
+}
+
+.edit-artwork-loading p {
+    margin: 0;
+    color: #80776e;
+    font-size: 14px;
+}
+
+@keyframes editArtworkSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .edit-artwork-form {
+        width: 90%;
+    }
+
+    .edit-artwork-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .edit-artwork-field.full {
+        grid-column: auto;
+    }
+
+    .edit-artwork-image-preview {
+        height: 320px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .edit-artwork-topbar {
+        padding: 0 5%;
+        height: 65px;
+    }
+
+    .edit-artwork-topbar > span {
+        display: none;
+    }
+
+    .edit-artwork-header {
+        width: 90%;
+        margin-top: 38px;
+    }
+
+    .edit-artwork-header h1 {
+        font-size: 42px;
+    }
+
+    .edit-artwork-header p {
+        font-size: 14px;
+    }
+
+    .edit-artwork-section {
+        padding: 25px 20px;
+        border-radius: 14px;
+    }
+
+    .edit-section-heading {
+        gap: 13px;
+    }
+
+    .edit-section-heading > span {
+        min-width: 36px;
+        height: 36px;
+        font-size: 11px;
+    }
+
+    .edit-section-heading h2 {
+        font-size: 25px;
+    }
+
+    .edit-artwork-image-preview {
+        height: 260px;
+    }
+
+    .edit-artwork-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .edit-artwork-cancel-button,
+    .edit-artwork-save-button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .edit-artwork-header h1 {
+        font-size: 35px;
+    }
+
+    .edit-artwork-section {
+        padding: 20px 16px;
+    }
+
+    .edit-artwork-image-preview {
+        height: 220px;
+    }
+
+    .edit-section-heading h2 {
+        font-size: 22px;
+    }
+}
+/* =========================================================
+   REPLICA OPTIONS
+   ========================================================= */
+
+.edit-artwork-replica-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    margin-top: 8px;
+    border: 1px solid #d8c8b4;
+    border-radius: 10px;
+    background: #f7f1e8;
+}
+
+.edit-artwork-replica-toggle button {
+    min-width: 72px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: #6f6256;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.edit-artwork-replica-toggle button:hover {
+    color: #3f3025;
+}
+
+.edit-artwork-replica-toggle button.active {
+    background: #4b3426;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(75, 52, 38, 0.18);
+}
+
+
+/* =========================================================
+   REPLICA OPTIONS CONTAINER
+   ========================================================= */
+
+.edit-artwork-replica-options {
+    margin-top: 24px;
+    padding: 24px;
+    border: 1px solid #dfd1c0;
+    border-radius: 14px;
+    background: #fbf8f3;
+}
+
+.edit-artwork-replica-heading {
+    margin-bottom: 20px;
+}
+
+.edit-artwork-replica-heading h3 {
+    margin: 0 0 6px;
+    color: #3f3025;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.edit-artwork-replica-heading p {
+    margin: 0;
+    color: #817467;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   INDIVIDUAL REPLICA OPTION
+   ========================================================= */
+
+.edit-artwork-replica-option {
+    display: grid;
+    grid-template-columns: 100px 1fr 190px;
+    align-items: center;
+    gap: 24px;
+    padding: 18px 20px;
+    margin-top: 12px;
+    border: 1px solid #e2d7c9;
+    border-radius: 11px;
+    background: #ffffff;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.edit-artwork-replica-option:hover {
+    border-color: #cbb69e;
+    box-shadow: 0 5px 18px rgba(73, 53, 38, 0.07);
+}
+
+.edit-artwork-replica-option.selected {
+    border-color: #a98b6c;
+    background: #fffdf9;
+    box-shadow: 0 5px 18px rgba(73, 53, 38, 0.08);
+}
+
+
+/* =========================================================
+   CHECKBOX
+   ========================================================= */
+
+.edit-artwork-replica-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0;
+    color: #5d4b3c;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.edit-artwork-replica-check input {
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    accent-color: #4b3426;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SIZE INFORMATION
+   ========================================================= */
+
+.edit-artwork-replica-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.edit-artwork-replica-info strong {
+    color: #3f3025;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.edit-artwork-replica-info span {
+    color: #817467;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   REPLICA PRICE
+   ========================================================= */
+
+.edit-artwork-replica-price {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.edit-artwork-replica-price label {
+    margin: 0;
+    color: #655548;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.edit-artwork-replica-price input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid #d8ccbd;
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+    color: #3f3025;
+    font-size: 14px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.edit-artwork-replica-price input:focus {
+    border-color: #9f8060;
+    box-shadow: 0 0 0 3px rgba(159, 128, 96, 0.12);
+}
+
+.edit-artwork-replica-price input:disabled {
+    background: #f3eee7;
+    color: #a59a8f;
+    cursor: not-allowed;
+    border-color: #e2d9ce;
+}
+
+
+/* =========================================================
+   HELP TEXT
+   ========================================================= */
+
+.edit-artwork-field > small {
+    display: block;
+    margin-top: 8px;
+    color: #8a7c6e;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .edit-artwork-replica-option {
+        grid-template-columns: 90px 1fr 170px;
+        gap: 18px;
+        padding: 16px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .edit-artwork-replica-options {
+        padding: 18px;
+    }
+
+    .edit-artwork-replica-option {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .edit-artwork-replica-check {
+        width: fit-content;
+    }
+
+    .edit-artwork-replica-price {
+        max-width: 260px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .edit-artwork-replica-options {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .edit-artwork-replica-option {
+        padding: 15px;
+    }
+
+    .edit-artwork-replica-toggle button {
+        min-width: 62px;
+        padding: 9px 16px;
+    }
+
+}

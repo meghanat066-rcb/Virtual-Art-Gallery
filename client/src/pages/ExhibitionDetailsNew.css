@@ -1,0 +1,1012 @@
+/* =========================================================
+   ARTEVORA — EXHIBITION DETAILS
+   Professional Museum / Gallery Exhibition Layout
+========================================================= */
+
+.artevora-exhibition-details-page {
+    min-height: 100vh;
+    background: #ffffff;
+    color: #202020;
+}
+
+
+/* =========================================================
+   EXHIBITION SECTION NAVIGATION
+========================================================= */
+
+.artevora-exhibition-section-nav {
+    position: sticky;
+    top: 82px;
+    z-index: 30;
+
+    border-top: 1px solid #ece9e3;
+    border-bottom: 1px solid #e3dfd8;
+
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+}
+
+.artevora-exhibition-section-nav-inner {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(28px, 5vw, 70px);
+
+    padding: 0 30px;
+}
+
+.artevora-exhibition-section-nav button {
+    position: relative;
+
+    padding: 10px 0;
+
+    border: none;
+    background: transparent;
+
+    color: #85817b;
+
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: color 0.25s ease;
+}
+
+.artevora-exhibition-section-nav button::after {
+    content: '';
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 1px;
+
+    background: #202020;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.25s ease;
+}
+
+.artevora-exhibition-section-nav button:hover {
+    color: #202020;
+}
+
+.artevora-exhibition-section-nav button:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.artevora-exhibition-hero {
+    position: relative;
+
+    width: 100%;
+    height: min(82vh, 850px);
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+.artevora-exhibition-hero-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.artevora-exhibition-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.08),
+            rgba(0, 0, 0, 0.58)
+        );
+}
+
+.artevora-exhibition-hero-content {
+    position: absolute;
+
+    left: clamp(30px, 7vw, 110px);
+    right: clamp(30px, 7vw, 110px);
+    bottom: clamp(45px, 8vw, 95px);
+
+    z-index: 2;
+
+    color: #ffffff;
+}
+
+.artevora-exhibition-eyebrow {
+    display: block;
+
+    margin-bottom: 14px;
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+.artevora-exhibition-hero-content h1 {
+    max-width: 950px;
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(3rem, 7vw, 7rem);
+    font-weight: 400;
+
+    line-height: 0.98;
+}
+
+.artevora-exhibition-hero-content h2 {
+    max-width: 700px;
+
+    margin: 18px 0 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(1.1rem, 2vw, 1.7rem);
+    font-weight: 400;
+
+    line-height: 1.4;
+
+    opacity: 0.92;
+}
+
+.artevora-exhibition-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    margin-top: 30px;
+}
+
+.artevora-exhibition-meta div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.artevora-exhibition-meta span {
+    font-size: 0.62rem;
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+}
+
+.artevora-exhibition-meta strong {
+    font-size: 0.82rem;
+    font-weight: 400;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   BACK TO EXHIBITIONS
+========================================================= */
+
+.artevora-exhibition-details-topbar {
+    width: 100%;
+
+    padding:
+        25px
+        clamp(30px, 7vw, 110px);
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #ece9e3;
+}
+
+.artevora-exhibition-back {
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #65615b;
+
+    font-family: var(--font-body);
+
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+
+    cursor: pointer;
+
+    transition: color 0.25s ease;
+}
+
+.artevora-exhibition-back:hover {
+    color: #202020;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.artevora-exhibition-overview,
+.artevora-exhibition-works {
+    width: 100%;
+
+    padding:
+        clamp(75px, 9vw, 130px)
+        clamp(30px, 7vw, 110px);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.artevora-exhibition-overview {
+    display: grid;
+
+    grid-template-columns:
+        minmax(160px, 0.35fr)
+        minmax(0, 1fr);
+
+    gap: clamp(45px, 8vw, 120px);
+
+    border-bottom: 1px solid #e8e4dd;
+}
+
+.artevora-exhibition-overview-label span {
+    display: block;
+
+    color: #77716a;
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.artevora-exhibition-overview-content {
+    max-width: 850px;
+}
+
+.artevora-exhibition-overview-content > p {
+    margin: 0;
+
+    color: #302d29;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(1.5rem, 2.8vw, 2.45rem);
+
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+.artevora-exhibition-info-block {
+    margin-top: 55px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid #e8e4dd;
+}
+
+.artevora-exhibition-info-block span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #77716a;
+
+    font-size: 0.62rem;
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+.artevora-exhibition-info-block p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #65615b;
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   INSTALLATION VIEWS
+========================================================= */
+
+.artevora-exhibition-installation {
+    width: 100%;
+
+    padding:
+        clamp(75px, 9vw, 130px)
+        clamp(30px, 7vw, 110px);
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #e8e4dd;
+}
+
+.artevora-exhibition-installation-header {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 45px;
+}
+
+.artevora-exhibition-installation-header span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #77716a;
+
+    font-size: 0.65rem;
+    font-weight: 600;
+
+    letter-spacing: 0.17em;
+
+    text-transform: uppercase;
+}
+
+.artevora-exhibition-installation-header h2 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(2.2rem, 4vw, 4rem);
+
+    font-weight: 400;
+}
+
+.artevora-exhibition-installation-controls {
+    display: flex;
+
+    gap: 8px;
+}
+
+.artevora-exhibition-installation-arrow {
+    width: 46px;
+    height: 46px;
+
+    border: 1px solid #d8d3cb;
+
+    background: #ffffff;
+
+    color: #34312d;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.artevora-exhibition-installation-arrow:hover {
+    border-color: #202020;
+
+    background: #202020;
+
+    color: #ffffff;
+}
+
+.artevora-exhibition-installation-gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.artevora-exhibition-installation-image {
+    width: 100%;
+    height: clamp(250px, 30vw, 430px);
+
+    overflow: hidden;
+
+    background: #f5f3ef;
+}
+
+.artevora-exhibition-installation-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.artevora-exhibition-installation-image:hover img {
+    transform: scale(1.025);
+}
+
+.artevora-exhibition-installation-empty {
+    padding: 80px 20px;
+
+    border-top: 1px solid #e8e4dd;
+    border-bottom: 1px solid #e8e4dd;
+
+    text-align: center;
+
+    color: #88827b;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   WORKS
+========================================================= */
+
+.artevora-exhibition-works {
+    padding-bottom: 130px;
+}
+
+.artevora-exhibition-works-header {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 55px;
+}
+
+.artevora-exhibition-works-header span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #77716a;
+
+    font-size: 0.65rem;
+    font-weight: 600;
+
+    letter-spacing: 0.17em;
+
+    text-transform: uppercase;
+}
+
+.artevora-exhibition-works-header h2 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(2.2rem, 4vw, 4rem);
+
+    font-weight: 400;
+}
+
+.artevora-exhibition-works-header p {
+    max-width: 360px;
+
+    margin: 0;
+
+    color: #77716a;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+}
+
+.artevora-exhibition-works-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap:
+        65px
+        28px;
+}
+
+.artevora-exhibition-work {
+    cursor: pointer;
+}
+
+.artevora-exhibition-work-image {
+    width: 100%;
+    height: clamp(300px, 35vw, 500px);
+
+    overflow: hidden;
+
+    background: #f5f3ef;
+}
+
+.artevora-exhibition-work-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.artevora-exhibition-work:hover
+.artevora-exhibition-work-image img {
+    transform: scale(1.025);
+}
+
+.artevora-exhibition-work-information {
+    padding-top: 17px;
+}
+
+.artevora-exhibition-work-information span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #858079;
+
+    font-size: 0.63rem;
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.artevora-exhibition-work-information h3 {
+    margin: 0;
+
+    color: #282521;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.35rem;
+
+    font-weight: 400;
+
+    line-height: 1.3;
+}
+
+.artevora-exhibition-work-information p {
+    margin: 8px 0 0;
+
+    color: #77716a;
+
+    font-size: 0.78rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   NO WORKS
+========================================================= */
+
+.artevora-exhibition-no-works {
+    padding: 90px 20px;
+
+    border-top: 1px solid #e8e4dd;
+    border-bottom: 1px solid #e8e4dd;
+
+    text-align: center;
+
+    color: #88827b;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.artevora-exhibition-bottom-navigation {
+    display: flex;
+
+    justify-content: center;
+
+    padding:
+        45px
+        30px
+        75px;
+
+    border-top: 1px solid #e8e4dd;
+}
+
+.artevora-exhibition-bottom-navigation button {
+    padding: 13px 24px;
+
+    border: 1px solid #d5d0c8;
+
+    background: #ffffff;
+
+    color: #4e4a44;
+
+    font-size: 0.7rem;
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.artevora-exhibition-bottom-navigation button:hover {
+    border-color: #202020;
+
+    background: #202020;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LOADING / ERROR
+========================================================= */
+
+.artevora-exhibition-details-message {
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    text-align: center;
+}
+
+.artevora-exhibition-details-message h2 {
+    margin: 0 0 12px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 2rem;
+
+    font-weight: 400;
+}
+
+.artevora-exhibition-details-message p {
+    margin: 0 0 25px;
+
+    color: #77716a;
+}
+
+.artevora-exhibition-details-message button {
+    padding: 12px 22px;
+
+    border: 1px solid #d5d0c8;
+
+    background: #ffffff;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .artevora-exhibition-section-nav {
+        top: 72px;
+    }
+
+    .artevora-exhibition-section-nav-inner {
+        min-height: 70px;
+
+        gap: 28px;
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        scrollbar-width: none;
+    }
+
+    .artevora-exhibition-section-nav-inner::-webkit-scrollbar {
+        display: none;
+    }
+
+    .artevora-exhibition-overview {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .artevora-exhibition-installation-gallery {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .artevora-exhibition-works-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .artevora-exhibition-hero {
+        height: 75vh;
+    }
+
+    .artevora-exhibition-hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .artevora-exhibition-meta {
+        gap: 20px;
+    }
+
+    .artevora-exhibition-details-topbar {
+        padding:
+            20px
+            25px;
+    }
+
+    .artevora-exhibition-overview,
+    .artevora-exhibition-installation,
+    .artevora-exhibition-works {
+        padding:
+            65px
+            25px;
+        }
+
+    .artevora-exhibition-installation-header,
+    .artevora-exhibition-works-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .artevora-exhibition-installation-gallery,
+    .artevora-exhibition-works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artevora-exhibition-installation-image {
+        height: 330px;
+    }
+
+    .artevora-exhibition-work-image {
+        height: 380px;
+    }
+}
+@media (max-width: 650px) {
+
+    .artevora-exhibition-introduction {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .artevora-exhibition-hero {
+        height: 65vh;
+    }
+
+    .artevora-exhibition-introduction-content h1 {
+        font-size: 3rem;
+    }
+}
+/* =========================================================
+   EXHIBITION INTRODUCTION
+========================================================= */
+
+.artevora-exhibition-introduction {
+    display: grid;
+
+    grid-template-columns:
+        minmax(160px, 0.35fr)
+        minmax(0, 1fr);
+
+    gap: clamp(45px, 8vw, 120px);
+
+    padding:
+        clamp(55px, 7vw, 95px)
+        clamp(30px, 7vw, 110px);
+
+    border-bottom: 1px solid #e8e4dd;
+
+    box-sizing: border-box;
+}
+
+.artevora-exhibition-introduction-label span {
+    display: block;
+
+    color: #77716a;
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.artevora-exhibition-introduction-content {
+    max-width: 950px;
+}
+
+.artevora-exhibition-introduction-content h1 {
+    margin: 0;
+
+    color: #202020;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(3rem, 6vw, 6rem);
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.artevora-exhibition-subtitle {
+    max-width: 700px;
+
+    margin: 20px 0 0;
+
+    color: #6f6a64;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(1.15rem, 2vw, 1.6rem);
+
+    line-height: 1.5;
+}
+
+.artevora-exhibition-introduction
+.artevora-exhibition-meta {
+    margin-top: 45px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 50px;
+}
+
+.artevora-exhibition-introduction
+.artevora-exhibition-meta div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.artevora-exhibition-introduction
+.artevora-exhibition-meta span {
+    color: #77716a;
+
+    font-size: 0.62rem;
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+.artevora-exhibition-introduction
+.artevora-exhibition-meta strong {
+    color: #34312d;
+
+    font-size: 0.85rem;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   HERO IMAGE — IMAGE ONLY
+========================================================= */
+
+.artevora-exhibition-hero {
+    position: relative;
+
+    width: 100%;
+
+    height: min(78vh, 820px);
+
+    overflow: hidden;
+
+    background: #f5f3ef;
+}
+
+.artevora-exhibition-hero-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}

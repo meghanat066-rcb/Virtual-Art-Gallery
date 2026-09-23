@@ -1,0 +1,564 @@
+/* ===================================
+   Artevora Museum Gallery
+=================================== */
+
+.museum-gallery-page {
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+/* ===================================
+   Category Navigation
+=================================== */
+
+.museum-category-navigation {
+    position: sticky;
+    top: 82px;
+    z-index: 20;
+    border-top: 1px solid #ece9e3;
+    border-bottom: 1px solid #e3dfd8;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+}
+
+.museum-category-inner {
+    position: relative;
+
+    display: flex;
+    min-height: 92px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.museum-category-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.museum-category-inner button {
+    position: relative;
+    flex-shrink: 0;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    color: #8c8882;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.museum-category-inner button::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: #202020;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+
+.museum-category-inner button:hover,
+.museum-category-inner button.active {
+    color: #202020;
+}
+
+.museum-category-inner button.active::after {
+    transform: scaleX(1);
+}
+.museum-category-inner {
+    display: flex;
+    min-height: 92px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.museum-category-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(25px, 4vw, 56px);
+
+    overflow-x: auto;
+    scrollbar-width: none;
+    transform: translateX(260px);
+
+}
+
+.museum-category-list::-webkit-scrollbar {
+    display: none;
+}
+
+.museum-search {
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    border-bottom: 1px solid transparent;
+
+    transition:
+        border-color 0.25s ease,
+        width 0.3s ease;
+}
+.museum-search svg {
+    width: 20px;
+    height: 20px;
+}
+.museum-search.is-open {
+    border-bottom-color: #bdb8b0;
+}
+
+.museum-search input {
+    width: 150px;
+
+    padding: 8px 4px;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: #202020;
+
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+}
+
+.museum-search input::placeholder {
+    color: #9b968f;
+}
+
+.museum-search-button {
+    display: flex;
+    width: 34px;
+    height: 34px;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    color: #6f6a64;
+
+    font-size: 0.85rem;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.museum-search-button:hover {
+    color: #202020;
+    transform: scale(1.05);
+}
+/* ===================================
+   Artwork Collection
+=================================== */
+
+.museum-gallery-collection {
+    padding: 58px 0 110px;
+}
+
+/* CSS-column masonry layout */
+
+.museum-artwork-masonry {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.museum-artwork-card {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateY(34px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+}
+.museum-artwork-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border: 1px solid #efede8;
+    background: #f7f6f2;
+}
+
+.museum-artwork-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.museum-artwork-card:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+}
+
+/* Different image proportions */
+
+
+.museum-artwork-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    transition: transform .5s ease;
+}
+.museum-artwork-info {
+    padding: 17px 4px 4px;
+}
+
+.museum-artwork-info h2 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+
+    color: #202020;
+}
+
+.museum-artwork-info p {
+    margin: 6px 0 0;
+
+    color: #88827b;
+
+    font-family: var(--font-body);
+
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+/* ===================================
+   Public Likes Count
+=================================== */
+
+.museum-artwork-public-likes {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    color: #6f6b66;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.museum-artwork-public-likes:hover {
+    background: transparent;
+    box-shadow: none;
+}
+
+.museum-artwork-public-likes svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.museum-artwork-public-likes.liked {
+    color: #b44a45;
+}
+
+/* ===================================
+   Artwork Actions
+   Public Likes + Replica Buy
+=================================== */
+
+.museum-artwork-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.museum-artwork-title-row h2 {
+    flex: 1;
+    min-width: 0;
+}
+
+.museum-artwork-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.museum-artwork-public-likes,
+.museum-replica-buy-symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    color: #77716a;
+
+    font-size: 0.78rem;
+
+    line-height: 1;
+}
+
+.museum-artwork-public-likes svg,
+.museum-replica-buy-symbol svg {
+    width: 14px;
+    height: 14px;
+}
+
+.museum-artwork-public-likes span {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+}
+
+.museum-replica-buy-symbol {
+    color: #29241e;
+}
+
+.museum-replica-buy-symbol svg {
+    transition: transform 0.25s ease;
+}
+
+.museum-artwork-card:hover
+.museum-replica-buy-symbol svg {
+    transform: scale(1.08);
+}
+
+
+/* ===================================
+   View Details Hover
+=================================== */
+
+.museum-image-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 10, 10, 0.2);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.museum-artwork-card:hover
+    .museum-image-overlay,
+.museum-artwork-card:focus-visible
+    .museum-image-overlay {
+    opacity: 1;
+}
+
+.museum-view-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transform: translateY(8px);
+    transition: transform 0.35s ease;
+}
+
+.museum-artwork-card:hover
+    .museum-view-details {
+    transform: translateY(0);
+}
+
+.museum-view-line {
+    display: block;
+    width: 72px;
+    height: 1px;
+    margin-top: 11px;
+    background: #ffffff;
+    transform: scaleX(0.35);
+    transition: transform 0.35s ease;
+}
+
+.museum-artwork-card:hover
+    .museum-view-line {
+    transform: scaleX(1);
+}
+
+/* ===================================
+   Loading and Empty States
+=================================== */
+
+.museum-gallery-state {
+    display: flex;
+    min-height: 390px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.museum-gallery-state h1 {
+    margin: 0 0 16px;
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 400;
+}
+
+.museum-gallery-state p {
+    max-width: 520px;
+    color: #77726c;
+    line-height: 1.7;
+}
+
+.museum-gallery-error p {
+    color: #9b4747;
+}
+
+.museum-gallery-loader {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    border: 2px solid #dedad3;
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    animation: museumLoaderSpin 0.8s linear
+        infinite;
+}
+
+.museum-gallery-loader.small {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+}
+
+.museum-load-more-trigger {
+    display: flex;
+    min-height: 110px;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    color: #87827b;
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.museum-gallery-end {
+    margin: 55px 0 0;
+    color: #96918a;
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@keyframes museumLoaderSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===================================
+   Responsive Layout
+=================================== */
+
+@media (max-width: 1050px) {
+    .museum-category-navigation {
+        top: 72px;
+    }
+
+   .museum-artwork-masonry {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+}
+
+    
+}
+
+@media (max-width: 760px) {
+    .museum-category-inner {
+        min-height: 76px;
+        justify-content: flex-start;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .museum-gallery-collection {
+        padding: 38px 0 90px;
+    }
+
+    .museum-image-overlay {
+        background: rgba(10, 10, 10, 0.12);
+    }
+    .museum-category-list {
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.museum-search {
+    position: sticky;
+    right: auto;
+    margin-left: 10px;
+}
+
+.museum-search input {
+    width: 120px;
+}
+}
+
+@media (max-width: 560px) {
+    .museum-artwork-masonry {
+        grid-template-columns: 1fr;
+    }
+.museum-artwork-image {
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .museum-artwork-card {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .museum-artwork-card > img,
+    .museum-image-overlay,
+    .museum-view-details,
+    .museum-view-line {
+        transition: none;
+    }
+}

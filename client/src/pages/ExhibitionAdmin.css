@@ -1,0 +1,483 @@
+.exhibition-admin-page {
+    min-height: 100vh;
+    padding: 55px 60px 80px;
+    background: #f7f5f1;
+    box-sizing: border-box;
+}
+
+.exhibition-admin-header {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+.exhibition-admin-header > span {
+    display: block;
+    margin-bottom: 10px;
+    color: #8b6f47;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.exhibition-admin-header h1 {
+    margin: 0 0 12px;
+    color: #29251f;
+    font-family: Georgia, serif;
+    font-size: 44px;
+    font-weight: 500;
+}
+
+.exhibition-admin-header p {
+    max-width: 700px;
+    margin: 0;
+    color: #777;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.exhibition-admin-form {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.exhibition-form-section {
+    margin-bottom: 25px;
+    padding: 32px 36px;
+    background: #fff;
+    border: 1px solid #e5ded4;
+    box-sizing: border-box;
+}
+
+.exhibition-form-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee8df;
+}
+
+.exhibition-form-heading > span {
+    color: #8b6f47;
+    font-family: Georgia, serif;
+    font-size: 24px;
+}
+
+.exhibition-form-heading small {
+    display: block;
+    margin-bottom: 5px;
+    color: #9a7b52;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.exhibition-form-heading h2 {
+    margin: 0;
+    color: #302b24;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.exhibition-form-field {
+    margin-bottom: 22px;
+}
+
+.exhibition-form-field:last-child {
+    margin-bottom: 0;
+}
+
+.exhibition-form-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #49423a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.exhibition-form-field input,
+.exhibition-form-field textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #d8d0c5;
+    outline: none;
+    background: #fff;
+    color: #333;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.exhibition-form-field textarea {
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.exhibition-form-field input:focus,
+.exhibition-form-field textarea:focus {
+    border-color: #9a7b52;
+    box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.08);
+}
+
+.exhibition-form-field input::placeholder,
+.exhibition-form-field textarea::placeholder {
+    color: #aaa;
+}
+
+.exhibition-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.exhibition-publishing-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.exhibition-radio-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px;
+    border: 1px solid #ded7cd;
+    background: #faf9f6;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.exhibition-radio-option input {
+    margin-top: 4px;
+    accent-color: #8b6f47;
+}
+
+.exhibition-radio-option span {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.exhibition-radio-option strong {
+    color: #302b24;
+    font-size: 14px;
+}
+
+.exhibition-radio-option small {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.exhibition-featured-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    color: #4d463e;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.exhibition-featured-option input {
+    width: 16px;
+    height: 16px;
+    accent-color: #8b6f47;
+}
+
+.exhibition-create-button {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    background: #8b6f47;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: background 0.25s ease,
+                transform 0.2s ease;
+}
+
+.exhibition-create-button:hover {
+    background: #6f5637;
+}
+
+.exhibition-create-button:active {
+    transform: translateY(1px);
+}
+
+.exhibition-create-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+
+    .exhibition-admin-page {
+        padding: 35px 20px 55px;
+    }
+
+    .exhibition-admin-header h1 {
+        font-size: 36px;
+    }
+
+    .exhibition-form-section {
+        padding: 25px 22px;
+    }
+
+    .exhibition-form-row,
+    .exhibition-publishing-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .exhibition-admin-header-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .exhibition-back-button {
+        width: 100%;
+    }
+}
+.exhibition-admin-header-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.exhibition-back-button {
+    flex-shrink: 0;
+    padding: 11px 20px;
+
+    border: 1px solid #d8cfc2;
+    background: #ffffff;
+    color: #6d5a42;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.exhibition-back-button:hover {
+    border-color: #8b6f47;
+    background: #8b6f47;
+    color: #ffffff;
+}
+/* =========================================
+   APPROVED ARTWORK SELECTION
+========================================= */
+
+.exhibition-form-section-description {
+    margin: -12px 0 24px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.exhibition-artwork-loading,
+.exhibition-artwork-empty {
+    padding: 20px;
+    border: 1px solid #e5ded4;
+    background: #faf9f6;
+    color: #777;
+    font-size: 13px;
+}
+
+/* Artwork grid */
+
+.exhibition-artwork-selection {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* Artwork card */
+
+.exhibition-artwork-option {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+
+    border: 1px solid #ded7cd;
+    background: #ffffff;
+
+    text-align: left;
+    cursor: pointer;
+
+    overflow: hidden;
+
+    /* Important: no animation on artwork cards */
+    animation: none;
+    transform: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.exhibition-artwork-option:hover {
+    border-color: #9a7b52;
+    box-shadow: 0 5px 18px rgba(60, 45, 30, 0.08);
+}
+
+.exhibition-artwork-option.selected {
+    border-color: #8b6f47;
+    box-shadow: 0 0 0 2px rgba(139, 111, 71, 0.15);
+}
+
+/* Image container */
+
+.exhibition-artwork-option-image {
+    position: relative;
+
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #f1eee9;
+
+    /* Prevent layout changes while scrolling */
+    flex-shrink: 0;
+}
+
+/* Artwork image */
+
+.exhibition-artwork-option-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 1;
+    visibility: visible;
+
+    /* No image animation */
+    animation: none;
+    transition: none;
+    transform: none;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Artwork information */
+
+.exhibition-artwork-option-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    min-height: 82px;
+
+    padding: 15px 50px 15px 16px;
+
+    box-sizing: border-box;
+}
+
+.exhibition-artwork-option-details strong {
+    color: #302b24;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+.exhibition-artwork-option-details span {
+    color: #8b6f47;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+/* Selection indicator */
+
+.exhibition-artwork-option-check {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+
+    background: rgba(45, 38, 30, 0.75);
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    z-index: 2;
+}
+
+.exhibition-artwork-option.selected
+.exhibition-artwork-option-check {
+    background: #8b6f47;
+}
+
+/* Selection count */
+
+.exhibition-artwork-selection-count {
+    display: block;
+
+    margin-top: 18px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .exhibition-artwork-selection {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .exhibition-artwork-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .exhibition-artwork-option-image {
+        height: 240px;
+    }
+
+}

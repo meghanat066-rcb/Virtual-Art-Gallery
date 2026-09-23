@@ -1,0 +1,1186 @@
+/* ===================================
+   ARTEVORA ARTWORK DETAILS PAGE
+=================================== */
+
+.artwork-details-page {
+    width: min(1420px, calc(100% - 80px));
+    margin: 0 auto;
+    padding: 42px 0 110px;
+    color: #1f1e1c;
+}
+
+/* ===================================
+   BACK NAVIGATION
+=================================== */
+
+.artwork-details-navigation {
+    margin-bottom: 34px;
+}
+
+.artwork-details-navigation button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #6e6963;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.25s ease;
+}
+
+.artwork-details-navigation button:hover {
+    color: var(--color-accent);
+}
+
+/* ===================================
+   MAIN ARTWORK INTRO
+=================================== */
+
+.artevora-artwork-intro {
+    display: grid;
+    grid-template-columns:
+        minmax(360px, 0.72fr)
+        minmax(0, 1.28fr);
+    align-items: start;
+    gap: clamp(55px, 7vw, 105px);
+    padding-bottom: 72px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Left content */
+
+.artevora-artwork-copy {
+    padding-top: 12px;
+}
+
+.artwork-category-label,
+.details-section-label {
+    margin: 0 0 16px;
+    color: var(--color-accent);
+    font-size: 0.67rem;
+    font-weight: 600;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}
+
+.artevora-artwork-copy h1 {
+    max-width: 590px;
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(3.2rem, 5vw, 5.5rem);
+    font-weight: 400;
+    line-height: 0.97;
+    letter-spacing: -0.03em;
+}
+
+.artevora-artist-year {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.artevora-artist-year button {
+    padding: 0 0 3px;
+    border: none;
+    border-bottom: 1px solid var(--color-accent);
+    background: transparent;
+    color: var(--color-accent);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.artevora-artist-year > span {
+    width: 1px;
+    height: 16px;
+    background: var(--color-border);
+}
+
+.artevora-artist-year strong {
+    color: #625e59;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+/* Long story */
+
+.artevora-long-story {
+    max-width: 600px;
+    margin-top: 32px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.artevora-long-story p {
+    margin: 0 0 17px;
+    color: #5d5852;
+    font-size: 0.92rem;
+    line-height: 1.85;
+}
+
+.artevora-long-story p:last-child {
+    margin-bottom: 0;
+}
+
+/* Price and availability */
+
+.artevora-price-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    margin-top: 24px;
+}
+
+.artevora-price-status > p {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 2.35rem;
+    font-weight: 400;
+}
+
+.artevora-price-status > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.71rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.artevora-price-status .available {
+    color: #4e7858;
+}
+
+.artevora-price-status .unavailable {
+    color: #975858;
+}
+
+/* ===================================
+   LIKE AND WISHLIST
+=================================== */
+
+.artwork-secondary-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.artwork-secondary-actions button {
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 15px;
+    border: 1px solid #ddd8d1;
+    background: transparent;
+    color: #3b3834;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition:
+        border-color 0.25s ease,
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+.artwork-secondary-actions button:hover {
+    border-color: #242424;
+}
+
+.artwork-secondary-actions button.active {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.artwork-secondary-actions button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.artwork-secondary-actions button small {
+    color: #96918b;
+    font-size: 0.68rem;
+}
+
+/* ===================================
+   ENQUIRY AND BUY BUTTONS
+=================================== */
+
+.artwork-primary-actions {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 12px;
+    margin-top: 13px;
+}
+
+.details-buy-button,
+.details-enquiry-button {
+    display: inline-flex;
+    min-height: 55px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    border-radius: 0;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.details-buy-button {
+    border: 1px solid #202020;
+    background: #202020;
+    color: #ffffff;
+}
+
+.details-buy-button:hover {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+}
+
+.details-enquiry-button {
+    border: 1px solid #202020;
+    background: transparent;
+    color: #202020;
+}
+
+.details-enquiry-button:hover {
+    background: #202020;
+    color: #ffffff;
+}
+
+.details-buy-button:disabled,
+.details-enquiry-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.purchase-note {
+    margin: 13px 0 0;
+    color: #918c85;
+    font-size: 0.71rem;
+    line-height: 1.65;
+}
+
+/* ===================================
+   MAIN IMAGE AND THUMBNAILS
+=================================== */
+
+.artevora-artwork-visual {
+    min-width: 0;
+}
+
+.artevora-main-artwork-image {
+    position: relative;
+    height: 610px;
+    overflow: hidden;
+    background: #eeeae3;
+}
+
+.artevora-main-artwork-image > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.artevora-expand-artwork {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: rgba(34, 34, 34, 0.78);
+    color: #ffffff;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.artevora-expand-artwork:hover {
+    background: #202020;
+    transform: scale(1.05);
+}
+
+.artevora-artwork-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 17px;
+}
+
+.artevora-artwork-thumbnails button {
+    height: 92px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ded9d2;
+    background: #f3f0eb;
+    cursor: pointer;
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.artevora-artwork-thumbnails button:hover {
+    border-color: #333333;
+    transform: translateY(-2px);
+}
+
+.artevora-artwork-thumbnails button.active {
+    border: 2px solid var(--color-accent);
+}
+
+.artevora-artwork-thumbnails img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===================================
+   ARTEVORA LUXURY ROOM VISUALIZER
+=================================== */
+
+.artevora-room-preview-section {
+    padding: 82px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.artevora-visualize-heading {
+    max-width: 760px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.artevora-visualize-heading h2 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.artevora-visualize-heading > p:last-child {
+    max-width: 590px;
+    margin: 22px auto 0;
+    color: #716c66;
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+.artevora-luxury-preview {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.artevora-room-stage {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    background: #eeeae3;
+}
+
+.artevora-selected-room {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: artevoraRoomFade 0.5s ease;
+}
+
+.artevora-room-artwork {
+    position: absolute;
+    max-height: 46%;
+    object-fit: contain;
+    transform: translateX(-50%);
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.24),
+        0 0 0 5px rgba(247, 243, 236, 0.9);
+    transition:
+        top 0.4s ease,
+        left 0.4s ease,
+        width 0.4s ease;
+}
+
+@keyframes artevoraRoomFade {
+    from {
+        opacity: 0.35;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Room navigation */
+
+.artevora-room-navigation {
+    display: grid;
+    grid-template-columns: 70px 1fr 70px;
+    align-items: center;
+    max-width: 720px;
+    margin: 32px auto 0;
+}
+
+.artevora-room-navigation > button {
+    display: flex;
+    width: 54px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #2c2926;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.artevora-room-navigation > button:last-child {
+    justify-self: end;
+}
+
+.artevora-room-navigation > button:hover {
+    color: var(--color-accent);
+    transform: scale(1.12);
+}
+
+.artevora-room-identity {
+    text-align: center;
+}
+
+.artevora-room-identity h3 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.artevora-room-identity p {
+    margin: 8px 0 0;
+    color: #5f5a54;
+    font-size: 0.9rem;
+}
+
+.artevora-room-identity small {
+    display: block;
+    max-width: 500px;
+    margin: 11px auto 0;
+    color: #8a857e;
+    font-size: 0.76rem;
+    line-height: 1.6;
+}
+
+.artevora-room-identity > span {
+    display: block;
+    margin-top: 14px;
+    color: var(--color-accent);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+}
+
+/* Size selection */
+
+.artevora-size-section {
+    max-width: 820px;
+    margin: 60px auto 0;
+    padding-top: 35px;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.artevora-size-label {
+    margin: 0 0 25px;
+    color: #716c66;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.artevora-luxury-sizes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.artevora-luxury-sizes button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 13px;
+    border: none;
+    background: transparent;
+    color: #3a3733;
+    cursor: pointer;
+}
+
+.artevora-luxury-sizes button::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.artevora-luxury-sizes button:hover::after,
+.artevora-luxury-sizes button.active::after {
+    transform: scaleX(1);
+}
+
+.artevora-luxury-sizes strong {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 400;
+}
+
+.artevora-luxury-sizes span {
+    margin-top: 7px;
+    color: #8c877f;
+    font-size: 0.69rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Price and purchase */
+
+.artevora-visualize-summary {
+    max-width: 600px;
+    margin: 55px auto 0;
+    text-align: center;
+}
+
+.artevora-visualize-summary > p {
+    margin: 0;
+    color: #8d8881;
+    font-size: 0.67rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.artevora-visualize-summary h3 {
+    margin: 12px 0 22px;
+    font-family: var(--font-heading);
+    font-size: 3.3rem;
+    font-weight: 400;
+}
+
+.artevora-visualize-summary > div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: #77726c;
+    font-size: 0.74rem;
+}
+
+.artevora-visualize-summary > button {
+    display: inline-flex;
+    min-height: 55px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 14px 34px;
+    border: 1px solid #202020;
+    background: #202020;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.artevora-visualize-summary > button:hover {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+}
+
+.artevora-visualize-summary > button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .artevora-room-stage {
+        height: 500px;
+    }
+}
+
+@media (max-width: 700px) {
+    .artevora-room-preview-section {
+        padding: 62px 0;
+    }
+
+    .artevora-room-stage {
+        height: 380px;
+    }
+
+    .artevora-room-navigation {
+        grid-template-columns: 48px 1fr 48px;
+    }
+
+    .artevora-room-navigation > button {
+        width: 42px;
+        height: 42px;
+    }
+
+    .artevora-luxury-sizes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 20px;
+    }
+
+    .artevora-visualize-summary > div {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .artevora-room-stage {
+        height: 300px;
+    }
+
+    .artevora-room-artwork {
+        max-height: 40%;
+    }
+
+    .artevora-room-identity h3 {
+        font-size: 1.8rem;
+    }
+
+    .artevora-luxury-sizes strong {
+        font-size: 1.25rem;
+    }
+}
+
+
+
+
+
+.artevora-visualizer-summary > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.artevora-visualizer-summary > div:last-child {
+    border-bottom: none;
+}
+
+.artevora-visualizer-summary span {
+    color: #8d8881;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.artevora-visualizer-summary strong {
+    font-size: 0.83rem;
+    font-weight: 500;
+    text-align: right;
+}
+
+.artevora-selected-price strong {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+    .artevora-room-visualizer {
+        grid-template-columns: 1fr;
+    }
+
+    .artevora-room-stage {
+        position: relative;
+        top: auto;
+        height: 500px;
+    }
+
+    .artevora-room-options {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .artevora-size-options {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 760px) {
+    .artevora-room-preview-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .artevora-room-stage {
+        height: 390px;
+    }
+
+    .artevora-room-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artevora-size-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .artevora-room-stage {
+        height: 310px;
+    }
+
+    .artevora-room-artwork {
+        max-height: 40%;
+    }
+
+    .artevora-room-options,
+    .artevora-size-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* ===================================
+   COMPACT ARTWORK INFORMATION
+=================================== */
+
+.artevora-compact-information {
+    display: grid;
+    grid-template-columns: 245px 1fr;
+    gap: 48px;
+    padding: 58px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.artevora-information-heading {
+    align-self: start;
+}
+
+.artevora-information-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
+}
+
+.artevora-information-list > div {
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    gap: 14px;
+    padding: 12px 15px;
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.artevora-information-list span {
+    color: #8d8881;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.artevora-information-list strong {
+    color: #302e2b;
+    font-size: 0.79rem;
+    font-weight: 500;
+}
+
+/* ===================================
+   COMMENTS SECTION
+=================================== */
+
+.professional-comments-section {
+    padding: 72px 0 0;
+}
+
+.comments-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.comments-heading h2 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 3.9rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.comments-heading > svg {
+    color: var(--color-accent);
+    font-size: 1.9rem;
+}
+
+.professional-comment-form {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+    gap: 18px;
+    margin-top: 38px;
+    padding: 28px 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.comment-user-icon,
+.comment-avatar {
+    color: #8d8881;
+    font-size: 2.5rem;
+}
+
+.comment-input-wrapper {
+    position: relative;
+}
+
+.comment-input-wrapper textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 15px 17px 33px;
+    border: 1px solid var(--color-border);
+    border-radius: 0;
+    outline: none;
+    background: #ffffff;
+    color: #282828;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.comment-input-wrapper textarea:focus {
+    border-color: var(--color-accent);
+}
+
+.comment-character-count {
+    position: absolute;
+    right: 14px;
+    bottom: 11px;
+    color: #98938d;
+    font-size: 0.68rem;
+}
+
+.comment-error {
+    margin: 0 0 9px;
+    color: #9b4b4b;
+    font-size: 0.78rem;
+}
+
+.post-comment-button,
+.details-primary-button {
+    display: inline-flex;
+    min-height: 53px;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 13px 22px;
+    border: 1px solid #202020;
+    background: #202020;
+    color: #ffffff;
+    border-radius: 0;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.post-comment-button:hover,
+.details-primary-button:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.post-comment-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.professional-comments-list {
+    margin-top: 30px;
+}
+
+.professional-comment-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 17px;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.comment-header h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.comment-header span {
+    color: #96918b;
+    font-size: 0.72rem;
+}
+
+.comment-content > p {
+    margin: 11px 0 0;
+    color: #65615c;
+    font-size: 0.88rem;
+    line-height: 1.75;
+}
+
+.no-comments-message {
+    padding: 58px 20px;
+    text-align: center;
+}
+
+.no-comments-message svg {
+    color: #aaa49c;
+    font-size: 2.2rem;
+}
+
+.no-comments-message h3 {
+    margin: 18px 0 9px;
+    font-family: var(--font-heading);
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+
+.no-comments-message p {
+    margin: 0;
+    color: #77726c;
+}
+
+/* ===================================
+   LOADING AND ERROR STATES
+=================================== */
+
+.artwork-details-state {
+    display: flex;
+    min-height: 75vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 24px;
+    text-align: center;
+}
+
+.artwork-details-state h1 {
+    margin: 21px 0 11px;
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    font-weight: 400;
+}
+
+.artwork-details-state p {
+    margin-bottom: 27px;
+    color: #77726c;
+}
+
+.details-loading-spinner {
+    width: 41px;
+    height: 41px;
+    border: 2px solid #ddd8d1;
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    animation: detailsSpin 0.8s linear infinite;
+}
+
+@keyframes detailsSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media (max-width: 1100px) {
+    .artwork-details-page {
+        width: min(100% - 48px, 1100px);
+    }
+
+    .artevora-artwork-intro {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .artevora-artwork-copy {
+        order: 2;
+    }
+
+    .artevora-artwork-visual {
+        order: 1;
+    }
+
+    .artevora-main-artwork-image {
+        height: 570px;
+    }
+
+    .artevora-compact-information {
+        grid-template-columns: 1fr;
+        gap: 27px;
+    }
+}
+
+@media (max-width: 760px) {
+    .artwork-details-page {
+        width: calc(100% - 32px);
+        padding-top: 28px;
+    }
+
+    .artevora-main-artwork-image {
+        height: 430px;
+    }
+
+    .artevora-artwork-thumbnails button {
+        height: 70px;
+    }
+
+    .artevora-artwork-copy h1 {
+        font-size: clamp(3rem, 14vw, 4rem);
+    }
+
+    .artwork-secondary-actions,
+    .artwork-primary-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .artevora-room-preview-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .artevora-information-list {
+        grid-template-columns: 1fr;
+    }
+
+    .artevora-price-status {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .professional-comment-form {
+        grid-template-columns: 1fr;
+    }
+
+    .comment-user-icon {
+        display: none;
+    }
+
+    .post-comment-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .artevora-main-artwork-image {
+        height: 340px;
+    }
+
+    .artevora-artwork-thumbnails {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artevora-artwork-thumbnails button {
+        height: 85px;
+    }
+
+    .artevora-information-list > div {
+        grid-template-columns: 90px 1fr;
+    }
+
+    .comment-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+@media (max-width: 900px) {
+    .artevora-room-stage {
+        height: 460px;
+    }
+
+    .artevora-room-artwork {
+        width: 29%;
+    }
+
+    .artevora-room-controls {
+        justify-content: flex-start;
+        padding-bottom: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .artevora-room-stage {
+        height: 340px;
+    }
+
+    .artevora-room-artwork {
+        top: 21%;
+        width: 34%;
+        max-height: 40%;
+    }
+
+    .artevora-room-controls {
+        gap: 22px;
+    }
+}

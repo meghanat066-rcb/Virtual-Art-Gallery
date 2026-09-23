@@ -1,0 +1,208 @@
+/* ================================
+   ARTEVORA — ARTISTS PAGE
+================================ */
+
+.artevora-artists-page {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 70px 0 100px;
+    color: #222;
+}
+
+/* ================================
+   PAGE HEADER
+================================ */
+
+.artevora-artists-header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.artevora-artists-header > span {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #9b6927;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+}
+
+.artevora-artists-header h1 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.artevora-artists-header p {
+    max-width: 600px;
+    margin: 12px auto 0;
+
+    color: #777;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* ================================
+   ARTIST GRID
+================================ */
+
+.artevora-artists-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 30px;
+}
+
+/* ================================
+   ARTIST CARD
+================================ */
+
+.artevora-artist-card {
+    text-align: center;
+    cursor: pointer;
+}
+
+.artevora-artist-photo {
+    position: relative;
+
+    width: 190px;
+    height: 190px;
+
+    margin: 0 auto 20px;
+
+    overflow: hidden;
+    border-radius: 50%;
+
+    background: #eee;
+}
+
+.artevora-artist-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+/* Hover effect */
+
+.artevora-artist-card:hover
+.artevora-artist-photo img {
+    transform: scale(1.06);
+    filter: brightness(0.78);
+}
+
+/* View profile overlay */
+
+.artevora-artist-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+    background: rgba(0, 0, 0, 0.38);
+
+    color: white;
+
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+
+    transition: opacity 0.35s ease;
+}
+
+.artevora-artist-card:hover
+.artevora-artist-overlay {
+    opacity: 1;
+}
+
+/* ================================
+   ARTIST NAME
+================================ */
+
+.artevora-artist-card h2 {
+    margin: 0 0 6px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+.artevora-artist-card p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+}
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.artevora-artists-empty {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    border: 1px solid #e3dfd8;
+    background: #faf9f7;
+}
+
+.artevora-artists-empty h2 {
+    margin: 12px 0 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 500;
+}
+
+.artevora-artists-empty p {
+    margin: 0;
+
+    color: #777;
+    font-size: 0.8rem;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+    .artevora-artists-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .artevora-artists-page {
+        padding-top: 40px;
+    }
+
+    .artevora-artists-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .artevora-artists-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .artevora-artist-photo {
+        width: 170px;
+        height: 170px;
+    }
+}

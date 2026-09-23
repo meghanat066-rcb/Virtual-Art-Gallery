@@ -1,0 +1,532 @@
+/* =========================================
+   ARTEVORA — MY PURCHASES
+========================================= */
+
+.artevora-purchases-page {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    padding: 45px 0 90px;
+}
+
+
+/* HEADER */
+
+.artevora-purchases-header {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.artevora-purchases-header > span {
+    display: block;
+    margin-bottom: 8px;
+    color: #a4773d;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+}
+
+.artevora-purchases-header h1 {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #222;
+}
+
+.artevora-purchases-header p {
+    margin: 10px 0 0;
+    color: #777;
+    font-size: 0.82rem;
+}
+
+
+/* PURCHASE LIST */
+
+.artevora-purchases-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+/* PURCHASE ITEM */
+
+.artevora-purchase-item {
+    display: grid;
+    grid-template-columns: 170px 1fr 180px;
+    gap: 25px;
+    align-items: center;
+
+    background: #fff;
+    border: 1px solid #e7e2da;
+    padding: 18px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.artevora-purchase-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* IMAGE */
+
+.artevora-purchase-image {
+    width: 170px;
+    height: 125px;
+    overflow: hidden;
+    background: #f3f1ed;
+}
+
+.artevora-purchase-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    transition: transform 0.45s ease;
+}
+
+.artevora-purchase-item:hover
+.artevora-purchase-image img {
+    transform: scale(1.04);
+}
+
+
+/* DETAILS */
+
+.artevora-purchase-details {
+    min-width: 0;
+}
+
+.artevora-purchase-label {
+    display: block;
+    margin-bottom: 6px;
+
+    color: #a4773d;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.artevora-purchase-details h2 {
+    margin: 0;
+
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #222;
+}
+
+.artevora-purchase-artist {
+    margin: 5px 0 12px;
+    color: #777;
+    font-size: 0.72rem;
+}
+
+
+/* META */
+
+.artevora-purchase-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.artevora-purchase-meta span {
+    padding: 5px 9px;
+
+    background: #f7f5f1;
+    border: 1px solid #e9e5df;
+
+    color: #666;
+    font-size: 0.62rem;
+}
+
+
+/* TRANSACTION */
+
+.artevora-transaction {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    margin-top: 12px;
+
+    color: #888;
+    font-size: 0.6rem;
+}
+
+.artevora-transaction svg {
+    color: #a4773d;
+}
+
+.artevora-transaction strong {
+    color: #666;
+    font-weight: 500;
+}
+
+
+/* RIGHT SUMMARY */
+
+.artevora-purchase-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    text-align: right;
+}
+
+.artevora-purchase-price {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.05rem;
+    color: #222;
+}
+
+
+/* STATUS */
+
+.artevora-purchase-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 5px 9px;
+
+    background: #edf7ef;
+    color: #327342;
+
+    font-size: 0.62rem;
+    font-weight: 600;
+}
+
+.artevora-purchase-status svg {
+    font-size: 0.65rem;
+}
+
+
+/* VIEW BUTTON */
+
+.artevora-view-purchase {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 9px 13px;
+
+    border: 1px solid #222;
+    background: #222;
+    color: #fff;
+
+    font-size: 0.65rem;
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.artevora-view-purchase:hover {
+    background: #a4773d;
+    border-color: #a4773d;
+}
+
+
+/* LOADING / ERROR */
+
+.artevora-purchases-state {
+    padding: 55px 20px;
+    text-align: center;
+    border: 1px solid #e5e1da;
+    background: #faf9f7;
+}
+
+.artevora-purchases-state p {
+    margin: 10px 0 0;
+    color: #777;
+    font-size: 0.78rem;
+}
+
+.artevora-purchases-error {
+    color: #c62828 !important;
+}
+
+
+/* LOADER */
+
+.artevora-purchases-loader {
+    width: 28px;
+    height: 28px;
+    margin: 0 auto;
+
+    border: 3px solid #e4dfd7;
+    border-top-color: #a4773d;
+    border-radius: 50%;
+
+    animation: artevoraPurchaseSpin 0.8s linear infinite;
+}
+
+@keyframes artevoraPurchaseSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* EMPTY STATE */
+
+.artevora-purchases-empty {
+    max-width: 550px;
+    margin: 0 auto;
+
+    padding: 55px 30px;
+
+    text-align: center;
+
+    border: 1px solid #e5e1da;
+    background: #faf9f7;
+}
+
+.artevora-purchases-empty > svg {
+    margin-bottom: 15px;
+
+    font-size: 28px;
+    color: #a4773d;
+}
+
+.artevora-purchases-empty h2 {
+    margin: 0;
+
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #222;
+}
+
+.artevora-purchases-empty p {
+    margin: 9px auto 20px;
+    max-width: 380px;
+
+    color: #777;
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+
+.artevora-purchases-empty button {
+    border: none;
+    background: #222;
+    color: #fff;
+
+    padding: 10px 18px;
+
+    font-size: 0.68rem;
+    cursor: pointer;
+
+    transition: background 0.25s ease;
+}
+
+.artevora-purchases-empty button:hover {
+    background: #a4773d;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .artevora-purchase-item {
+        grid-template-columns: 135px 1fr;
+        gap: 18px;
+    }
+
+    .artevora-purchase-image {
+        width: 135px;
+        height: 110px;
+    }
+
+    .artevora-purchase-summary {
+        grid-column: 2;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .artevora-purchases-page {
+        width: 92%;
+        padding-top: 30px;
+    }
+
+    .artevora-purchases-header {
+        margin-bottom: 28px;
+    }
+
+    .artevora-purchases-header h1 {
+        font-size: 1.9rem;
+    }
+
+    .artevora-purchase-item {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .artevora-purchase-image {
+        width: 100%;
+        height: 190px;
+    }
+
+    .artevora-purchase-summary {
+        grid-column: auto;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+
+    .artevora-transaction strong {
+        max-width: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+/* ================================
+   DELETE PURCHASE BUTTON
+================================ */
+
+.artevora-delete-purchase {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 11px 18px;
+    margin-top: 10px;
+
+    border: 1px solid #d9b8b8;
+    border-radius: 8px;
+
+    background: #fff;
+    color: #9b3d3d;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease;
+}
+
+.artevora-delete-purchase svg {
+    font-size: 13px;
+    transition: transform 0.25s ease;
+}
+
+.artevora-delete-purchase:hover {
+    background: #9b3d3d;
+    color: #fff;
+    border-color: #9b3d3d;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 5px 14px rgba(155, 61, 61, 0.18);
+}
+
+.artevora-delete-purchase:hover svg {
+    transform: scale(1.08);
+}
+
+.artevora-delete-purchase:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.artevora-delete-purchase:focus-visible {
+    outline: 2px solid #9b3d3d;
+    outline-offset: 3px;
+}
+/* ================================
+   BACK TO DASHBOARD
+================================ */
+
+.artevora-back-dashboard {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 25px;
+    padding: 10px 18px;
+
+    border: 1px solid #d8d0c5;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #4a4038;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.2s ease;
+}
+
+.artevora-back-dashboard:hover {
+    background: #4a4038;
+    color: #fff;
+    border-color: #4a4038;
+    transform: translateX(-2px);
+}
+
+.artevora-back-dashboard:active {
+    transform: translateX(0);
+}
+
+.artevora-back-dashboard:focus-visible {
+    outline: 2px solid #4a4038;
+    outline-offset: 3px;
+}
+.artevora-purchase-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+.artevora-purchase-action-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+    margin-top: 18px;
+}
+
+.artevora-purchase-action-row .artevora-view-purchase,
+.artevora-purchase-action-row .artevora-delete-purchase {
+    width: auto !important;
+    margin: 0 !important;
+    flex: 0 0 auto;
+}

@@ -1,0 +1,1165 @@
+.artevora-virtual-gallery-3d {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #e7e5df;
+}
+
+.artevora-virtual-gallery-3d canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.artevora-virtual-gallery-3d:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    background: #e7e5df;
+}
+
+.artevora-virtual-menu-button {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #1f1e1c;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.16);
+    z-index: 50;
+}
+
+.artevora-virtual-menu-button:hover {
+    transform: scale(1.04);
+}
+
+.artevora-virtual-menu {
+    position: fixed;
+    right: 24px;
+    bottom: 82px;
+    width: 230px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    z-index: 80;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.artevora-virtual-menu-item {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #25231f;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s ease;
+}
+
+.artevora-virtual-menu-item:hover {
+    background: #f1efeb;
+}
+
+.artevora-menu-arrow {
+    font-size: 20px;
+    color: #77736d;
+    line-height: 1;
+}
+
+.artevora-menu-status {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    color: #77736d;
+}
+
+.artevora-instructions-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(20, 20, 20, 0.28);
+    backdrop-filter: blur(2px);
+    z-index: 100;
+}
+
+.artevora-instructions-panel {
+    width: min(620px, calc(100vw - 40px));
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px 36px 32px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 24px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+    color: #24221f;
+}
+
+.artevora-instructions-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+.artevora-instructions-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.artevora-instructions-close {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    background: transparent;
+    color: #24221f;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.artevora-instructions-visual {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0 28px;
+}
+
+.artevora-gallery-diagram {
+    position: relative;
+    width: 390px;
+    height: 190px;
+    max-width: 100%;
+}
+
+.artevora-gallery-back-wall {
+    position: absolute;
+    left: 21%;
+    right: 21%;
+    top: 30px;
+    bottom: 30px;
+    border: 2px solid #24221f;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.5),
+        rgba(240, 238, 234, 0.3)
+    );
+}
+
+.artevora-gallery-left-wall {
+    position: absolute;
+    left: 2%;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    border-top: 2px solid #24221f;
+    border-right: 2px solid #24221f;
+    transform: skewY(27deg);
+    transform-origin: right center;
+}
+
+.artevora-gallery-right-wall {
+    position: absolute;
+    right: 2%;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    border-top: 2px solid #24221f;
+    border-left: 2px solid #24221f;
+    transform: skewY(-27deg);
+    transform-origin: left center;
+}
+
+.artevora-gallery-perspective-line {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    width: 2px;
+    height: 45px;
+    background: #24221f;
+    transform: translateX(-50%);
+}
+
+.artevora-gallery-cursor {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #24221f;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.artevora-instructions-controls {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 24px 0;
+    border-top: 1px solid #dedbd6;
+    border-bottom: 1px solid #dedbd6;
+}
+
+.artevora-control-section {
+    min-width: 160px;
+    text-align: center;
+}
+
+.artevora-control-section h3 {
+    margin: 0 0 14px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.artevora-control-section p {
+    margin: 12px 0 0;
+    font-size: 12px;
+    color: #68645f;
+}
+
+.artevora-wasd-keys,
+.artevora-arrow-keys {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.artevora-key-row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.artevora-control-key {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #24221f;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #24221f;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.artevora-instructions-start {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #24221f;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+}
+
+.artevora-instructions-start:hover {
+    opacity: 0.88;
+}
+
+.artevora-artwork-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999998 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #11110f;
+    overflow: hidden;
+}
+.artevora-artwork-fullscreen-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 40px 40px;
+    box-sizing: border-box;
+}
+
+.artevora-artwork-fullscreen-content img {
+    max-width: 86vw;
+    max-height: 78vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.artevora-artwork-fullscreen-content h2 {
+    margin: 18px 0 0;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.artevora-artwork-back {
+    position: fixed !important;
+    top: 25px !important;
+    right: 25px !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    min-height: 52px !important;
+    z-index: 9999999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 50% !important;
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 34px !important;
+    font-weight: 300 !important;
+    line-height: 52px !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45) !important;
+}
+
+.artevora-artwork-back:hover {
+    background: #000000 !important;
+    transform: scale(1.05);
+}
+.artevora-artwork-info-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999998 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f3ef;
+    overflow-y: auto;
+}
+
+.artevora-artwork-info-content {
+    width: min(1100px, 90vw);
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr) minmax(320px, 1fr);
+    gap: 70px;
+    align-items: center;
+    padding: 70px 40px;
+    box-sizing: border-box;
+}
+
+.artevora-artwork-info-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artevora-artwork-info-image img {
+    max-width: 100%;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.artevora-artwork-info-text {
+    max-width: 460px;
+}
+
+.artevora-artwork-info-text h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    line-height: 1.15;
+    font-weight: 400;
+    color: #24221f;
+}
+
+.artevora-info-divider {
+    width: 55px;
+    height: 1px;
+    margin: 22px 0 28px;
+    background: #8c8780;
+}
+
+.artevora-artwork-info-text h3 {
+    margin: 20px 0 7px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #57534d;
+}
+
+.artevora-artwork-info-text p {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #45413c;
+}
+
+.artevora-artwork-info-back {
+    position: fixed !important;
+    top: 25px !important;
+    right: 25px !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    min-height: 52px !important;
+    z-index: 9999999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 2px solid #333333 !important;
+    border-radius: 50% !important;
+    background: #ffffff !important;
+    color: #222222 !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 34px !important;
+    font-weight: 300 !important;
+    line-height: 52px !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25) !important;
+}
+
+.artevora-artwork-info-back:hover {
+    background: #eeeeee !important;
+    transform: scale(1.05);
+}
+@media (max-width: 900px) {
+    .artevora-artwork-info-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 80px 30px 40px;
+    }
+
+    .artevora-artwork-info-image img {
+        max-height: 48vh;
+    }
+
+    .artevora-artwork-info-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .artevora-instructions-panel {
+        padding: 24px 20px 25px;
+    }
+
+    .artevora-instructions-controls {
+        gap: 30px;
+    }
+
+    .artevora-control-section {
+        min-width: 130px;
+    }
+
+    .artevora-artwork-fullscreen-content {
+        padding: 70px 20px 30px;
+    }
+
+    .artevora-artwork-fullscreen-content img {
+        max-width: 92vw;
+        max-height: 72vh;
+    }
+
+    .artevora-artwork-info-content {
+        width: 94vw;
+        padding: 80px 20px 35px;
+    }
+
+    .artevora-artwork-info-text h1 {
+        font-size: 28px;
+    }
+}
+.artevora-room-selector {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+
+    display: flex;
+    gap: 10px;
+
+    padding: 8px;
+
+    background: rgba(25, 22, 18, 0.82);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+}
+
+.artevora-room-selector button {
+    border: none;
+    background: transparent;
+
+    color: #eee8df;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+.artevora-room-selector button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.artevora-room-selector button.active {
+    background: #d4af6a;
+    color: #201a13;
+}
+/* =========================================================
+   ARTEVORA VIRTUAL TOUR — ROOM SELECTION
+   ========================================================= */
+
+.artevora-virtual-room-selection {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 90px 7vw 100px;
+
+     overflow: visible;
+
+    background:
+        radial-gradient(
+            circle at top center,
+            rgba(213, 190, 157, 0.20),
+            transparent 42%
+        ),
+        #f3efe8;
+
+    color: #29241e;
+
+    font-family:
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.artevora-virtual-room-selection-header {
+    max-width: 850px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+
+.artevora-virtual-room-selection-header span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.28em;
+
+    color: #a27a43;
+}
+
+
+.artevora-virtual-room-selection-header h1 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.025em;
+
+    color: #2c251e;
+}
+
+
+.artevora-virtual-room-selection-header p {
+    max-width: 620px;
+
+    margin: 25px auto 0;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #6d655c;
+}
+
+
+/* =========================================================
+   ROOM GRID
+   ========================================================= */
+
+.artevora-virtual-room-grid {
+    width: 100%;
+
+    max-width: 1350px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 42px;
+}
+
+
+/* =========================================================
+   ROOM CARD
+   ========================================================= */
+
+.artevora-virtual-room-card {
+    overflow: hidden;
+
+    background: #fffdf9;
+
+    border: 1px solid rgba(100, 82, 60, 0.14);
+
+    box-shadow:
+        0 18px 50px rgba(63, 48, 32, 0.10);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    animation: artevoraVirtualRoomFadeIn 0.7s ease both;
+}
+
+
+.artevora-virtual-room-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 28px 65px rgba(63, 48, 32, 0.16);
+}
+
+
+/* =========================================================
+   ROOM IMAGE
+   ========================================================= */
+
+.artevora-virtual-room-card-image {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #d9d0c4;
+}
+
+
+.artevora-virtual-room-card-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(20, 15, 10, 0.30),
+            transparent 55%
+        );
+
+    pointer-events: none;
+}
+
+
+.artevora-virtual-room-card-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+.artevora-virtual-room-card:hover
+.artevora-virtual-room-card-image img {
+    transform: scale(1.045);
+}
+
+
+/* =========================================================
+   IMAGE PLACEHOLDER
+   ========================================================= */
+
+.artevora-virtual-room-card-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6f5a45,
+            #342a21
+        );
+
+    color: #e5c98e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 25px;
+
+    letter-spacing: 0.22em;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.artevora-virtual-room-card-content {
+    padding: 30px 32px 34px;
+}
+
+
+.artevora-virtual-room-theme {
+    display: inline-block;
+
+    margin-bottom: 13px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.20em;
+
+    color: #a27a43;
+}
+
+
+.artevora-virtual-room-card-content h2 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color: #302920;
+}
+
+
+.artevora-virtual-room-card-content p {
+    margin: 16px 0 27px;
+
+    max-width: 600px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    color: #70685f;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 3;
+
+    line-clamp: 3;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+/* =========================================================
+   ENTER VIRTUAL TOUR BUTTON
+   ========================================================= */
+
+.artevora-virtual-room-card-content button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    min-width: 205px;
+
+    padding: 13px 21px;
+
+    border: 1px solid #8e6b3f;
+
+    background: transparent;
+
+    color: #5c4325;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.artevora-virtual-room-card-content button span {
+    font-size: 18px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.artevora-virtual-room-card-content button:hover {
+    background: #5d4730;
+
+    border-color: #5d4730;
+
+    color: #fffaf2;
+
+    transform: translateX(2px);
+}
+
+
+.artevora-virtual-room-card-content button:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   LOADING STATE
+   ========================================================= */
+
+.artevora-virtual-room-selection-loading {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.02em;
+
+    color: #665544;
+}
+
+
+/* =========================================================
+   ERROR STATE
+   ========================================================= */
+
+.artevora-virtual-room-selection-error {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #8b4038;
+}
+
+
+/* =========================================================
+   ENTRANCE ANIMATION
+   ========================================================= */
+
+@keyframes artevoraVirtualRoomFadeIn {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .artevora-virtual-room-selection {
+        padding:
+            70px 5vw
+            80px;
+    }
+
+
+    .artevora-virtual-room-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 720px;
+
+        gap: 32px;
+    }
+
+
+    .artevora-virtual-room-selection-header {
+        margin-bottom: 50px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .artevora-virtual-room-selection {
+        padding:
+            55px 20px
+            65px;
+    }
+
+
+    .artevora-virtual-room-selection-header h1 {
+        font-size: 43px;
+    }
+
+
+    .artevora-virtual-room-selection-header p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .artevora-virtual-room-card-content {
+        padding:
+            25px 22px
+            28px;
+    }
+
+
+    .artevora-virtual-room-card-content h2 {
+        font-size: 26px;
+    }
+
+
+    .artevora-virtual-room-card-content button {
+        width: 100%;
+    }
+
+}
+.artevora-artist-fullscreen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #eeeae3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.artevora-artist-fullscreen-back {
+    position: absolute;
+    top: 24px;
+    right: 30px;
+    border: none;
+    background: transparent;
+    font-size: 42px;
+    cursor: pointer;
+    color: #24211d;
+    z-index: 2;
+}
+
+.artevora-artist-fullscreen-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.artevora-artist-fullscreen-content img {
+    width: min(520px, 45vw);
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.artevora-artist-fullscreen-details {
+    max-width: 460px;
+}
+
+.artevora-artist-fullscreen-details h2 {
+    font-size: 38px;
+    margin-bottom: 24px;
+}
+
+.artevora-artist-fullscreen-details p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+html,
+body,
+#root {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* FIX VIRTUAL TOUR SELECTION PAGE SCROLLING */
+
+.artevora-virtual-room-selection {
+    position: relative !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+    overflow-y: visible !important;
+}
+
+.artevora-virtual-room-grid {
+    position: relative !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.artevora-virtual-room-card {
+    position: relative !important;
+}

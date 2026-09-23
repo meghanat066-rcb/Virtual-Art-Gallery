@@ -1,0 +1,330 @@
+.artevora-edit-profile-page {
+    min-height: calc(100vh - 80px);
+    background: #faf9f6;
+    padding: 55px 6% 80px;
+}
+
+.artevora-edit-profile-container {
+    width: min(850px, 100%);
+    margin: 0 auto;
+}
+
+.artevora-edit-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    border: none;
+    background: transparent;
+
+    color: #777;
+    font-size: 0.75rem;
+
+    cursor: pointer;
+
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.artevora-edit-back:hover {
+    color: #9b6927;
+}
+
+.artevora-edit-profile-header {
+    margin-bottom: 35px;
+}
+
+.artevora-edit-profile-header span {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    color: #9b6927;
+}
+
+.artevora-edit-profile-header h1 {
+    margin: 8px 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #222;
+}
+
+.artevora-edit-profile-header p {
+    margin: 0;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+.artevora-edit-profile-card {
+    background: #fff;
+    border-top: 1px solid #e3dfd8;
+    border-bottom: 1px solid #e3dfd8;
+
+    padding: 45px;
+}
+
+.artevora-edit-profile-photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.artevora-profile-avatar {
+    width: 105px;
+    height: 105px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    background: #222;
+    color: #fff;
+
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 42px;
+}
+
+.artevora-profile-avatar img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.artevora-edit-field {
+    margin-bottom: 28px;
+}
+
+.artevora-edit-field label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: #555;
+}
+
+.artevora-edit-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border-bottom: 1px solid #d8d3ca;
+
+    padding: 10px 2px;
+
+    transition: border-color 0.2s ease;
+}
+
+.artevora-edit-input:focus-within {
+    border-color: #9b6927;
+}
+
+.artevora-edit-input svg {
+    color: #9b6927;
+    font-size: 14px;
+}
+
+.artevora-edit-input input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #222;
+    font-size: 0.85rem;
+}
+
+.artevora-edit-input input:disabled {
+    color: #888;
+    cursor: not-allowed;
+}
+
+.artevora-edit-field small {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #999;
+    font-size: 0.68rem;
+}
+
+.artevora-edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: 45px;
+}
+
+.artevora-edit-actions button {
+    padding: 11px 22px;
+
+    font-size: 0.72rem;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.artevora-edit-cancel {
+    border: 1px solid #d8d3ca;
+    background: transparent;
+    color: #555;
+}
+
+.artevora-edit-cancel:hover {
+    background: #f4f1eb;
+}
+
+.artevora-edit-save {
+    border: 1px solid #222;
+    background: #222;
+    color: #fff;
+}
+
+.artevora-edit-save:hover {
+    background: #9b6927;
+    border-color: #9b6927;
+}
+
+@media (max-width: 600px) {
+
+    .artevora-edit-profile-page {
+        padding: 40px 5% 60px;
+    }
+
+    .artevora-edit-profile-header h1 {
+        font-size: 2rem;
+    }
+
+    .artevora-edit-profile-card {
+        padding: 30px 20px;
+    }
+
+    .artevora-edit-actions {
+        flex-direction: column;
+    }
+
+    .artevora-edit-actions button {
+        width: 100%;
+    }
+}
+/* =========================================
+   PROFILE PHOTO ACTIONS
+   ========================================= */
+
+.artevora-photo-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+
+/* CHANGE PHOTO */
+
+.artevora-change-photo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    background: #222;
+    color: #fff;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease;
+}
+
+.artevora-change-photo svg {
+    font-size: 12px;
+}
+
+.artevora-change-photo:hover {
+    background: #9b6927;
+    transform: translateY(-1px);
+}
+
+
+/* REMOVE PHOTO */
+
+.artevora-remove-photo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 9px 17px;
+
+    background: transparent;
+
+    color: #777;
+
+    border: 1px solid #d8d4cc;
+
+    font-family: inherit;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.2s ease;
+}
+
+.artevora-remove-photo svg {
+    font-size: 11px;
+}
+
+.artevora-remove-photo:hover {
+    color: #8a4f45;
+    border-color: #c9aaa4;
+    background: #faf6f5;
+    transform: translateY(-1px);
+}
+
+.artevora-remove-photo:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* PHOTO INFORMATION */
+
+.artevora-photo-help {
+    display: block;
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    color: #999;
+
+    font-size: 0.65rem;
+    letter-spacing: 0.03em;
+}

@@ -1,0 +1,1114 @@
+/* =========================================================
+   ARTEVORA — PROFESSIONAL USER PROFILE
+   ========================================================= */
+
+.artevora-user-profile {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+
+    margin: 0;
+    padding: 0;
+
+    background: #faf9f6;
+    color: #252525;
+}
+
+
+/* =========================================================
+   PROFILE LAYOUT
+   ========================================================= */
+
+.artevora-profile-layout {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+
+    gap: 0;
+
+    align-items: stretch;
+
+    background: #ffffff;
+}
+
+/* =========================================================
+   LEFT SIDEBAR
+   ========================================================= */
+
+.artevora-profile-sidebar {
+    width: 100%;
+    min-height: 100%;
+
+    padding: 42px 25px;
+
+    background: black;
+
+    border-right: 1px solid #ded9d0;
+}
+
+/* =========================================================
+   SIDEBAR USER
+   ========================================================= */
+
+.artevora-sidebar-user {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 5px 28px;
+
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid #ded9d0;
+}
+
+
+.artevora-sidebar-avatar {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #222222;
+    color: #ffffff;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 20px;
+}
+
+
+.artevora-sidebar-user strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #242424;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.artevora-sidebar-user span {
+    display: block;
+
+    max-width: 145px;
+
+    color: #89857e;
+
+    font-size: 10px;
+    line-height: 1.5;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.artevora-profile-navigation {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.artevora-nav-label {
+    margin: 12px 10px 8px;
+
+    color: #9b978f;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+.artevora-profile-nav-item {
+    width: 100%;
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 13px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: transparent;
+
+    color: #66625c;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.artevora-profile-nav-item svg {
+    width: 14px;
+
+    flex-shrink: 0;
+
+    font-size: 12px;
+}
+
+
+.artevora-profile-nav-item:hover {
+    background: #eae6de;
+
+    color: #222222;
+}
+
+
+.artevora-profile-nav-item.active {
+    background: #e5e0d7;
+
+    color: #222222;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   RIGHT MAIN AREA
+   ========================================================= */
+
+.artevora-profile-main {
+    min-width: 0;
+    width: 100%;
+
+    min-height: calc(100vh - 80px);
+
+    padding: 48px 6% 70px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   PROFILE HEADER
+   ========================================================= */
+
+.artevora-profile-hero {
+    width: 100%;
+
+    padding-bottom: 38px;
+
+    border-bottom: 1px solid #e5e1da;
+}
+
+
+/* Small heading */
+
+.artevora-profile-heading {
+    margin-bottom: 25px;
+}
+
+
+.artevora-profile-heading span {
+    color: #a06e2d;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PROFILE IDENTITY
+   ========================================================= */
+
+.artevora-profile-identity {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+}
+
+
+/* Main Avatar */
+
+.artevora-profile-identity .artevora-profile-avatar {
+    width: 92px;
+    height: 92px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #222222;
+
+    color: #ffffff;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 36px;
+}
+
+
+/* Intro */
+
+.artevora-profile-intro {
+    min-width: 0;
+}
+
+
+.artevora-profile-intro > span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #a06e2d;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.17em;
+
+    text-transform: uppercase;
+}
+
+
+.artevora-profile-intro h1 {
+    margin: 0 0 6px;
+
+    color: #222222;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 2.35rem;
+
+    font-weight: 500;
+
+    line-height: 1.1;
+}
+
+
+.artevora-profile-intro p {
+    margin: 0 0 8px;
+
+    color: #77736d;
+
+    font-size: 12px;
+}
+
+
+.artevora-profile-intro small {
+    display: block;
+
+    color: #99958e;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   EDIT PROFILE
+   ========================================================= */
+
+.artevora-edit-profile {
+    align-self: flex-start;
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+
+    padding: 9px 17px;
+
+    border: 1px solid #d5cfc5;
+
+    background: transparent;
+
+    color: #3d3a36;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.artevora-edit-profile:hover {
+    background: #222222;
+
+    border-color: #222222;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ACTIVITY INDICATORS
+   ========================================================= */
+
+/*
+   No cards.
+   No boxes.
+   No vertical borders.
+   Simple inline activity indicators.
+*/
+
+.artevora-profile-stats {
+    display: flex;
+    align-items: center;
+
+    gap: 48px;
+
+    padding: 30px 0;
+
+    border-bottom: 1px solid #e5e1da;
+}
+
+
+.artevora-profile-stat-item {
+    display: grid;
+
+    grid-template-columns: auto auto;
+
+    column-gap: 9px;
+
+    row-gap: 4px;
+
+    align-items: center;
+
+    min-width: 120px;
+
+    padding: 0;
+
+    margin: 0;
+
+    border: none;
+
+    background: transparent;
+
+    text-align: left;
+}
+
+
+.artevora-profile-stat-item svg {
+    grid-row: 1 / 3;
+
+    color: #a06e2d;
+
+    font-size: 14px;
+}
+
+
+.artevora-profile-stat-item strong {
+    color: #292929;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+.artevora-profile-stat-item span {
+    color: #88847d;
+
+    font-size: 8px;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.artevora-profile-content {
+    padding-top: 45px;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.artevora-profile-section {
+    margin-bottom: 60px;
+}
+
+
+.artevora-profile-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+
+.artevora-profile-section-heading > div {
+    min-width: 0;
+}
+
+
+.artevora-profile-section-heading span {
+    display: block;
+
+    color: #a06e2d;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.17em;
+
+    text-transform: uppercase;
+}
+
+
+.artevora-profile-section-heading h2 {
+    margin: 7px 0 0;
+
+    color: #272727;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 1.55rem;
+
+    font-weight: 500;
+}
+
+
+/* View all */
+
+.artevora-profile-section-heading button {
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #a06e2d;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+
+.artevora-profile-section-heading button:hover {
+    color: #222222;
+}
+
+
+/* =========================================================
+   LIKED ARTWORKS
+   ========================================================= */
+
+.artevora-profile-artworks {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+.artevora-profile-artworks article {
+    min-width: 0;
+
+    cursor: pointer;
+}
+
+
+/* Artwork image */
+
+.artevora-profile-artworks article > div {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    background: #efede8;
+}
+
+
+.artevora-profile-artworks img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.45s ease;
+}
+
+
+.artevora-profile-artworks article:hover img {
+    transform: scale(1.035);
+}
+
+
+/* Heart icon */
+
+.artevora-profile-artworks article > div > svg {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    filter: drop-shadow(
+        0 1px 5px rgba(0, 0, 0, 0.45)
+    );
+}
+
+
+/* Artwork title */
+
+.artevora-profile-artworks h3 {
+    margin: 11px 0 4px;
+
+    color: #292929;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    line-height: 1.35;
+}
+
+
+/* Artist */
+
+.artevora-profile-artworks p {
+    margin: 0;
+
+    color: #89857e;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.artevora-profile-empty {
+    padding: 48px 25px;
+
+    border: 1px solid #e5e1da;
+
+    background: #fbfaf7;
+
+    text-align: center;
+}
+
+
+.artevora-profile-empty svg {
+    color: #a06e2d;
+
+    font-size: 21px;
+}
+
+
+.artevora-profile-empty h3 {
+    margin: 13px 0 7px;
+
+    color: #292929;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+}
+
+
+.artevora-profile-empty p {
+    max-width: 360px;
+
+    margin: 0 auto 20px;
+
+    color: #88847d;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+.artevora-profile-empty button {
+    padding: 10px 20px;
+
+    border: none;
+
+    background: #222222;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+
+.artevora-profile-empty button:hover {
+    background: #a06e2d;
+}
+
+
+/* =========================================================
+   COMMENTS
+   ========================================================= */
+
+.artevora-profile-comments {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.artevora-profile-comments article {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 18px 20px;
+
+    border: 1px solid #e5e1da;
+
+    background: #fbfaf7;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.artevora-profile-comments article:hover {
+    background: #f6f3ed;
+
+    border-color: #d8d1c7;
+}
+
+
+.artevora-profile-comments article > svg {
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    color: #a06e2d;
+
+    font-size: 14px;
+}
+
+
+.artevora-profile-comments article > div {
+    min-width: 0;
+}
+
+
+.artevora-profile-comments p {
+    margin: 0 0 7px;
+
+    color: #44403b;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+.artevora-profile-comments span {
+    color: #89857e;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   ACCOUNT INFORMATION
+   ========================================================= */
+
+.artevora-profile-account {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 25px 0;
+
+    border-top: 1px solid #e5e1da;
+
+    border-bottom: 1px solid #e5e1da;
+}
+
+
+.artevora-profile-account > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-width: 0;
+}
+
+
+.artevora-profile-account > div > svg {
+    flex-shrink: 0;
+
+    color: #a06e2d;
+
+    font-size: 18px;
+}
+
+
+.artevora-profile-account > div > div {
+    min-width: 0;
+}
+
+
+.artevora-profile-account > div > div > span {
+    display: block;
+
+    color: #a06e2d;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+
+.artevora-profile-account h2 {
+    margin: 5px 0 3px;
+
+    color: #292929;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+.artevora-profile-account p {
+    margin: 0;
+
+    color: #85817a;
+
+    font-size: 10px;
+}
+
+
+/* User role */
+
+.artevora-user-role {
+    flex-shrink: 0;
+
+    padding: 5px 10px;
+
+    border: 1px solid #d8c3a4;
+
+    color: #9a6a2d !important;
+
+    font-size: 8px !important;
+
+    letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.artevora-profile-message {
+    padding: 35px 0;
+
+    color: #88847d;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .artevora-profile-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+
+        gap: 0;
+    }
+
+
+    .artevora-profile-main {
+        padding: 42px 38px 60px;
+    }
+
+
+    .artevora-profile-artworks {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .artevora-profile-stats {
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .artevora-user-profile {
+        min-height: auto;
+
+        padding: 0;
+    }
+
+
+    .artevora-profile-layout {
+        width: 100%;
+
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Sidebar */
+
+    .artevora-profile-sidebar {
+        min-height: auto;
+
+        padding: 25px 5%;
+
+        border-right: none;
+
+        border-bottom: 1px solid #ded9d0;
+    }
+
+
+    .artevora-sidebar-user {
+        margin-bottom: 18px;
+
+        padding-bottom: 18px;
+    }
+
+
+    .artevora-profile-navigation {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 4px;
+    }
+
+
+    .artevora-nav-label {
+        grid-column: 1 / -1;
+    }
+
+
+    /* Main */
+
+    .artevora-profile-main {
+        padding: 38px 5% 60px;
+    }
+
+
+    .artevora-profile-identity {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+
+    .artevora-profile-intro h1 {
+        font-size: 2rem;
+    }
+
+
+    .artevora-edit-profile {
+        margin-left: 116px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 550px) {
+
+    .artevora-profile-navigation {
+        grid-template-columns: 1fr;
+    }
+
+
+    .artevora-profile-identity {
+        display: grid;
+
+        grid-template-columns: 70px minmax(0, 1fr);
+
+        gap: 17px;
+    }
+
+
+    .artevora-profile-identity .artevora-profile-avatar {
+        width: 70px;
+        height: 70px;
+
+        font-size: 28px;
+    }
+
+
+    .artevora-profile-intro h1 {
+        font-size: 1.65rem;
+    }
+
+
+    .artevora-profile-intro small {
+        font-size: 10px;
+    }
+
+
+    .artevora-edit-profile {
+        grid-column: 1 / -1;
+
+        margin: 5px 0 0;
+    }
+
+
+    /* Activity */
+
+    .artevora-profile-stats {
+        gap: 20px;
+
+        justify-content: space-between;
+    }
+
+
+    .artevora-profile-stat-item {
+        min-width: 0;
+
+        flex: 1;
+    }
+
+
+    .artevora-profile-stat-item strong {
+        font-size: 16px;
+    }
+
+
+    .artevora-profile-stat-item span {
+        font-size: 7px;
+    }
+
+
+    /* Artwork */
+
+    .artevora-profile-artworks {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    /* Account */
+
+    .artevora-profile-account {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
