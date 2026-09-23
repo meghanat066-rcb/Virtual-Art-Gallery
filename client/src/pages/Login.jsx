@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate, useLocation, Link } from 'react-router-dom'
 import api from '../services/api'
 import PageLayout from '../components/PageLayout'
-import loginBg from '../assets/login-bg.jpg'
+import loginBg from '../assets/Login-bg.jpg'
 import { toast } from 'react-toastify'
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa'
 

@@ -9,7 +9,7 @@ import { toast } from 'react-toastify'
 
 import api from '../services/api'
 import PageLayout from '../components/PageLayout'
-import galleryBg from '../assets/notification-bg.jpg'
+import galleryBg from '../assets/Notification-bg.jpg'
 
 function Notifications() {
     const [notifications, setNotifications] = useState([])

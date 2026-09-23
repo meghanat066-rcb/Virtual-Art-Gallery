@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import api from '../services/api'
 import PageLayout from '../components/PageLayout'
-import registerBg from '../assets/register-bg.jpg'
+import registerBg from '../assets/Register-bg.jpg'
 import { toast } from 'react-toastify'
 import {
     FaUser,

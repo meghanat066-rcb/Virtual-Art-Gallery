@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import api from '../services/api'
 import PageLayout from '../components/PageLayout'
-import galleryBg from '../assets/myartwork-bg.jpg'
+import galleryBg from '../assets/Myartwork-bg.jpg'
 import { FaTrashAlt, FaEdit } from 'react-icons/fa'
 import { toast } from 'react-toastify'
 
