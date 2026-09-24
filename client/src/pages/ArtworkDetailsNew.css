@@ -2221,23 +2221,18 @@
 
     .artevora-product-section {
         width: 92%;
-
         padding-top: 30px;
-
         margin-bottom: 50px;
     }
 
     .artevora-artwork-gallery {
         grid-template-columns: 1fr;
-
         gap: 15px;
     }
 
     .artevora-gallery-thumbnails {
         order: 2;
-
         flex-direction: row;
-
         justify-content: center;
     }
 
@@ -2246,12 +2241,20 @@
     }
 
     .artevora-information-row {
-        grid-template-columns:
-            1fr
-            1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
+    .artevora-living-room {
+        top: 34% !important;
+    }
+
+    .artevora-gallery-wall {
+        top: 43% !important;
+    }
 }
+
+    /* Move artwork slightly upward on mobile */
+    
 /* =========================================
    ARTWORK ACTIONS
 ========================================= */

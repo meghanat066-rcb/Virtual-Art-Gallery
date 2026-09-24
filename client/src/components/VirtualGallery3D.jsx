@@ -8,27 +8,29 @@ import { createPortal } from 'react-dom'
 
 
 function GalleryMovement() {
+
     const camera = useRef(null)
+
     const keys = useRef({})
 
     useEffect(() => {
-       const handleKeyDown = (event) => {
-    const key = event.key.toLowerCase()
+        const handleKeyDown = (event) => {
+            const key = event.key.toLowerCase()
 
-    if (
-        key === 'w' ||
-        key === 'a' ||
-        key === 's' ||
-        key === 'd' ||
-        key === 'arrowup' ||
-        key === 'arrowdown' ||
-        key === 'arrowleft' ||
-        key === 'arrowright'
-    ) {
-        event.preventDefault()
-        keys.current[key] = true
-    }
-}
+            if (
+                key === 'w' ||
+                key === 'a' ||
+                key === 's' ||
+                key === 'd' ||
+                key === 'arrowup' ||
+                key === 'arrowdown' ||
+                key === 'arrowleft' ||
+                key === 'arrowright'
+            ) {
+                event.preventDefault()
+                keys.current[key] = true
+            }
+        }
 
         const handleKeyUp = (event) => {
             keys.current[event.key.toLowerCase()] = false
@@ -43,67 +45,126 @@ function GalleryMovement() {
         }
     }, [])
 
+    // Mobile touch controls
+    useEffect(() => {
+
+        const handleMobileControlStart = (event) => {
+            keys.current[event.detail] = true
+        }
+
+        const handleMobileControlStop = (event) => {
+            keys.current[event.detail] = false
+        }
+
+        window.addEventListener(
+            'artevora-mobile-control-start',
+            handleMobileControlStart
+        )
+
+        window.addEventListener(
+            'artevora-mobile-control-stop',
+            handleMobileControlStop
+        )
+
+        return () => {
+            window.removeEventListener(
+                'artevora-mobile-control-start',
+                handleMobileControlStart
+            )
+
+            window.removeEventListener(
+                'artevora-mobile-control-stop',
+                handleMobileControlStop
+            )
+        }
+
+    }, [])
+
     useEffect(() => {
         let animationFrame
+        const clock = new THREE.Clock()
 
-       const clock = new THREE.Clock()
+        const move = () => {
 
-const move = () => {
-    const delta = Math.min(clock.getDelta(), 0.05)
+            const delta = Math.min(
+                clock.getDelta(),
+                0.05
+            )
 
-    if (camera.current) {
-        const speed = 45
+            if (camera.current) {
 
-        if (keys.current['w']) {
-            camera.current.position.z -= speed * delta
+                const speed = 45
+
+                if (keys.current['w']) {
+                    camera.current.position.z -=
+                        speed * delta
+                }
+
+                if (keys.current['s']) {
+                    camera.current.position.z +=
+                        speed * delta
+                }
+
+                if (keys.current['a']) {
+                    camera.current.position.x -=
+                        speed * delta
+                }
+
+                if (keys.current['d']) {
+                    camera.current.position.x +=
+                        speed * delta
+                }
+
+                if (keys.current['arrowleft']) {
+                    camera.current.rotation.y +=
+                        4.5 * delta
+                }
+
+                if (keys.current['arrowright']) {
+                    camera.current.rotation.y -=
+                        4.5 * delta
+                }
+
+                camera.current.rotation.x =
+                    Math.max(
+                        -0.5,
+                        Math.min(
+                            0.5,
+                            camera.current.rotation.x
+                        )
+                    )
+
+                camera.current.position.x =
+                    Math.max(
+                        -19,
+                        Math.min(
+                            19,
+                            camera.current.position.x
+                        )
+                    )
+
+                camera.current.position.z =
+                    Math.max(
+                        -18,
+                        Math.min(
+                            24,
+                            camera.current.position.z
+                        )
+                    )
+
+                camera.current.position.y = 3.25
+            }
+
+            animationFrame =
+                requestAnimationFrame(move)
         }
-
-        if (keys.current['s']) {
-            camera.current.position.z += speed * delta
-        }
-
-        if (keys.current['a']) {
-            camera.current.position.x -= speed * delta
-        }
-
-        if (keys.current['d']) {
-            camera.current.position.x += speed * delta
-        }
-
-        if (keys.current['arrowleft']) {
-            camera.current.rotation.y += 4.5 * delta
-        }
-
-        if (keys.current['arrowright']) {
-            camera.current.rotation.y -= 4.5 * delta
-        }
-
-        camera.current.rotation.x = Math.max(
-            -0.5,
-            Math.min(0.5, camera.current.rotation.x)
-        )
-
-        camera.current.position.x = Math.max(
-            -19,
-            Math.min(19, camera.current.position.x)
-        )
-
-        camera.current.position.z = Math.max(
-            -18,
-            Math.min(24, camera.current.position.z)
-        )
-
-        camera.current.position.y = 3.25
-    }
-
-    animationFrame = requestAnimationFrame(move)
-}
 
         move()
 
         return () => {
             cancelAnimationFrame(animationFrame)
         }
+
     }, [])
 
     return camera
@@ -2120,6 +2181,166 @@ if (!selectedVirtualRoom) {
     }
 />
             </Canvas>
+
+            <div className="artevora-mobile-controls">
+
+    <button
+        className="artevora-mobile-control up"
+        onPointerDown={() => {
+            window.dispatchEvent(
+                new CustomEvent(
+                    'artevora-mobile-control-start',
+                    { detail: 'w' }
+                )
+            )
+        }}
+        onPointerUp={() => {
+            window.dispatchEvent(
+                new CustomEvent(
+                    'artevora-mobile-control-stop',
+                    { detail: 'w' }
+                )
+            )
+        }}
+        onPointerLeave={() => {
+            window.dispatchEvent(
+                new CustomEvent(
+                    'artevora-mobile-control-stop',
+                    { detail: 'w' }
+                )
+            )
+        }}
+        onPointerCancel={() => {
+            window.dispatchEvent(
+                new CustomEvent(
+                    'artevora-mobile-control-stop',
+                    { detail: 'w' }
+                )
+            )
+        }}
+    >
+        ↑
+    </button>
+
+    <div className="artevora-mobile-control-row">
+
+        <button
+            className="artevora-mobile-control"
+            onPointerDown={() => {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'artevora-mobile-control-start',
+                        { detail: 'arrowleft' }
+                    )
+                )
+            }}
+            onPointerUp={() => {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'artevora-mobile-control-stop',
+                        { detail: 'arrowleft' }
+                    )
+                )
+            }}
+            onPointerLeave={() => {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'artevora-mobile-control-stop',
+                        { detail: 'arrowleft' }
+                    )
+                )
+            }}
+            onPointerCancel={() => {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'artevora-mobile-control-stop',
+                        { detail: 'arrowleft' }
+                    )
+                )
+            }}
+        >
+            ←
+        </button>
+
+        <button
+            className="artevora-mobile-control"
+            onPointerDown={() => {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'artevora-mobile-control-start',
+                        { detail: 's' }
+                    )
+                )
+            }}
+            onPointerUp={() => {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'artevora-mobile-control-stop',
+                        { detail: 's' }
+                    )
+                )
+            }}
+            onPointerLeave={() => {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'artevora-mobile-control-stop',
+                        { detail: 's' }
+                    )
+                )
+            }}
+            onPointerCancel={() => {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'artevora-mobile-control-stop',
+                        { detail: 's' }
+                    )
+                )
+            }}
+        >
+            ↓
+        </button>
+
+        <button
+            className="artevora-mobile-control"
+            onPointerDown={() => {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'artevora-mobile-control-start',
+                        { detail: 'arrowright' }
+                    )
+                )
+            }}
+            onPointerUp={() => {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'artevora-mobile-control-stop',
+                        { detail: 'arrowright' }
+                    )
+                )
+            }}
+            onPointerLeave={() => {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'artevora-mobile-control-stop',
+                        { detail: 'arrowright' }
+                    )
+                )
+            }}
+            onPointerCancel={() => {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'artevora-mobile-control-stop',
+                        { detail: 'arrowright' }
+                    )
+                )
+            }}
+        >
+            →
+        </button>
+
+    </div>
+
+</div>
 
             {selectedArtwork &&
      createPortal(

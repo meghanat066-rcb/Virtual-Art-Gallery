@@ -402,15 +402,14 @@ function GalleryArtwork({
     const [visible, setVisible] = useState(false)
 
     const [liked, setLiked] = useState(false)
-const [likeCount, setLikeCount] = useState(
-      100 + (artwork.likes?.length || 0)
-
-)
 const galleryLikeBase =
     getGalleryLikeBase(artwork._id)
 
+const [likeCount, setLikeCount] =
+    useState(galleryLikeBase)
+
 const displayedLikeCount =
-    galleryLikeBase + likeCount
+    likeCount
 const [liking, setLiking] = useState(false)
 
 useEffect(() => {
@@ -437,8 +436,8 @@ useEffect(() => {
             )
         })
 
-    setLiked(alreadyLiked)
-    setLikeCount(100 + artworkLikes.length)
+   setLiked(alreadyLiked)
+setLikeCount(galleryLikeBase)
 }, [artwork])
 
     useEffect(() => {
@@ -505,9 +504,21 @@ const handleLike = async (event) => {
         const response = await api.patch(
             `/artworks/${artwork._id}/like`
         )
-
+        console.log("LIKE RESPONSE:", response.data)
         setLiked(response.data.liked)
-        setLikeCount(response.data.likeCount)
+
+setLikeCount((currentCount) =>
+    response.data.liked
+        ? currentCount + 1
+        : currentCount - 1
+)
+
+        console.log(
+    "DISPLAY VALUES:",
+    galleryLikeBase,
+    response.data.likeCount,
+    galleryLikeBase + response.data.likeCount
+)
 
     } catch (err) {
         console.error(

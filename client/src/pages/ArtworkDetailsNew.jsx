@@ -1663,90 +1663,111 @@ image.style.transform =
 
     )}
 
-    {showShareOptions && (
-        <div className="artevora-share-menu">
+  {showShareOptions && (
+    <div className="artevora-share-menu">
+        <div className="artevora-share-menu-title">
+            Share Artwork
+        </div>
 
-            <div className="artevora-share-menu-title">
-                Share Artwork
-            </div>
+        <a
+            href={`https://wa.me/?text=${encodeURIComponent(
+                selectedImage ||
+                displayedImage ||
+                artwork?.image ||
+                ''
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="artevora-share-option"
+        >
+            WhatsApp
+        </a>
 
-            <a
-                href={`https://wa.me/?text=${encodeURIComponent(
-                    `Check out ${
-                        artwork?.title ||
-                        'this artwork'
-                    } on ArteVora Gallery: ${window.location.href}`
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="artevora-share-option"
-            >
-                WhatsApp
-            </a>
+        <a
+            href={`mailto:?subject=${encodeURIComponent(
+                artwork?.title || 'Artwork'
+            )}&body=${encodeURIComponent(
+                selectedImage ||
+                displayedImage ||
+                artwork?.image ||
+                ''
+            )}`}
+            className="artevora-share-option"
+        >
+            Email
+        </a>
 
-            <a
-                href={`mailto:?subject=${encodeURIComponent(
-                    artwork?.title || 'Artwork'
-                )}&body=${encodeURIComponent(
-                    `Check out ${
-                        artwork?.title ||
-                        'this artwork'
-                    } on ArteVora Gallery: ${window.location.href}`
-                )}`}
-                className="artevora-share-option"
-            >
-                Email
-            </a>
-
-            <button
-                type="button"
-                className="artevora-share-option"
-                onClick={async () => {
+        <button
+            type="button"
+            className="artevora-share-option"
+            onClick={async () => {
+                try {
                     await navigator.clipboard.writeText(
-                        window.location.href
+                        selectedImage ||
+                        displayedImage ||
+                        artwork?.image ||
+                        ''
                     )
 
                     toast.success(
-                        'Artwork link copied!'
+                        'Artwork image link copied!'
                     )
 
                     setShowShareOptions(false)
-                }}
-            >
-                Copy Link
-            </button>
+                } catch (error) {
+                    toast.error(
+                        'Unable to copy artwork image link.'
+                    )
+                }
+            }}
+        >
+            Copy Image Link
+        </button>
 
-            <button
-                type="button"
-                className="artevora-share-option"
-                onClick={async () => {
-                    if (navigator.share) {
+        <button
+            type="button"
+            className="artevora-share-option"
+            onClick={async () => {
+                const imageUrl =
+                    selectedImage ||
+                    displayedImage ||
+                    artwork?.image ||
+                    ''
+
+                if (navigator.share) {
+                    try {
                         await navigator.share({
                             title:
                                 artwork?.title ||
                                 'Artwork',
                             text:
-                                `Check out ${
-                                    artwork?.title ||
-                                    'this artwork'
-                                } on ArteVora Gallery.`,
-                            url:
-                                window.location.href
+                                artwork?.title ||
+                                'Artwork',
+                            url: imageUrl
                         })
 
                         setShowShareOptions(false)
-                    } else {
-                        toast.info(
-                            'More sharing options are not available on this device.'
-                        )
+                    } catch (error) {
+                        if (
+                            error?.name !==
+                            'AbortError'
+                        ) {
+                            toast.error(
+                                'Unable to share artwork.'
+                            )
+                        }
                     }
-                }}
-            >
-                Other
-            </button>
-
-        </div>
-    )}
+                } else {
+                    toast.info(
+                        'More sharing options are not available on this device.'
+                    )
+                }
+            }}
+        >
+            Other
+        </button>
+    </div>
+)}  
 
 </div>
 
@@ -2217,6 +2238,7 @@ image.style.transform =
                                         value={
                                             visualizeSize
                                         }
+
                                         onChange={(
                                             event
                                         ) =>
